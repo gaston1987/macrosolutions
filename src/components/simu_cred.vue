@@ -31,8 +31,7 @@
               v-model="select2"
               label="Seleccione cantidad de Cuotas"
               outlined
-              shaped
-              solo
+              rounded
               :items="items2"
             ></v-select>
           </v-col>
@@ -49,9 +48,8 @@
                 :rules="nameRules"
                 label="Nombre"
                 required
+                rounded
                 outlined
-                shaped
-                solo
               ></v-text-field>
 
               <v-text-field
@@ -59,9 +57,8 @@
                 :rules="emailRules"
                 label="E-mail"
                 required
+                rounded
                 outlined
-                shaped
-                solo
               ></v-text-field>
 
               <v-select
@@ -70,9 +67,8 @@
                 :rules="[v => !!v || 'Campo Requerido']"
                 label="Sexo"
                 required
+                rounded
                 outlined
-                shaped
-                solo
               ></v-select>
 
               <v-checkbox

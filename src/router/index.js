@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import simu_cred from '@/components/simu_cred.vue'
-import parallax from '@/components/parallax.vue'
+
 
 Vue.use(VueRouter)
 
@@ -11,11 +11,7 @@ const routes = [
     name: 'simu_cred',
     component: simu_cred
   },
-  {
-    path: '/',
-    name: 'parallax',
-    component: parallax
-  },
+
   {
     path: '/about',
     name: 'About',
