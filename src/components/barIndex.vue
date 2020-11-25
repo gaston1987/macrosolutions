@@ -94,37 +94,8 @@
         class="secondary white--text text-center"
       >
         <v-card-text>
-          <v-btn
-            class="mx-4 white--text"
-            icon
-          >
-            <v-icon size="24px">mdi-home</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-4 white--text"
-            icon
-          >
-            <v-icon size="24px">mdi-email</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-4 white--text"
-            icon
-          >
-            <v-icon size="24px">mdi-calendar</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-4 white--text"
-            icon
-          >
-            <v-icon size="24px">mdi-delete</v-icon>
-          </v-btn>
 
         </v-card-text>
-
-        <v-card-text class="white--text pt-0">
-          Abre tu tienda online y empieza a vender tus productos hoy mismo. Asistencia técnica 24h. Tu mejor opción. Las mejores páginas web. Sin restricciones. Optimizado para móviles.
-        </v-card-text>
-
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
