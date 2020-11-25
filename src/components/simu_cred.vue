@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+
     <v-row>
       <v-col
         cols="12"
@@ -26,11 +27,14 @@
             min="0"
           ></v-slider>
           <v-col cols="12">
-            <v-combobox
+            <v-select
+              v-model="select2"
               label="Seleccione cantidad de Cuotas"
-              chips
+              outlined
+              shaped
+              solo
               :items="items2"
-            ></v-combobox>
+            ></v-select>
           </v-col>
           <v-form
             ref="form"
@@ -45,6 +49,9 @@
                 :rules="nameRules"
                 label="Nombre"
                 required
+                outlined
+                shaped
+                solo
               ></v-text-field>
 
               <v-text-field
@@ -52,6 +59,9 @@
                 :rules="emailRules"
                 label="E-mail"
                 required
+                outlined
+                shaped
+                solo
               ></v-text-field>
 
               <v-select
@@ -60,6 +70,9 @@
                 :rules="[v => !!v || 'Campo Requerido']"
                 label="Sexo"
                 required
+                outlined
+                shaped
+                solo
               ></v-select>
 
               <v-checkbox
@@ -120,6 +133,7 @@ export default {
         'Prefiero no decir',
       ],
       checkbox: false,
+      select2: null,
       items2: [
         '3',
         '4',

@@ -1,70 +1,14 @@
 <template>
-  <v-container fluid>
-
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      temporary
-    >
-      <v-list dense>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-btn
-              color="purple"
-              fab
-              @click="onClientes"
-            >
-              <v-icon color="white">mdi-calendar-month-outline</v-icon>
-            </v-btn>
-          </v-list-item-action>
-
-          <v-list-item-content>
-            <v-list-item-title>Reservas</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-action>
-            <v-btn
-              color="purple"
-              fab
-              @click="onLogsoc"
-              v-if="currentUser"
-            >
-              <v-icon color="white">mdi-registered-trademark</v-icon>
-            </v-btn>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-if="currentUser">Registrá tu negocio</v-list-item-title>
-          </v-list-item-content>
-
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-btn
-              color="purple"
-              fab
-              @click="onPlanes"
-            >
-              <v-icon color="white">mdi-alpha-p-circle-outline</v-icon>
-            </v-btn>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Planes</v-list-item-title>
-          </v-list-item-content>
-
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
+  <v-app id="inspire">
     <v-app-bar
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
       color="white"
       dark
-      loading
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"> </v-app-bar-nav-icon>
-      <v-toolbar-title>
+      <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
+
+      <v-toolbar-title style="width: 350px">
         <router-link to="/">
           <v-img
             src="@/assets/logo.png"
@@ -73,64 +17,132 @@
             position="left"
           />
         </router-link>
+
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <searchBar></searchBar>
-      </v-toolbar-items>
+      <v-text-field
+        flat
+        solo-inverted
+        hide-details
+        prepend-inner-icon="mdi-magnify"
+        label="Buscar"
+        class="hidden-sm-and-down pl-10 ml-4"
+        rounded
+        background-color="blue"
+      />
+      <v-spacer />
       <v-btn
-        v-for="icon in icons"
-        :key="icon"
-        class="mx-4 hidden-sm-and-down"
-        dark
         icon
+        color="blue"
       >
-        <v-icon size="24px">{{ icon }}</v-icon>
+        <v-icon>mdi-account-circle</v-icon>
       </v-btn>
-      <v-spacer></v-spacer>
-      <div
-        v-if="currentUser"
-        class="my-2 mx-5"
-      >
-        <router-link to="/profile">
-
-          <h5 style="color:#ffffff"> {{ currentUser.username }} &nbsp; </h5>
-        </router-link>
-      </div>
-      <div class="my-2">
-        <a @click.prevent="logOut">
-          <v-icon
-            v-if="currentUser"
-            size="24px"
-          > mdi-logout </v-icon>
-        </a>
-        <v-btn
-          v-if="!currentUser"
-          color="white"
-          fab
-          dark
-          @click="onLogin"
-          small
-        >
-          <v-icon color="blue"> mdi-account-circle - </v-icon>
-        </v-btn>
-
-      </div>
-
     </v-app-bar>
+    <v-content>
+      <v-bottom-navigation
+        :value="activeBtn"
+        color="primary"
+        horizontal
+      >
+        <a class="v-btn">
+          <span>Inicio</span>
+        </a>
+        <v-menu
+          open-on-hover
+          offset-y
+        >
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on">
+              <span>Servicios</span>
+            </v-btn>
+          </template>
+          <v-card
+            class="mx-auto"
+            max-width="344"
+            outlined
+          >
 
-  </v-container>
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              @click="onTienda"
+            >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
 
+          </v-card>
+        </v-menu>
+        <a class="v-btn">
+          <span>MacroCreditos</span>
+        </a>
+        <v-btn>
+          <span>Clientes</span>
+        </v-btn>
+        <v-btn>
+          <span>Atención al Clientes</span>
+        </v-btn>
+        <v-btn>
+          <span>Contacto</span>
+        </v-btn>
+      </v-bottom-navigation>
+    </v-content>
+    <router-view />
+    <v-footer :padless="true">
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="secondary white--text text-center"
+      >
+        <v-card-text>
+          <v-btn
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">mdi-home</v-icon>
+          </v-btn>
+          <v-btn
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">mdi-email</v-icon>
+          </v-btn>
+          <v-btn
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">mdi-calendar</v-icon>
+          </v-btn>
+          <v-btn
+            class="mx-4 white--text"
+            icon
+          >
+            <v-icon size="24px">mdi-delete</v-icon>
+          </v-btn>
+
+        </v-card-text>
+
+        <v-card-text class="white--text pt-0">
+          Abre tu tienda online y empieza a vender tus productos hoy mismo. Asistencia técnica 24h. Tu mejor opción. Las mejores páginas web. Sin restricciones. Optimizado para móviles.
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>INDEV e-bussines</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import searchBar from "@/components/searchBar"
+
 
 export default {
 
   name: 'barIndex',
   components: {
-    searchBar,
+
 
   },
   data: () => ({
