@@ -88,6 +88,58 @@
     </v-content>
     <Parallax />
     <router-view />
+    <div class="text-center">
+      <v-dialog
+        v-model="dialog"
+        width="500"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="mx-2"
+            fab
+            dark
+            large
+            color="green"
+          >
+            <v-icon dark>
+              mdi-whatsapp
+            </v-icon>
+          </v-btn>
+        </template>
+
+        <v-card flat>
+          <v-card-title class="headline grey lighten-2">
+            Chat
+          </v-card-title>
+
+          <v-card-text>
+            <iframe
+              allow="microphone;"
+              width="350"
+              height="430"
+              src="https://console.dialogflow.com/api-client/demo/embedded/7059d5b3-4a9b-4a5b-99c7-b6d698e387b1"
+              text-color="primary"
+            >
+            </iframe>
+          </v-card-text>
+
+          <v-divider></v-divider>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="primary"
+              text
+              @click="dialog = false"
+            >
+              Cerrar Chat
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </div>
     <v-footer :padless="true">
       <v-card
         flat
