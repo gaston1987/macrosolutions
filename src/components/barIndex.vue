@@ -16,6 +16,7 @@
             contain
             position="left"
           />
+
         </router-link>
 
       </v-toolbar-title>
@@ -85,6 +86,7 @@
         </v-btn>
       </v-bottom-navigation>
     </v-content>
+    <Parallax />
     <router-view />
     <v-footer :padless="true">
       <v-card
@@ -107,13 +109,13 @@
 </template>
 
 <script>
-
+import Parallax from '@/components/parallax';
 
 export default {
 
   name: 'barIndex',
   components: {
-
+    Parallax,
 
   },
   data: () => ({

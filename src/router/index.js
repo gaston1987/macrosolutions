@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import simu_cred from '@/components/simu_cred.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +11,7 @@ const routes = [
     name: 'simu_cred',
     component: simu_cred
   },
+
   {
     path: '/about',
     name: 'About',
