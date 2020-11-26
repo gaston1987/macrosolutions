@@ -5,24 +5,41 @@
       app
       color="white"
       dark
-      height="80px"
+      height="75px"
     >
       <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
-      <v-toolbar-title >
+      <v-toolbar-title>
         <router-link to="/">
           <v-img
             src="@/assets/logo0001.png"
-            
+         
             contain
             position="center"
           />
-
+          <h3>De pequeñas a grandes soluciones</h3>
         </router-link>
+        
 
       </v-toolbar-title>
+      
      
       <v-spacer />
+      
+      <v-card-actions class="white justify-center">
+              <v-btn
+                v-for="(social, i) in socials"
+                :key="i"
+                :color="social.color"
+               
+                fab
+                icon
+                small
+                position="right"
+              >
+                <v-icon>{{ social.icon }}</v-icon>
+              </v-btn>
+            </v-card-actions>
      
     </v-app-bar>
     <v-content>
@@ -34,27 +51,51 @@
         min-height="65px"
       >
  
-    <v-btn>
-      <span>Servicios</span>
+    <v-btn class="botones">
+      <span>SERVICIOS</span>
 
-      <v-icon>fas fa-list</v-icon>
+   
     </v-btn>
 
-    <v-btn>
-      <span>Favorites</span>
+    <v-btn class="botones">
+      <span>MACROCREDITOS</span>
 
-      <v-icon>mdi-heart</v-icon>
+     
+    </v-btn >
+
+    <v-btn class="botones">
+      <span>CLIENTES</span>
+
+     
     </v-btn>
 
-    <v-btn>
-      <span>Nearby</span>
+      <v-btn class="botones">
+      <span>ATENCION AL CLIENTE</span>
 
-      <v-icon>mdi-map-marker</v-icon>
+     
+    </v-btn>
+    
+      <v-btn class="botones">
+      <span>CONTACTO</span>
+
+     
     </v-btn>
   </v-bottom-navigation>
+
     </v-content>
-    <Parallax />
+ 
+      <v-carousel hide-delimiters>
+        <v-carousel-item
+          v-for="(item,i) in items"
+          :key="i"
+          :src="item.src"
+        ></v-carousel-item>
+      </v-carousel>
+ 
+  
     <router-view />
+   
+    
     <div class="text-right">
       <v-dialog
         v-model="dialog"
@@ -120,24 +161,24 @@
 </template>
 
 <script>
-import Parallax from '@/components/parallax';
+
+/*import Parallax from "@/components/parallax";*/
+
 
 export default {
-
-  name: 'barIndex',
+  name: "barIndex",
   components: {
-    Parallax,
+   /*Parallax,*/
+  
 
   },
   data: () => ({
     dialog: false,
     icons: [
-
-      'mdi-facebook',
-      'mdi-twitter',
+      "mdi-facebook",
+      "mdi-twitter",
       // 'mdi-linkedin',
-      'mdi-instagram',
-
+      "mdi-instagram",
     ],
     drawer: null,
     iconClass: "mdi-facebook",
@@ -146,36 +187,28 @@ export default {
   }),
 
   methods: {
-
-    onLogin () {
+    onLogin() {
       // eslint-disable-next-line no-console
-      console.log(['onLogin()'])
-      this.$router.push({ name: "luser" })
-        .catch(() => { })
+      console.log(["onLogin()"]);
+      this.$router.push({ name: "luser" }).catch(() => {});
     },
-    onClientes () {
+    onClientes() {
       // eslint-disable-next-line no-console
-      console.log(['onClientes()'])
-      this.$router.push({ name: "clientes" })
-        .catch(() => { })
+      console.log(["onClientes()"]);
+      this.$router.push({ name: "clientes" }).catch(() => {});
     },
-    onLogsoc () {
+    onLogsoc() {
       // eslint-disable-next-line no-console
-      console.log(['onLogsoc()'])
-      this.$router.push({ name: "crudSoc" })
-        .catch(() => { })
+      console.log(["onLogsoc()"]);
+      this.$router.push({ name: "crudSoc" }).catch(() => {});
     },
-    onPlanes () {
+    onPlanes() {
       // eslint-disable-next-line no-console
-      console.log(['onPlanes()'])
-      this.$router.push({ name: "planes" })
-        .catch(() => { })
+      console.log(["onPlanes()"]);
+      this.$router.push({ name: "planes" }).catch(() => {});
     },
-
-
-
   },
-}
+};
 </script>
 
 <!--
@@ -200,25 +233,93 @@ export default {
 --->
 <style>
 .v-btn {
-  
   margin: 7px;
   padding: 4px;
-  color: #ffffff !important;
-
+  
+  
 }
 
 .v-btn span {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 1px;
-   color: #ffffff !important;
-   
+ 
+}
+
+.botones span{
+  color: #FFFFFF !important;
+ 
+}
+
+.icon {
+  border: 0px !important;
+}
+
+#inspire h3{
+  font-size: 16px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  padding: 5px ;
+  color: dimgray;
+  text-align: center;
+
 
 }
 
-.icon{
+#inspire a {
 
-   border:0px !important; 
+  text-decoration: none !important;
+  text-transform:none;
+  text-decoration-style: none;
+
 }
 
 
 </style>
+
+<script>
+  export default {
+    data: () => ({
+    
+      socials: [
+        {
+          icon: 'mdi-facebook',
+          color: 'indigo',
+        },
+        {
+          icon: 'mdi-linkedin',
+          color: 'cyan darken-1',
+        },
+        {
+          icon: 'mdi-instagram',
+          color: 'red lighten-3',
+        },
+      ],
+
+       items: [
+          {
+            src: '.@/assets/sup001.png',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
+    }),
+
+    methods: {
+      getImage () {
+        const min = 550
+        const max = 560
+
+        return Math.floor(Math.random() * (max - min + 1)) + min
+      },
+    },
+  }
+</script>
+
+
