@@ -99,8 +99,7 @@
     <div class="text-right">
       <v-dialog
         v-model="dialog"
-        width="500"
-        flat
+        width="400"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -121,8 +120,22 @@
         <v-card
           class="mx-auto"
           max-width="400"
+          height="450"
+          flat
         >
-
+          <div class="text-right">
+            <v-btn
+              color="green"
+              fab
+              small
+              dark
+              @click="dialog = false"
+            >
+              <v-icon>
+                mdi-close-circle
+              </v-icon>
+            </v-btn>
+          </div>
           <iframe
             allow="microphone;"
             width="400"
@@ -131,13 +144,6 @@
             text-color="primary"
           >
           </iframe>
-          <v-btn
-            color="primary"
-            text
-            @click="dialog = false"
-          >
-            Cerrar Chat
-          </v-btn>
 
         </v-card>
       </v-dialog>
