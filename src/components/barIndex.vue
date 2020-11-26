@@ -55,6 +55,52 @@
     </v-content>
     <Parallax />
     <router-view />
+    <div class="text-right">
+      <v-dialog
+        v-model="dialog"
+        width="500"
+        flat
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="mx-2"
+            fab
+            dark
+            large
+            color="green"
+          >
+            <v-icon dark>
+              mdi-whatsapp
+            </v-icon>
+          </v-btn>
+        </template>
+
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+
+          <iframe
+            allow="microphone;"
+            width="400"
+            height="400"
+            src="https://console.dialogflow.com/api-client/demo/embedded/7059d5b3-4a9b-4a5b-99c7-b6d698e387b1"
+            text-color="primary"
+          >
+          </iframe>
+          <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+            Cerrar Chat
+          </v-btn>
+
+        </v-card>
+      </v-dialog>
+    </div>
     <v-footer :padless="true">
       <v-card
         flat
@@ -62,9 +108,7 @@
         width="100%"
         class="secondary white--text text-center"
       >
-        <v-card-text>
 
-        </v-card-text>
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
@@ -86,6 +130,7 @@ export default {
 
   },
   data: () => ({
+    dialog: false,
     icons: [
 
       'mdi-facebook',
