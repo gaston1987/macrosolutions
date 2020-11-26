@@ -5,86 +5,53 @@
       app
       color="white"
       dark
+      height="80px"
     >
       <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
-      <v-toolbar-title style="width: 350px">
+      <v-toolbar-title >
         <router-link to="/">
           <v-img
-            src="@/assets/logo.png"
-            max-width="100"
+            src="@/assets/logo0001.png"
+            
             contain
-            position="left"
+            position="center"
           />
 
         </router-link>
 
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Buscar"
-        class="hidden-sm-and-down pl-10 ml-4"
-        rounded
-        background-color="blue"
-      />
+     
       <v-spacer />
-      <v-btn
-        icon
-        color="blue"
-      >
-        <v-icon>mdi-account-circle</v-icon>
-      </v-btn>
+     
     </v-app-bar>
     <v-content>
       <v-bottom-navigation
         :value="activeBtn"
         color="primary"
         horizontal
+        background-color="blue"
+        min-height="65px"
       >
-        <a class="v-btn">
-          <span>Inicio</span>
-        </a>
-        <v-menu
-          open-on-hover
-          offset-y
-        >
-          <template v-slot:activator="{ on }">
-            <v-btn v-on="on">
-              <span>Servicios</span>
-            </v-btn>
-          </template>
-          <v-card
-            class="mx-auto"
-            max-width="344"
-            outlined
-          >
+ 
+    <v-btn>
+      <span>Servicios</span>
 
-            <v-list-item
-              v-for="(item, index) in items"
-              :key="index"
-              @click="onTienda"
-            >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
+      <v-icon>fas fa-list</v-icon>
+    </v-btn>
 
-          </v-card>
-        </v-menu>
-        <a class="v-btn">
-          <span>MacroCreditos</span>
-        </a>
-        <v-btn>
-          <span>Clientes</span>
-        </v-btn>
-        <v-btn>
-          <span>Atención al Clientes</span>
-        </v-btn>
-        <v-btn>
-          <span>Contacto</span>
-        </v-btn>
-      </v-bottom-navigation>
+    <v-btn>
+      <span>Favorites</span>
+
+      <v-icon>mdi-heart</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Nearby</span>
+
+      <v-icon>mdi-map-marker</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
     </v-content>
     <Parallax />
     <router-view />
@@ -186,3 +153,27 @@ export default {
 
 </style>
 --->
+<style>
+.v-btn {
+  
+  margin: 7px;
+  padding: 4px;
+  color: #ffffff !important;
+
+}
+
+.v-btn span {
+  font-size: 18px;
+  letter-spacing: 1px;
+   color: #ffffff !important;
+   
+
+}
+
+.icon{
+
+   border:0px !important; 
+}
+
+
+</style>
