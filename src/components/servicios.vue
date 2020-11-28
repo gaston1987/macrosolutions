@@ -33,10 +33,9 @@
             column
           >
             <v-chip
-              v-for="tag in tags"
-              :key="tag"
+             
             >
-              {{ tag }}
+            
             </v-chip>
           </v-chip-group>
         </div>

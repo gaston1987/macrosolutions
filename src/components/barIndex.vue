@@ -22,7 +22,7 @@
         
 
       </v-toolbar-title>
-       <Servicios />
+      
      
       <v-spacer />
       
@@ -45,12 +45,12 @@
     <v-content>
       
       <v-bottom-navigation
-        :value="activeBtn"
+        
         color="primary"
         horizontal
         background-color="blue"
         min-height="65px"
-        v-model="drawer"
+     
         
         
       >
@@ -98,14 +98,14 @@
  
   
     <router-view />
-   
+  
    
    
 
 
     <div class="text-right">
       <v-dialog
-        v-model="dialog"
+        
         width="400"
       >
         <template v-slot:activator="{ on, attrs }">
@@ -178,74 +178,63 @@
 <script>
 
 /*import Parallax from "@/components/parallax";*/
-import Servicios from "@/components/servicios";
+
 
 export default {
-  name: "barIndex",
+  name: 'barIndex',
+
   components: {
-   /*Parallax,*/
-    Servicios
+
+   
+  
   },
-}
- /* 
+
   data: () => ({
-    dialog: false,
-    icons: [
-      "mdi-facebook",
-      "mdi-twitter",
-      // 'mdi-linkedin',
-      "mdi-instagram",
-    ],
-    drawer: null,
-    iconClass: "mdi-facebook",
-    iconClass1: "mdi-twitter",
-    iconClass2: "mdi-instagram",
-  }),
+    socials: [
+        {
+          icon: 'mdi-facebook',
+          color: 'indigo',
+        },
+        {
+          icon: 'mdi-linkedin',
+          color: 'cyan darken-1',
+        },
+        {
+          icon: 'mdi-instagram',
+          color: 'red lighten-3',
+        },
+      ],
 
-  methods: {
-    onLogin() {
-      // eslint-disable-next-line no-console
-      console.log(["onLogin()"]);
-      this.$router.push({ name: "luser" }).catch(() => {});
+       items: [
+          {
+           src:'./src/assets/sup001.png'
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
+ }),
+    methods: {
+      getImage () {
+        const min = 550
+        const max = 560
+
+        return Math.floor(Math.random() * (max - min + 1)) + min
+      },
     },
-    onClientes() {
-      // eslint-disable-next-line no-console
-      console.log(["onClientes()"]);
-      this.$router.push({ name: "clientes" }).catch(() => {});
-    },
-    onLogsoc() {
-      // eslint-disable-next-line no-console
-      console.log(["onLogsoc()"]);
-      this.$router.push({ name: "crudSoc" }).catch(() => {});
-    },
-    onPlanes() {
-      // eslint-disable-next-line no-console
-      console.log(["onPlanes()"]);
-      this.$router.push({ name: "planes" }).catch(() => {});
-    },
-  },
-};*/
- </script>
+    dialog:false,
+    
+    
+    
+  }
 
-<!--
-<style>
-
-.mdi-facebook{ color: purple !important;}
-.mdi-facebook:hover {color: blue !important;}
-
-.mdi-twitter{ color: purple !important;}
-.mdi-twitter:hover {color:lightblue !important;}
-
-.mdi-instagram{ color: purple !important;}
-.mdi-instagram:hover {color: plum !important;}
-
-
-.v-btn__content {
-
-  color:#5a1487 !important;
-}
-
-</style>
+</script>
 --->
 <style>
 .v-btn {
@@ -290,57 +279,11 @@ export default {
   text-decoration-style: none;
 }
 
-#social {
- 
-}
+
 
 
 </style>
 
-<script>
-  export default {
-    data: () => ({
-    
-      socials: [
-        {
-          icon: 'mdi-facebook',
-          color: 'indigo',
-        },
-        {
-          icon: 'mdi-linkedin',
-          color: 'cyan darken-1',
-        },
-        {
-          icon: 'mdi-instagram',
-          color: 'red lighten-3',
-        },
-      ],
 
-       items: [
-          {
-            src: '.@/assets/sup001.png',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-    }),
-
-    methods: {
-      getImage () {
-        const min = 550
-        const max = 560
-
-        return Math.floor(Math.random() * (max - min + 1)) + min
-      },
-    },
-  }
-</script>
 
 
