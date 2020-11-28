@@ -22,12 +22,12 @@
         
 
       </v-toolbar-title>
-      
+       <Servicios />
      
       <v-spacer />
       
-      <v-card-actions class="white justify-center">
-              <v-btn
+      <v-card-actions id="social" class="white justify-center">
+              <v-btn 
                 v-for="(social, i) in socials"
                 :key="i"
                 :color="social.color"
@@ -43,12 +43,16 @@
      
     </v-app-bar>
     <v-content>
+      
       <v-bottom-navigation
         :value="activeBtn"
         color="primary"
         horizontal
         background-color="blue"
         min-height="65px"
+        v-model="drawer"
+        
+        
       >
  
     <v-btn class="botones">
@@ -95,7 +99,10 @@
   
     <router-view />
    
-    
+   
+   
+
+
     <div class="text-right">
       <v-dialog
         v-model="dialog"
@@ -148,6 +155,8 @@
         </v-card>
       </v-dialog>
     </div>
+
+    
     <v-footer :padless="true">
       <v-card
         flat
@@ -169,15 +178,16 @@
 <script>
 
 /*import Parallax from "@/components/parallax";*/
-
+import Servicios from "@/components/servicios";
 
 export default {
   name: "barIndex",
   components: {
    /*Parallax,*/
-  
-
+    Servicios
   },
+}
+ /* 
   data: () => ({
     dialog: false,
     icons: [
@@ -214,8 +224,8 @@ export default {
       this.$router.push({ name: "planes" }).catch(() => {});
     },
   },
-};
-</script>
+};*/
+ </script>
 
 <!--
 <style>
@@ -262,8 +272,10 @@ export default {
 
 #inspire h3{
   font-size: 16px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   font-style: italic;
+  
   padding: 5px ;
   color: dimgray;
   text-align: center;
@@ -276,7 +288,10 @@ export default {
   text-decoration: none !important;
   text-transform:none;
   text-decoration-style: none;
+}
 
+#social {
+ 
 }
 
 
