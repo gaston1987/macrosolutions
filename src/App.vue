@@ -1,23 +1,20 @@
 <template>
 
-  <v-app>
-    
+  <v-main>
     <barIndex />
-    <servicios />
-  </v-app>
+  </v-main>
 
 </template>
 
 <script>
 
 import barIndex from './components/barIndex';
-import servicios from './components/servicios';
+
 export default {
   name: 'App',
 
   components: {
     barIndex,
-    servicios,
   },
 
   data: () => ({

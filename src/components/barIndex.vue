@@ -1,7 +1,6 @@
 <template>
   <v-app id="inspire">
     <v-app-bar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
       color="white"
       dark
@@ -13,104 +12,78 @@
         <router-link to="/">
           <v-img
             src="@/assets/logo0001.png"
-         
             contain
             position="center"
           />
           <h3>De pequeñas a grandes soluciones</h3>
         </router-link>
-        
 
       </v-toolbar-title>
-      
-     
+
       <v-spacer />
-      
-      <v-card-actions id="social" class="white justify-center">
-              <v-btn 
-                v-for="(social, i) in socials"
-                :key="i"
-                :color="social.color"
-               
-                fab
-                icon
-                small
-                position="right"
-              >
-                <v-icon>{{ social.icon }}</v-icon>
-              </v-btn>
-            </v-card-actions>
-     
-    </v-app-bar>
-    <v-content>
-      
-      <v-bottom-navigation
-        
-        color="primary"
-        horizontal
-        background-color="blue"
-        min-height="65px"
-     
-        
-        
+
+      <v-card-actions
+        id="social"
+        class="white justify-center"
       >
- 
-    <v-btn class="botones">
-      <span>SERVICIOS</span>
-
-   
-    </v-btn>
-
-    <v-btn class="botones">
-      <span>MACROCREDITOS</span>
-
-     
-    </v-btn >
-
-    <v-btn class="botones">
-      <span>CLIENTES</span>
-
-     
-    </v-btn>
-
-      <v-btn class="botones">
-      <span>ATENCION AL CLIENTE</span>
-
-     
-    </v-btn>
-    
-      <v-btn class="botones">
-      <span>CONTACTO</span>
-
-     
-    </v-btn>
-  </v-bottom-navigation>
-
-    </v-content>
- 
-      <v-carousel hide-delimiters>
-        <v-carousel-item
-          v-for="(item,i) in items"
+        <v-btn
+          v-for="(social, i) in socials"
           :key="i"
-          :src="item.src"
-        ></v-carousel-item>
-      </v-carousel>
- 
-  
-    <router-view />
-<<<<<<< HEAD
-=======
-  
-   
-   
+          :color="social.color"
+          fab
+          icon
+          small
+          position="right"
+        >
+          <v-icon>{{ social.icon }}</v-icon>
+        </v-btn>
+      </v-card-actions>
 
->>>>>>> 73082b9dfe40d336899584f13a7dd06d3345d5c8
+    </v-app-bar>
 
+    <v-bottom-navigation
+      color="primary"
+      horizontal
+      background-color="blue"
+      min-height="65px"
+    >
+
+      <v-btn class="botones">
+        <span>SERVICIOS</span>
+
+      </v-btn>
+
+      <v-btn class="botones">
+        <span>MACROCREDITOS</span>
+
+      </v-btn>
+
+      <v-btn class="botones">
+        <span>CLIENTES</span>
+
+      </v-btn>
+
+      <v-btn class="botones">
+        <span>ATENCION AL CLIENTE</span>
+
+      </v-btn>
+
+      <v-btn class="botones">
+        <span>CONTACTO</span>
+
+      </v-btn>
+    </v-bottom-navigation>
+
+    <v-carousel hide-delimiters>
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+      ></v-carousel-item>
+    </v-carousel>
+    <servicios />
     <div class="text-right">
-      <v-dialog
-        
-        width="400"
-      >
+      <v-dialog width="400">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             v-bind="attrs"
@@ -159,7 +132,6 @@
       </v-dialog>
     </div>
 
-    
     <v-footer :padless="true">
       <v-card
         flat
@@ -181,61 +153,61 @@
 <script>
 
 /*import Parallax from "@/components/parallax";*/
-
+import servicios from '@/components/servicios';
 
 export default {
   name: 'barIndex',
 
   components: {
+    servicios,
 
-   
-  
+
   },
 
   data: () => ({
     socials: [
-        {
-          icon: 'mdi-facebook',
-          color: 'indigo',
-        },
-        {
-          icon: 'mdi-linkedin',
-          color: 'cyan darken-1',
-        },
-        {
-          icon: 'mdi-instagram',
-          color: 'red lighten-3',
-        },
-      ],
-
-       items: [
-          {
-           src:'./src/assets/sup001.png'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
- }),
-    methods: {
-      getImage () {
-        const min = 550
-        const max = 560
-
-        return Math.floor(Math.random() * (max - min + 1)) + min
+      {
+        icon: 'mdi-facebook',
+        color: 'indigo',
       },
+      {
+        icon: 'mdi-linkedin',
+        color: 'cyan darken-1',
+      },
+      {
+        icon: 'mdi-instagram',
+        color: 'red lighten-3',
+      },
+    ],
+
+    items: [
+      {
+        src: './src/assets/sup001.png'
+      },
+      {
+        src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+      },
+      {
+        src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+      },
+      {
+        src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+      },
+    ],
+  }),
+  methods: {
+    getImage () {
+      const min = 550
+      const max = 560
+
+      return Math.floor(Math.random() * (max - min + 1)) + min
     },
-    dialog:false,
-    
-    
-    
-  }
+  },
+  dialog: false,
+
+
+
+}
 
 </script>
 --->
@@ -243,48 +215,38 @@ export default {
 .v-btn {
   margin: 7px;
   padding: 4px;
-  
-  
 }
 
 .v-btn span {
   font-size: 15px;
   letter-spacing: 1px;
- 
 }
 
-.botones span{
-  color: #FFFFFF !important;
- 
+.botones span {
+  color: #ffffff !important;
 }
 
 .icon {
   border: 0px !important;
 }
 
-#inspire h3{
+#inspire h3 {
   font-size: 16px;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-style: italic;
-  
-  padding: 5px ;
+
+  padding: 5px;
   color: dimgray;
   text-align: center;
-
-
 }
 
 #inspire a {
-
   text-decoration: none !important;
-  text-transform:none;
+  text-transform: none;
   text-decoration-style: none;
 }
-
-
-
-
 </style>
 
 
