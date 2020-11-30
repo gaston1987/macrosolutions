@@ -74,7 +74,10 @@
       </v-btn>
     </v-bottom-navigation>
 
-    <v-carousel hide-delimiters>
+    <v-carousel
+      hide-delimiters
+      class="hidden-sm-and-down"
+    >
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
@@ -182,7 +185,7 @@ export default {
 
     items: [
       {
-        src: './src/assets/sup001.png'
+        src: 'https://i.postimg.cc/k5ckntLF/sup001.jpg',
       },
       {
         src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
