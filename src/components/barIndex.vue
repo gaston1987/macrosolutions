@@ -54,6 +54,7 @@
     </v-content>
     <Parallax />
     <router-view />
+
     <div class="text-right">
       <v-dialog
         v-model="dialog"
@@ -77,8 +78,8 @@
 
         <v-card
           class="mx-auto"
-          max-width="400"
-          height="450"
+          max-width="auto"
+          height="auto"
           flat
         >
           <div class="text-right">
