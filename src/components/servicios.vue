@@ -1,46 +1,129 @@
 <template>
-  <v-row justify="center">
+
+  <v-row justify="center"
+  pt-5
+  >
+ 
     <v-col
-      cols="12"
-      sm="7"
-      md="6"
-      lg="5"
+      cols="6"
+      sm="3"
+      md="3"
+      lg="3"
+      pr-10
+      
+   
     >
-      <v-sheet
-        elevation="10"
-        rounded="xl"
+      <v-card
+  elevation="5"
+  outlined
+  shaped
+  pr-10
+  min-height="280px"
+  color="blue-grey lighten-5"
+
+  
+>
+
+<v-card-text>
+    
+      <p class="display-1 text--primary">
+        Organización
+      </p>
+      
+      <div class="text--primary">
+        Organización y estructuración del flujo <br>de caja de la compañía.
+        
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal accent-4"
+        @click="reveal = true"
+        align-center
       >
-        <v-sheet
-          class="pa-3 primary text-right"
-          dark
-          rounded="t-xl"
-        >
-          <v-btn icon>
-            <v-icon>mdi-content-save-cog-outline</v-icon>
-          </v-btn>
+       <i style="font-size:40px;" class="fas fa-paper-plane"></i>
+      </v-btn>
+    </v-card-actions>
+</v-card>
+</v-col>
 
-          <v-btn
-            class="ml-2"
-            icon
-          >
-            <v-icon>mdi-check-bold</v-icon>
-          </v-btn>
-        </v-sheet>
+<v-col
+      cols="6"
+      sm="3"
+      md="3"
+      lg="3"
+    
+    >
+<v-card
+  elevation="5"
+  outlined
+  shaped
+   min-height="280px"
+   color="blue-grey lighten-5"
+>
 
-        <div class="pa-4">
-          <v-chip-group
-            active-class="primary--text"
-            column
-          >
-            <v-chip
-             
-            >
-            
-            </v-chip>
-          </v-chip-group>
-        </div>
-      </v-sheet>
-    </v-col>
+<v-card-text>
+     
+      <p class="display-1 text--primary">
+        Análisis de costos
+      </p>
+      <p></p>
+      <div class="text--primary">
+        Análisis de costos de oportunidad y
+       rentabilidad de trabajos que realiza cada compañía.
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal accent-4"
+        @click="reveal = true"
+      >
+        <i style="font-size:40px;" class="fas fa-chart-pie"></i>
+      </v-btn>
+    </v-card-actions>
+</v-card>
+</v-col>
+
+<v-col
+      cols="6"
+      sm="3"
+      md="3"
+      lg="3"
+    
+    >
+<v-card
+  elevation="5"
+  outlined
+  shaped
+  min-height="280px"
+  color="blue-grey lighten-5"
+>
+
+<v-card-text>
+     
+      <p class="display-1 text--primary">
+        Elaboración de modelos 
+      </p>
+    
+      <div class="text--primary">
+      Elaboración de modelos económicos/ financieros que permitan que la compañía pueda decidir si afrontar o no un trabajo.
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal accent-4"
+        @click="reveal = true"
+      >
+       <i style="font-size:40px;" class="fas fa-wallet"></i>
+      </v-btn>
+    </v-card-actions>
+</v-card>
+
+</v-col>
+
   </v-row>
 </template>
 

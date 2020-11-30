@@ -1,0 +1,17 @@
+    <template>
+    <v-footer :padless="true">
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="secondary white--text text-center"
+      >
+
+        <v-divider></v-divider>
+
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>INDEV e-bussines</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+    </template>

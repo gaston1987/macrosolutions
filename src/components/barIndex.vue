@@ -1,90 +1,38 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar
-      app
-      color="white"
-      dark
-      height="75px"
-    >
-      <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
-
-      <v-toolbar-title>
-        <router-link to="/">
-          <v-img
-            src="@/assets/logo0001.png"
-            contain
-            position="center"
-          />
-          <h3>De pequeñas a grandes soluciones</h3>
-        </router-link>
-
-      </v-toolbar-title>
-
-      <v-spacer />
-
-      <v-card-actions
-        id="social"
-        class="white justify-center"
-      >
-        <v-btn
-          v-for="(social, i) in socials"
-          :key="i"
-          :color="social.color"
-          fab
-          icon
-          small
-          position="right"
-        >
-          <v-icon>{{ social.icon }}</v-icon>
-        </v-btn>
-      </v-card-actions>
-
-    </v-app-bar>
-
-    <v-bottom-navigation
+    <bar/>
+      <v-bottom-navigation
       color="primary"
       horizontal
       background-color="blue"
       min-height="65px"
     >
-
       <v-btn class="botones">
         <span>SERVICIOS</span>
-
       </v-btn>
 
       <v-btn class="botones">
         <span>MACROCREDITOS</span>
-
       </v-btn>
 
       <v-btn class="botones">
         <span>CLIENTES</span>
-
       </v-btn>
 
       <v-btn class="botones">
         <span>ATENCION AL CLIENTE</span>
-
       </v-btn>
 
       <v-btn class="botones">
         <span>CONTACTO</span>
-
       </v-btn>
     </v-bottom-navigation>
-
-    <v-carousel
-      hide-delimiters
-      class="hidden-sm-and-down"
-    >
-      <v-carousel-item
-        v-for="(item,i) in items"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
-    </v-carousel>
-    <servicios />
+  
+    <carrousel/> 
+    <div class="divider"></div>
+    <servicios/>
+ 
+   
     <div class="text-right">
       <v-dialog width="400">
         <template v-slot:activator="{ on, attrs }">
@@ -154,50 +102,26 @@
 </template>
 
 <script>
-
-/*import Parallax from "@/components/parallax";*/
+import bar from '@/components/bar';
+import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
+
+
 
 export default {
   name: 'barIndex',
 
   components: {
+    
+    bar,
+    carrousel,
     servicios,
-
+    
+  
 
   },
 
-  data: () => ({
-    socials: [
-      {
-        icon: 'mdi-facebook',
-        color: 'indigo',
-      },
-      {
-        icon: 'mdi-linkedin',
-        color: 'cyan darken-1',
-      },
-      {
-        icon: 'mdi-instagram',
-        color: 'red lighten-3',
-      },
-    ],
 
-    items: [
-      {
-        src: 'https://i.postimg.cc/k5ckntLF/sup001.jpg',
-      },
-      {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-      },
-      {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-      },
-      {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-      },
-    ],
-  }),
   methods: {
     getImage () {
       const min = 550
@@ -208,12 +132,11 @@ export default {
   },
   dialog: false,
 
-
-
 }
 
 </script>
---->
+
+
 <style>
 .v-btn {
   margin: 7px;
@@ -249,6 +172,11 @@ export default {
   text-decoration: none !important;
   text-transform: none;
   text-decoration-style: none;
+}
+.divider{
+   padding-top: 20px;
+   padding-bottom: 15px;
+
 }
 </style>
 

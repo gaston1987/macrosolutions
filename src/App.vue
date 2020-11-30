@@ -1,20 +1,20 @@
 <template>
 
   <v-main>
-    <barIndex />
+    <index />
   </v-main>
 
 </template>
 
 <script>
 
-import barIndex from './components/barIndex';
+import index from './components/index';
 
 export default {
   name: 'App',
 
   components: {
-    barIndex,
+    index,
   },
 
   data: () => ({
