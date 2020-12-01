@@ -1,12 +1,13 @@
   <template>
-  <v-bottom-navigation   
+  <v-bottom-navigation
     color="primary"
     horizontal
     background-color="blue"
     min-height="65px"
+    grow
+    v-model="drawer"
   >
     <v-btn class="botones">
-      
       <a href="#servicio" v-smooth-scroll>SERVICIOS</a>
     </v-btn>
 
@@ -19,24 +20,18 @@
     </v-btn>
 
     <v-btn class="botones">
-       <a href="#" v-smooth-scroll>ATENCION AL CLIENTE</a>
+      <a href="#" v-smooth-scroll>ATENCION AL CLIENTE</a>
     </v-btn>
 
     <v-btn class="botones">
-        <a href="#contacto" v-smooth-scroll>CONTACTO</a>
+      <a href="#contacto" v-smooth-scroll>CONTACTO</a>
     </v-btn>
-   
   </v-bottom-navigation>
-   
 </template>
 <script>
-  export default {
-    data () {
-      return {
-      }
-    },
-    
-  }
-
-
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
