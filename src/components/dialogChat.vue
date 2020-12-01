@@ -43,6 +43,7 @@
             height="400"
             src="https://console.dialogflow.com/api-client/demo/embedded/7059d5b3-4a9b-4a5b-99c7-b6d698e387b1"
             text-color="primary"
+            
           >
           </iframe>
 
@@ -63,3 +64,13 @@ return{
 
 }
 </script>
+
+<style>
+.b-agent-demo .b-agent-demo_powered_by {
+
+  display: none !important;
+}
+
+
+</style>
+

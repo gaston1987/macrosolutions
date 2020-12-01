@@ -11,19 +11,19 @@
     </v-btn>
 
     <v-btn class="botones">
-      <span>MACROCREDITOS</span>
+      <a href="#" v-smooth-scroll>MACROCREDITOS</a>
     </v-btn>
 
     <v-btn class="botones">
-      <span>CLIENTES</span>
+      <a href="#clientes" v-smooth-scroll>CLIENTES</a>
     </v-btn>
 
     <v-btn class="botones">
-      <span>ATENCION AL CLIENTE</span>
+       <a href="#" v-smooth-scroll>ATENCION AL CLIENTE</a>
     </v-btn>
 
     <v-btn class="botones">
-      <span>CONTACTO</span>
+        <a href="#contacto" v-smooth-scroll>CONTACTO</a>
     </v-btn>
    
   </v-bottom-navigation>
