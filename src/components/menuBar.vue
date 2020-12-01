@@ -6,7 +6,8 @@
     min-height="65px"
   >
     <v-btn class="botones">
-      <span>SERVICIOS</span>
+      
+      <a href="#servicio">SERVICIOS</a>
     </v-btn>
 
     <v-btn class="botones">
@@ -24,6 +25,7 @@
     <v-btn class="botones">
       <span>CONTACTO</span>
     </v-btn>
+   
   </v-bottom-navigation>
 </template>
 <script>

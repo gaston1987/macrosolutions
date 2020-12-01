@@ -77,7 +77,7 @@ export default {
   letter-spacing: 1px;
 }
 
-.botones span {
+.botones a {
   color: #ffffff !important;
 }
 

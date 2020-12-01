@@ -1,7 +1,9 @@
 <template>
-  <v-row justify="center">
+<div id="servicio">
+  <h1 class="text-center">Servicios </h1>
+  <v-row justify="center" >
     <v-col cols="4" sm="3" md="3" lg="3" class="mx-5 mb-10">
-      <v-card
+      <v-card 
         elevation="3"
         outlined
         shaped
@@ -17,9 +19,9 @@
             compañía.
           </div>
         </v-card-text>
-        <v-card-actions>
-          <v-btn text color="teal accent-4" @click="reveal = true" align-center>
-            <i style="font-size: 40px" class="fas fa-paper-plane"></i>
+        <v-card-actions >
+          <v-btn text color="teal accent-4" @click="reveal = true"   align="center">
+            <i style="font-size: 50px" class="fas fa-paper-plane"></i>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -148,7 +150,7 @@
 
   </v-row>
 
-  
+</div>
 </template>
 
 <style>
