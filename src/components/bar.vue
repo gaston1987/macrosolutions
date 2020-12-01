@@ -4,14 +4,14 @@
 
     <v-toolbar-title>
       <router-link to="/">
-        <v-img src="@/assets/logo0001.png" contain position="center" />
+        <v-img src="@/assets/logo0001.png" contain position="center" class="animate__animated animate__fadeInUp" />
         <h3>De pequeñas a grandes soluciones</h3>
       </router-link>
     </v-toolbar-title>
 
     <v-spacer />
 
-    <v-card-actions id="social" class="white justify-center">
+    <v-card-actions id="social" class="white justify-center animate__animated animate__fadeInRight">
       <v-btn
         v-for="(social, i) in socials"
         :key="i"

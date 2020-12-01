@@ -1,6 +1,6 @@
 <template>
 <div id="servicio">
-  <h1 class="text-center">Servicios </h1>
+  <h1 class="text-center " >Servicios </h1>
   <v-row justify="center" >
     <v-col cols="4" sm="3" md="3" lg="3" class="mx-5 mb-10">
       <v-card 
