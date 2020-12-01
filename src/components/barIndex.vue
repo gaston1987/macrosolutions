@@ -1,86 +1,16 @@
 <template>
   <v-app id="inspire">
     <bar/>
-      <v-bottom-navigation
-      color="primary"
-      horizontal
-      background-color="blue"
-      min-height="65px"
-    >
-      <v-btn class="botones">
-        <span>SERVICIOS</span>
-      </v-btn>
-
-      <v-btn class="botones">
-        <span>MACROCREDITOS</span>
-      </v-btn>
-
-      <v-btn class="botones">
-        <span>CLIENTES</span>
-      </v-btn>
-
-      <v-btn class="botones">
-        <span>ATENCION AL CLIENTE</span>
-      </v-btn>
-
-      <v-btn class="botones">
-        <span>CONTACTO</span>
-      </v-btn>
-    </v-bottom-navigation>
+     <menu-bar />
   
-    <carrousel/> 
+    <carrousel /> 
     <div class="divider"></div>
-    <servicios/>
- 
+    <servicios />
+    <parallax />
+    
    
     <div class="text-right">
-      <v-dialog width="400">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            v-bind="attrs"
-            v-on="on"
-            class="mx-2"
-            fab
-            dark
-            large
-            color="green"
-          >
-            <v-icon dark>
-              mdi-whatsapp
-            </v-icon>
-          </v-btn>
-        </template>
-
-        <v-card
-          class="mx-auto"
-          max-width="auto"
-          height="auto"
-          flat
-        >
-          <div class="text-right">
-            <v-btn
-              color="green"
-              fab
-              small
-              dark
-              @click="dialog = false"
-            >
-              <v-icon>
-                mdi-close-circle
-              </v-icon>
-            </v-btn>
-          </div>
-          <iframe
-            allow="microphone;"
-            width="400"
-            height="400"
-            src="https://console.dialogflow.com/api-client/demo/embedded/7059d5b3-4a9b-4a5b-99c7-b6d698e387b1"
-            text-color="primary"
-          >
-          </iframe>
-
-        </v-card>
-      </v-dialog>
+     <dialogChat />
     </div>
 
     <v-footer :padless="true">
@@ -105,9 +35,9 @@
 import bar from '@/components/bar';
 import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
-
-
-
+import parallax from '@/components/parallax';
+import dialogChat from '@/components/dialogChat';
+import MenuBar from './menuBar.vue';
 export default {
   name: 'barIndex',
 
@@ -116,11 +46,10 @@ export default {
     bar,
     carrousel,
     servicios,
-    
-  
-
-  },
-
+    parallax,
+    dialogChat,
+    MenuBar,
+},
 
   methods: {
     getImage () {

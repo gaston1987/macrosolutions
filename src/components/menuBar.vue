@@ -26,3 +26,11 @@
     </v-btn>
   </v-bottom-navigation>
 </template>
+<script>
+  export default {
+    data () {
+      return {
+      }
+    },
+  }
+</script>

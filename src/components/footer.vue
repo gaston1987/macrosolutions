@@ -1,5 +1,5 @@
     <template>
-    <v-footer :padless="true">
+   <v-footer :padless="true">
       <v-card
         flat
         tile
@@ -14,4 +14,14 @@
         </v-card-text>
       </v-card>
     </v-footer>
-    </template>
+</template>
+
+<script>
+export default {
+  name: 'footer',
+
+  components: {
+  },
+
+}
+</script>

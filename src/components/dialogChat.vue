@@ -1,6 +1,7 @@
-<template>
-
-      <v-dialog width="400">
+    <template>
+   <v-dialog 
+            v-model="dialog" 
+            width="400">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             v-bind="attrs"
@@ -47,6 +48,18 @@
 
         </v-card>
       </v-dialog>
-   
+</template>
 
-    </template>
+<script>
+export default {
+  name: 'dialogChat',
+  data (){
+return{
+     dialog: false,
+}
+  },
+  components: {
+  },
+
+}
+</script>
