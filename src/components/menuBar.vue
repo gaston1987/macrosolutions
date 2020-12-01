@@ -1,5 +1,5 @@
   <template>
-  <v-bottom-navigation
+  <v-bottom-navigation   
     color="primary"
     horizontal
     background-color="blue"
@@ -7,7 +7,7 @@
   >
     <v-btn class="botones">
       
-      <a href="#servicio">SERVICIOS</a>
+      <a href="#servicio" v-smooth-scroll>SERVICIOS</a>
     </v-btn>
 
     <v-btn class="botones">
@@ -27,6 +27,7 @@
     </v-btn>
    
   </v-bottom-navigation>
+   
 </template>
 <script>
   export default {
@@ -34,5 +35,8 @@
       return {
       }
     },
+    
   }
+
+
 </script>

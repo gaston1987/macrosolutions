@@ -4,6 +4,13 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+// importo smooth scroll
+import VueSmoothScroll from 'vue2-smooth-scroll'
+
+Vue.use(VueSmoothScroll, {
+  duration: 900,
+  updateHistory: false,
+})
 
 Vue.config.productionTip = false
 

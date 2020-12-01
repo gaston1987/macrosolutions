@@ -2,7 +2,7 @@
 <div id="servicio">
   <h1 class="text-center " >Servicios </h1>
   <v-row justify="center" >
-    <v-col cols="4" sm="3" md="3" lg="3" class="mx-5 mb-10">
+    <v-col  sm="12" md="4" lg="3" class="mx-5 mb-10">
       <v-card 
         elevation="3"
         outlined
@@ -27,7 +27,7 @@
       </v-card>
     </v-col>
 
-    <v-col cols="4" sm="3" md="3" lg="3" class="mx-5">
+    <v-col  sm="12" md="4" lg="3" class="mx-5">
       <v-card
         elevation="3"
         outlined
@@ -51,7 +51,7 @@
       </v-card>
     </v-col>
 
-    <v-col cols="4" sm="3" md="3" lg="3" class="mx-5">
+    <v-col sm="12" md="4" lg="3" class="mx-5">
       <v-card
         elevation="3"
         outlined
@@ -75,7 +75,7 @@
       </v-card>
     </v-col>
 
- <v-col cols="4" sm="3" md="3" lg="3" class="mx-5">
+ <v-col sm="1" md="4" lg="3" class="mx-5">
       <v-card
         elevation="3"
         outlined
@@ -100,7 +100,7 @@
     </v-col>
 
 
-     <v-col cols="4" sm="3" md="3" lg="3" class="mx-5">
+     <v-col sm="1" md="4" lg="3" class="mx-5">
       <v-card
         elevation="3"
         outlined
@@ -124,7 +124,7 @@
       </v-card>
     </v-col>
 
-     <v-col cols="4" sm="3" md="3" lg="3" class="mx-5">
+     <v-col sm="1" md="4" lg="3" class="mx-5">
       <v-card
         elevation="3"
         outlined

@@ -3,10 +3,12 @@
     <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
     <v-toolbar-title>
+        <div>
       <router-link to="/">
-        <v-img src="@/assets/logo0001.png" contain position="center" class="animate__animated animate__fadeInUp" />
+        <v-img id="logo" src="@/assets/logo0001.png" contain position="center" class="animate__animated animate__fadeInUp" />
         <h3>De pequeñas a grandes soluciones</h3>
       </router-link>
+        </div>
     </v-toolbar-title>
 
     <v-spacer />
@@ -50,3 +52,23 @@ export default {
   },
 };
 </script>
+
+
+<style>
+
+
+@media only screen and (max-width: 600px) {
+
+#social{
+
+    display: none;
+}
+
+#logo{
+
+  width: 90%;
+}
+
+}
+
+</style>
