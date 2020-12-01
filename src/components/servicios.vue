@@ -1,15 +1,16 @@
 <template>
 
   <v-row justify="center"
-  pt-5
+  
   >
  
     <v-col
-      cols="6"
+      cols="4"
       sm="3"
       md="3"
       lg="3"
-      pr-10
+     
+      
       
    
     >
@@ -26,9 +27,9 @@
 
 <v-card-text>
     
-      <p class="display-1 text--primary">
+      <h2 class="text--primary">
         Organización
-      </p>
+      </h2>
       
       <div class="text--primary">
         Organización y estructuración del flujo <br>de caja de la compañía.
@@ -49,7 +50,7 @@
 </v-col>
 
 <v-col
-      cols="6"
+      cols="4"
       sm="3"
       md="3"
       lg="3"
@@ -65,9 +66,9 @@
 
 <v-card-text>
      
-      <p class="display-1 text--primary">
+      <h2 class="text--primary">
         Análisis de costos
-      </p>
+      </h2>
       <p></p>
       <div class="text--primary">
         Análisis de costos de oportunidad y
@@ -87,7 +88,7 @@
 </v-col>
 
 <v-col
-      cols="6"
+      cols="4"
       sm="3"
       md="3"
       lg="3"
@@ -103,9 +104,9 @@
 
 <v-card-text>
      
-      <p class="display-1 text--primary">
+      <h2 class="text--primary">
         Elaboración de modelos 
-      </p>
+      </h2>
     
       <div class="text--primary">
       Elaboración de modelos económicos/ financieros que permitan que la compañía pueda decidir si afrontar o no un trabajo.
@@ -127,4 +128,13 @@
   </v-row>
 </template>
 
+<style>
+h2{
+
+  padding-bottom:15px;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+</style>
 
