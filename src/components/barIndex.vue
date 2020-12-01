@@ -37,7 +37,7 @@ import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
 import parallax from '@/components/parallax';
 import dialogChat from '@/components/dialogChat';
-import MenuBar from './menuBar.vue';
+import MenuBar from '@/components/menuBar';
 export default {
   name: 'barIndex',
 
