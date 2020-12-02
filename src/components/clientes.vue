@@ -1,46 +1,111 @@
 <template>
+  <v-container
+    fluid
+    class="my-8"
+    
+  >
   <v-sheet
     class="mx-auto"
-    elevation="8"
+    flat
     max-width="100%"
   >
-    <v-slide-group
-      v-model="model"
-      class="pa-4"
-      active-class="success"
-      show-arrows
-    >
+    <v-sheet
+        
+      >  <h1 class="text-center " >Clientes </h1>
+      
+      </v-sheet> 
+
+       <v-slide-group multiple show-arrows>
       <v-slide-item
-        v-for="n in 15"
+        v-for="n in 25"
         :key="n"
-        v-slot="{ active, toggle }"
+       
       >
-        <v-card
-          :color="active ? undefined : 'grey lighten-1'"
-          class="ma-4"
-          height="200"
-          width="100"
-          @click="toggle"
+      
+      <v-row>
+
+        <v-col
+      
         >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            <v-scale-transition>
-              <v-icon
-                v-if="active"
-                color="white"
-                size="48"
-                v-text="'mdi-close-circle-outline'"
-              ></v-icon>
-            </v-scale-transition>
-          </v-row>
+        <v-card 
+        flat 
+        :loading="loading">
+        <a
+          target="_blank"
+          href=""
+        > <img
+            src="@/assets/tm.jpeg"
+            alt="Todo Moto SRL"
+            class="clienteImg"
+          > </a>
         </v-card>
+
+
+        </v-col>
+
+          <v-col>
+        <v-card 
+        flat
+        :loading="loading">
+        <a
+          target="_blank"
+          href=""
+        > <img
+            src="@/assets/eq.jpeg"
+            alt="Todo Moto SRL"
+            class="clienteImg"
+          > </a>
+        </v-card>
+
+
+        </v-col>
+
+
+        <v-col>
+        <v-card 
+        flat
+        :loading="loading">
+        <a
+          target="_blank"
+          href=""
+        > <img
+            src="@/assets/rabonera.png"
+            alt="Todo Moto SRL"
+            class="clienteImg"
+          > </a>
+        </v-card>
+
+
+        </v-col>
+
+             <v-col>
+        <v-card 
+        flat
+        :loading="loading">
+        <a
+          target="_blank"
+          href=""
+        > <img
+            src="@/assets/illeppac.jpg"
+            alt="Todo Moto SRL"
+            class="clienteImg"
+          > </a>
+        </v-card>
+
+
+        </v-col>
+
+        </v-row>
+
       </v-slide-item>
+
+
     </v-slide-group>
   </v-sheet>
+  </v-container>
 </template>
+
+
 
 <script>
   export default {
@@ -64,7 +129,10 @@ section {
   }
 }
 
-h1,
+h1{
+  font-weight: 700;
+
+}
 h2 {
   font-weight: normal;
 }
@@ -89,13 +157,13 @@ a {
 }
 
 .clienteImg {
-  filter: grayscale(1);
-  height: 120px;
+
   margin: 0.8em 1.3em;
   transition: filter 0.5s ease-in-out;
+  max-height: 120px;
 
   &:hover {
-    filter: grayscale(0);
+    filter: grayscale(1);
   }
 
   @media (max-width: 600px) {

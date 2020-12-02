@@ -5,14 +5,10 @@
 
     <carrousel />
     <div class="divider"></div>
-    <servicios />
-    <v-divider></v-divider>
-    <v-divider></v-divider>
-    <clientes />
-    <v-divider></v-divider>
-    <v-divider></v-divider>
+    <servicios />  
     <parallax />
-
+    <div class="divider"></div>
+    <clientes />
     <div class="text-right">
       <dialogChat />
     </div>
