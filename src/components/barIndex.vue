@@ -8,11 +8,10 @@
     <servicios />
     <v-divider></v-divider>
     <v-divider></v-divider>
- 
+    <clientes />
     <v-divider></v-divider>
     <v-divider></v-divider>
     <parallax />
-    <clientes />
 
     <div class="text-right">
       <dialogChat />
@@ -44,7 +43,6 @@ import parallax from '@/components/parallax';
 import clientes from '@/components/clientes';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
-
 export default {
   name: 'barIndex',
 
