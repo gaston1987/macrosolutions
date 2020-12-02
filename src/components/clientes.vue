@@ -1,80 +1,80 @@
 <template>
-  <!-- CLIENTES -->
-  <section style="background-color:white;">
-    <v-row>
-      <v-col
-        cols="12"
-        sm="6"
-      >
-        <div class="text-xs-center">
-          <h1 class="text-center ">Clientes </h1>
-        </div>
-      </v-col>
-    </v-row>
+  <div id="clientes">
+    <h1 class="text-center ">Clientes </h1>
+    <!-- CLIENTES -->
+    <section style="background-color:white;">
+      <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+        >
 
-    <v-layout
-      class="px-4 pb-3"
-      wrap
-    >
-      <div class="text-xs-center mb-5">
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/tm.jpeg"
-            alt="Todo Moto SRL"
-            class="clienteImg"
-          > </a>
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/eq.jpeg"
-            id="equity"
-            alt="Equity Administración & Finanzas SA"
-            class="clienteImg"
-          ></a>
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/rabo.jpeg"
-            alt="La Rabonera"
-            class="clienteImg"
-          ></a>
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/rai.png"
-            alt="RAI Distribuciones S.A."
-            class="clienteImg"
-          ></a>
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/tr.jpeg"
-            alt="
+        </v-col>
+      </v-row>
+
+      <v-layout
+        class="px-4 pb-3"
+        wrap
+      >
+        <div class="text-xs-center mb-5">
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/tm.jpeg"
+              alt="Todo Moto SRL"
+              class="clienteImg"
+            > </a>
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/eq.jpeg"
+              id="equity"
+              alt="Equity Administración & Finanzas SA"
+              class="clienteImg"
+            ></a>
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/rabo.jpeg"
+              alt="La Rabonera"
+              class="clienteImg"
+            ></a>
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/rai.png"
+              alt="RAI Distribuciones S.A."
+              class="clienteImg"
+            ></a>
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/tr.jpeg"
+              alt="
             Meat
             Trading
             S.A."
-            class="clienteImg"
-          ></a>
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/ille.jpeg"
-            alt="Illeppac S.A."
-            class="clienteImg"
-          ></a>
+              class="clienteImg"
+            ></a>
+          <a
+            target="_blank"
+            href=""
+          > <img
+              src="@/assets/ille.jpeg"
+              alt="Illeppac S.A."
+              class="clienteImg"
+            ></a>
 
-      </div>
-    </v-layout>
+        </div>
+      </v-layout>
 
-  </section>
-
+    </section>
+  </div>
 </template>
 
 <script>
