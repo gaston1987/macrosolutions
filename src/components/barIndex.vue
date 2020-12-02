@@ -10,6 +10,7 @@
     <div class="divider"></div>
     <clientes />
     <div class="text-right">
+      <contacto />
       <dialogChat />
     </div>
 
@@ -37,6 +38,7 @@ import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
 import parallax from '@/components/parallax';
 import clientes from '@/components/clientes';
+import contacto from '@/components/contacto';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
 export default {
@@ -49,6 +51,7 @@ export default {
     servicios,
     parallax,
     clientes,
+    contacto,
     dialogChat,
     MenuBar,
   
