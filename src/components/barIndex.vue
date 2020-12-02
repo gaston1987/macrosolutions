@@ -8,7 +8,7 @@
     <servicios />
     <v-divider></v-divider>
     <v-divider></v-divider>
-    <clientes />
+ 
     <v-divider></v-divider>
     <v-divider></v-divider>
     <parallax />
@@ -44,7 +44,7 @@ import parallax from '@/components/parallax';
 import clientes from '@/components/clientes';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
-import clientes from '@/components/clientes';
+
 export default {
   name: 'barIndex',
 
@@ -57,7 +57,7 @@ export default {
     clientes,
     dialogChat,
     MenuBar,
-    clientes,
+  
   },
 
   methods: {
