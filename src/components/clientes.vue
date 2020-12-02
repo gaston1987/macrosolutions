@@ -115,14 +115,6 @@ a {
   color: #42b983;
 }
 
-#vineria {
-  max-height: 70px;
-
-  @media (max-width: 600px) {
-    max-height: 40px;
-  }
-}
-
 .titulo {
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
@@ -133,7 +125,7 @@ a {
 
 .clienteImg {
   filter: grayscale(1);
-  height: 80px;
+  height: 120px;
   margin: 0.8em 1.3em;
   transition: filter 0.5s ease-in-out;
 
