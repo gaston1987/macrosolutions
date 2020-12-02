@@ -1,16 +1,21 @@
 <template>
   <v-app id="inspire">
-    <bar/>
-     <menu-bar />
-  
-    <carrousel /> 
+    <bar />
+    <menu-bar />
+
+    <carrousel />
     <div class="divider"></div>
     <servicios />
+    <v-divider></v-divider>
+    <v-divider></v-divider>
+    <clientes />
+    <v-divider></v-divider>
+    <v-divider></v-divider>
     <parallax />
     <clientes />
 
     <div class="text-right">
-     <dialogChat />
+      <dialogChat />
     </div>
 
     <v-footer :padless="true">
@@ -39,11 +44,12 @@ import parallax from '@/components/parallax';
 import clientes from '@/components/clientes';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
+import clientes from '@/components/clientes';
 export default {
   name: 'barIndex',
 
   components: {
-    
+
     bar,
     carrousel,
     servicios,
@@ -51,7 +57,8 @@ export default {
     clientes,
     dialogChat,
     MenuBar,
-},
+    clientes,
+  },
 
   methods: {
     getImage () {
@@ -104,10 +111,9 @@ export default {
   text-transform: none;
   text-decoration-style: none;
 }
-.divider{
-   padding-top: 20px;
-   padding-bottom: 15px;
-
+.divider {
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 </style>
 
