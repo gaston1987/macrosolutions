@@ -13,7 +13,6 @@
     <v-divider></v-divider>
     <v-divider></v-divider>
     <parallax />
-    <clientes />
 
     <div class="text-right">
       <dialogChat />
