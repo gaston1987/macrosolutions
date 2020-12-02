@@ -3,16 +3,17 @@
             v-model="dialog" 
             width="400">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
+          <v-btn 
             v-bind="attrs"
             v-on="on"
             class="mx-2"
             fab
-            dark
+            elevation="10"
             large
             color="green"
+            id="botw"
           >
-            <v-icon dark>
+            <v-icon color="white">
               mdi-whatsapp
             </v-icon>
           </v-btn>
@@ -70,7 +71,12 @@ return{
 
   display: none !important;
 }
-
+#botw {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index:10;
+}
 
 </style>
 
