@@ -13,6 +13,7 @@
     <v-divider></v-divider>
     <v-divider></v-divider>
     <parallax />
+    <clientes />
 
     <div class="text-right">
       <dialogChat />
@@ -41,9 +42,9 @@ import bar from '@/components/bar';
 import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
 import parallax from '@/components/parallax';
+import clientes from '@/components/clientes';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
-import clientes from '@/components/clientes';
 export default {
   name: 'barIndex',
 
@@ -53,9 +54,9 @@ export default {
     carrousel,
     servicios,
     parallax,
+    clientes,
     dialogChat,
     MenuBar,
-    clientes,
   },
 
   methods: {
