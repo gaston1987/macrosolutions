@@ -1,20 +1,16 @@
 <template>
   <!-- CLIENTES -->
-  <section style="background-color: #f7f7f7;">
-    <v-layout
-      column
-      wrap
-      align-center
-    >
-      <v-flex
-        xs12
-        class="my-3"
+  <section style="background-color:white;">
+    <v-row>
+      <v-col
+        cols="12"
+        sm="6"
       >
         <div class="text-xs-center">
           <h1 class="text-center ">Clientes </h1>
         </div>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
 
     <v-layout
       class="px-4 pb-3"
@@ -99,7 +95,6 @@ section {
   }
 }
 
-h1,
 h2 {
   font-weight: normal;
 }
