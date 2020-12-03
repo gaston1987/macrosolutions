@@ -9,6 +9,7 @@
     progress
     progress-color="secondary"
     class="mb-2 elevation-2"
+    :show-arrows="false"
   >
     <v-carousel-item
       v-for="(item,i) in items"
