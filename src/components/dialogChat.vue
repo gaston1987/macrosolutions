@@ -1,9 +1,11 @@
     <template>
-  <v-dialog
-    v-model="dialog"
-    width="400"
+  <v-menu
+    top
+    origin="center center"
+    transition="scale-transition"
   >
     <template v-slot:activator="{ on, attrs }">
+
       <v-btn
         v-bind="attrs"
         v-on="on"
@@ -25,14 +27,17 @@
       max-width="auto"
       height="auto"
       flat
-      color="primary"
+      color="#2b303e"
     >
       <div class="text-right">
         <v-btn
-          color="green"
-          fab
+          color="light-green accent-4"
+          icon
+          text
+          tile
           small
-          dark
+          ripple
+          class="embed-button-center mr-3"
           @click="dialog = false"
         >
           <v-icon>
@@ -50,7 +55,8 @@
       </iframe>
 
     </v-card>
-  </v-dialog>
+
+  </v-menu>
 </template>
 
 <script>

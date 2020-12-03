@@ -1,10 +1,9 @@
 <template>
-<v-app>
-  <v-main>
-    <index />
-    
-  </v-main>
-</v-app>
+  <v-app :dark="$vuetify.theme.dark">
+    <v-main>
+      <index />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -18,7 +17,7 @@ export default {
 
   components: {
     index,
-   
+
   },
 
   data: () => ({

@@ -349,6 +349,7 @@
 <script>
 import axios from 'axios';
 export default {
+  name: 'simu_cred',
   data () {
 
     return {

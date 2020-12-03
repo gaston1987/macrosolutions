@@ -1,15 +1,7 @@
 <template>
-  <main>
- 
-      <barIndex/>
-  
-   
-     
-      
 
+  <barIndex />
 
- 
-  </main>
 </template>
 
 <script>
@@ -25,13 +17,13 @@ export default {
   components: {
 
     barIndex,
-    
- 
+
+
 
   },
 
   data: () => ({
-  
+
   }),
 
 }
