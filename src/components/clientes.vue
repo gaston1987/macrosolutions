@@ -1,4 +1,5 @@
 <template>
+<div id="clientes">
   <v-container
     fluid
     class="my-8"
@@ -103,6 +104,7 @@
     </v-slide-group>
   </v-sheet>
   </v-container>
+</div>
 </template>
 
 

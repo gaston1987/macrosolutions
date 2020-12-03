@@ -1,4 +1,5 @@
 <template>
+<div id="contacto">
 <v-content
 >
 <row
@@ -154,6 +155,7 @@
     </v-col>
 </row>
 </v-content>
+</div>
 </template>
 
 
