@@ -30,20 +30,23 @@
       color="#2b303e"
     >
       <div class="text-right">
-        <v-btn
-          color="light-green accent-4"
-          icon
-          text
-          tile
-          small
-          ripple
-          class="embed-button-center mr-3"
-          @click="dialog = false"
-        >
-          <v-icon>
-            mdi-close-circle
-          </v-icon>
-        </v-btn>
+        <v-fab-transition>
+          <v-btn
+            color="light-green accent-4"
+            icon
+            text
+            tile
+            small
+            ripple
+            class="embed-button-center mr-3"
+            @click="dialog = false"
+          >
+            <v-icon>
+              mdi-close-circle
+            </v-icon>
+
+          </v-btn>
+        </v-fab-transition>
       </div>
       <iframe
         allow="microphone;"
