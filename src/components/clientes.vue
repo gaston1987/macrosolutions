@@ -1,120 +1,104 @@
 <template>
-<div id="clientes">
-  <v-container
-    fluid
-    class="my-8"
-    
-  >
-  <v-sheet
-    class="mx-auto"
-    flat
-    max-width="100%"
-  >
-    <v-sheet
-        
-      >  <h1 class="text-center " >Clientes </h1>
-      
-      </v-sheet> 
-
-       <v-slide-group multiple show-arrows>
-      <v-slide-item
-        v-for="n in 25"
-        :key="n"
-       
+  <div id="clientes">
+    <v-container
+      fluid
+      class="my-8"
+    >
+      <v-sheet
+        class="mx-auto"
+        flat
+        max-width="100%"
       >
-      
-      <v-row>
+        <v-sheet>
+          <h1 class="text-center ">Clientes </h1>
 
-        <v-col
-      
+        </v-sheet>
+
+        <v-slide-group
+          multiple
+          show-arrows
         >
-        <v-card 
-        flat 
-        :loading="loading">
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/tm.jpeg"
-            alt="Todo Moto SRL"
-            class="clienteImg"
-          > </a>
-        </v-card>
+          <v-slide-item
+            v-for="n in 25"
+            :key="n"
+          >
 
+            <v-row>
 
-        </v-col>
+              <v-col>
+                <v-card flat>
+                  <a
+                    target="_blank"
+                    href=""
+                  > <img
+                      src="@/assets/tm.jpeg"
+                      alt="Todo Moto SRL"
+                      class="clienteImg"
+                    > </a>
+                </v-card>
 
-          <v-col>
-        <v-card 
-        flat
-        :loading="loading">
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/eq.jpeg"
-            alt="Todo Moto SRL"
-            class="clienteImg"
-          > </a>
-        </v-card>
+              </v-col>
 
+              <v-col>
+                <v-card flat>
+                  <a
+                    target="_blank"
+                    href=""
+                  > <img
+                      src="@/assets/eq.jpeg"
+                      alt="Todo Moto SRL"
+                      class="clienteImg"
+                    > </a>
+                </v-card>
 
-        </v-col>
+              </v-col>
 
+              <v-col>
+                <v-card flat>
+                  <a
+                    target="_blank"
+                    href=""
+                  > <img
+                      src="@/assets/rabonera.png"
+                      alt="Todo Moto SRL"
+                      class="clienteImg"
+                    > </a>
+                </v-card>
 
-        <v-col>
-        <v-card 
-        flat
-        :loading="loading">
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/rabonera.png"
-            alt="Todo Moto SRL"
-            class="clienteImg"
-          > </a>
-        </v-card>
+              </v-col>
 
+              <v-col>
+                <v-card flat>
+                  <a
+                    target="_blank"
+                    href=""
+                  > <img
+                      src="@/assets/illeppac.jpg"
+                      alt="Todo Moto SRL"
+                      class="clienteImg"
+                    > </a>
+                </v-card>
 
-        </v-col>
+              </v-col>
 
-             <v-col>
-        <v-card 
-        flat
-        :loading="loading">
-        <a
-          target="_blank"
-          href=""
-        > <img
-            src="@/assets/illeppac.jpg"
-            alt="Todo Moto SRL"
-            class="clienteImg"
-          > </a>
-        </v-card>
+            </v-row>
 
+          </v-slide-item>
 
-        </v-col>
-
-        </v-row>
-
-      </v-slide-item>
-
-
-    </v-slide-group>
-  </v-sheet>
-  </v-container>
-</div>
+        </v-slide-group>
+      </v-sheet>
+    </v-container>
+  </div>
 </template>
 
 
 
 <script>
-  export default {
-    data: () => ({
-      model: null,
-    }),
-  }
+export default {
+  data: () => ({
+    model: null,
+  }),
+}
 </script>
 
 
@@ -131,9 +115,8 @@ section {
   }
 }
 
-h1{
+h1 {
   font-weight: 700;
-
 }
 h2 {
   font-weight: normal;
@@ -159,7 +142,6 @@ a {
 }
 
 .clienteImg {
-
   margin: 0.8em 1.3em;
   transition: filter 0.5s ease-in-out;
   max-height: 120px;

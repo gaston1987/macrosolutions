@@ -5,7 +5,7 @@
 
     <carrousel />
     <div class="divider"></div>
-    <servicios />  
+    <servicios />
     <parallax />
     <div class="divider"></div>
     <clientes />
@@ -13,6 +13,9 @@
       <contacto />
       <dialogChat />
     </div>
+
+    <simucred>
+    </simucred>
 
     <v-footer :padless="true">
       <v-card
@@ -41,6 +44,7 @@ import clientes from '@/components/clientes';
 import contacto from '@/components/contacto';
 import dialogChat from '@/components/dialogChat';
 import MenuBar from '@/components/menuBar';
+import simucred from './simu_cred.vue';
 export default {
   name: 'barIndex',
 
@@ -54,7 +58,8 @@ export default {
     contacto,
     dialogChat,
     MenuBar,
-  
+    simucred,
+
   },
 
   methods: {

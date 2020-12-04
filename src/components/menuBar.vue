@@ -5,7 +5,6 @@
     background-color="blue"
     min-height="65px"
     grow
-    v-model="drawer"
   >
     <v-btn class="botones">
       <a
