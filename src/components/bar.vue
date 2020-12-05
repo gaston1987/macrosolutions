@@ -27,18 +27,84 @@
           light
         >
           <v-tab
-            v-for="(name, i) in items"
-            :key="i"
-            :to="{ name }"
-            :exact="name === 'Servicios'"
+        
+          
             :ripple="false"
             active-class="text--primary"
             class="font-weight-bold"
             min-width="96"
             text
-          >
-            {{ name }}
+          > <a
+        href="#servicio"
+        v-smooth-scroll
+      >
+           Servicios </a>
           </v-tab>
+
+
+              <v-tab
+        
+            
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          > <a
+        href="#"
+        v-smooth-scroll
+      >
+           MacroCreditos</a>
+          </v-tab>
+
+
+                 <v-tab
+        
+            
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          ><a
+        href="#clientes"
+        v-smooth-scroll
+      >
+           Clientes</a>
+          </v-tab>
+
+           <v-tab
+        
+            
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          ><a
+        href="#"
+        v-smooth-scroll
+      >
+           At. al Cliente</a>
+          </v-tab>
+
+
+           <v-tab
+        
+            
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          ><a
+        href="#contacto"
+        v-smooth-scroll
+      >
+           Contacto</a>
+          </v-tab>
+
+
         </v-tabs>
       </div>
   
@@ -121,7 +187,10 @@ export default {
 
 
 <style>
+#home-app-bar a{
 
+  font-size: 15px;
+}
 
 
 @media only screen and (max-width: 600px) {
