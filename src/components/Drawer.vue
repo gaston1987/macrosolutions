@@ -5,7 +5,7 @@
     fixed
     height="auto"
     overlay-color="secondary"
-    overlay-opacity=".8"
+    overlay-opacity=".7"
     temporary
     v-bind="$attrs"
     v-on="$listeners"
@@ -15,6 +15,7 @@
       shaped
     >
       <v-list-item
+        class="boton"
         v-for="name in items"
         :key="name"
         :to="{ name }"
@@ -41,3 +42,11 @@
     },
   }
 </script>
+
+<style scoped>
+.boton{
+   font-size: 30px im !important;
+  font-weight: bold;
+  text-transform:uppercase !important;
+}
+</style>

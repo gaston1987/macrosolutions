@@ -117,6 +117,7 @@
         fab
         icon
         small
+        
         position="right"
       >
         <v-icon>{{ social.icon }}</v-icon>
@@ -129,6 +130,8 @@
         @click="drawer = !drawer"
         dark
         color="blue accent-4"
+        medium
+        elevation="5"
 
       />
   </v-app-bar>
