@@ -155,4 +155,15 @@ a {
     margin: 0.8em 1.3em;
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+
+#clientes img{
+
+min-height:80px;
+
+}
+
+}
 </style>
