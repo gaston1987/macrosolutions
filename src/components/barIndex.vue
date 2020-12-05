@@ -106,6 +106,7 @@ export default {
   padding: 5px;
   color: dimgray;
   text-align: center;
+   text-transform:none !important;
 }
 
 #inspire a {

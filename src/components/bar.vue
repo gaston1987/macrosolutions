@@ -189,8 +189,23 @@ export default {
 <style>
 #home-app-bar a{
 
-  font-size: 15px;
+  font-size: 14px;
+  text-transform:uppercase !important;
 }
+
+#home-app-bar h3 {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+
+  padding: 5px;
+  color: dimgray;
+  text-align: center;
+   text-transform:none !important;
+}
+
 
 
 @media only screen and (max-width: 600px) {
