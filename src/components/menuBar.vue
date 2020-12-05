@@ -21,8 +21,7 @@
     </v-btn>
 
     <v-btn class="botones">
-      <a
-        href="#clientes"
+      <a href="#clientes"
         v-smooth-scroll
       >CLIENTES</a>
     </v-btn>

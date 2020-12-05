@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <bar />
-    <menu-bar />
+   <!-- <menu-bar /> -->
 
     <carrousel />
     <div class="divider"></div>
@@ -118,6 +118,9 @@ export default {
   padding-bottom: 15px;
 }
 </style>
+
+
+
 
 
 

@@ -1,13 +1,21 @@
 <template>
   <div id="contacto">
     <v-content>
-      <v-row>
+      <v-row width="90%">
+            <v-col
+          xs="12"
+          sm="12"
+          md="1"
+  
+        
+        >
+  </v-col>
 
         <v-col
           xs="12"
           sm="12"
-          md="6"
-          lg="6"
+          md="5"
+         
           class="float-left"
           flat
           pr-5
@@ -31,12 +39,22 @@
           </v-card>
 
         </v-col>
+       
+         <v-col
+          xs="12"
+          sm="12"
+          md="1"
+  
+        
+        >
+  </v-col>
+
 
         <v-col
           xs="12"
           sm="12"
-          md="6"
-          lg="6"
+          md="5"
+  
           class="float-right"
         >
           <v-card>
@@ -93,7 +111,7 @@
                 color="deep-purple"
                 label="Consulta"
                 rows="1"
-                height="10em"
+                height="8em"
               ></v-textarea>
 
             </v-form>
@@ -177,3 +195,9 @@ export default {
   }),
 }
 </script>
+
+<style scoped>
+#contacto{
+  width: 95% !important;
+}
+</style>

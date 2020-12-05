@@ -1,5 +1,12 @@
   <template>
-  <v-app-bar app color="white" dark height="75px">
+  <div>
+  <v-app-bar 
+  app 
+  color="white" 
+  dark height="80px"
+  id="home-app-bar"
+  elevation="5"
+  >
     <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
     <v-toolbar-title>
@@ -12,6 +19,29 @@
     </v-toolbar-title>
 
     <v-spacer />
+
+    <div>
+        <v-tabs
+          class="hidden-sm-and-down"
+          optional
+          light
+        >
+          <v-tab
+            v-for="(name, i) in items"
+            :key="i"
+            :to="{ name }"
+            :exact="name === 'Servicios'"
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          >
+            {{ name }}
+          </v-tab>
+        </v-tabs>
+      </div>
+  
 
     <v-card-actions id="social" class="white justify-center animate__animated animate__fadeInRight">
       <v-btn
@@ -26,13 +56,40 @@
         <v-icon>{{ social.icon }}</v-icon>
       </v-btn>
     </v-card-actions>
+
+
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click="drawer = !drawer"
+        dark
+        color="blue accent-4"
+
+      />
   </v-app-bar>
+
+
+     <home-drawer
+      v-model="drawer"
+      :items="items"
+    />
+  </div>
 </template>
 
 
     <script>
 export default {
+
+ name: 'HomeAppBar',
+
+    components: {
+      HomeDrawer: () => import('./Drawer'),
+    },
+
+
+  
   data() {
+
+    
     return {
       socials: [
         {
@@ -48,6 +105,15 @@ export default {
           color: "red lighten-3",
         },
       ],
+      drawer: null,
+
+        items: [
+        'Servicios',
+        'Macrocreditos',
+        'Clientes',
+        'At. al cliente ',
+        'Contacto',
+      ],
     };
   },
 };
@@ -55,6 +121,7 @@ export default {
 
 
 <style>
+
 
 
 @media only screen and (max-width: 600px) {
@@ -71,4 +138,16 @@ export default {
 
 }
 
+</style>
+
+
+<style lang="sass">
+  #home-app-bar
+    .v-tabs-slider
+      max-width: 24px
+      margin: 0 auto
+
+    .v-tab
+      &::before
+        display: none
 </style>
