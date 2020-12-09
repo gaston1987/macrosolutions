@@ -43,7 +43,7 @@ import parallax from '@/components/parallax';
 import clientes from '@/components/clientes';
 import contacto from '@/components/contacto';
 import dialogChat from '@/components/dialogChat';
-import MenuBar from '@/components/menuBar';
+
 import simucred from './simu_cred.vue';
 export default {
   name: 'barIndex',
@@ -57,7 +57,6 @@ export default {
     clientes,
     contacto,
     dialogChat,
-    MenuBar,
     simucred,
 
   },
