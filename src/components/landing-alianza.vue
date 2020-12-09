@@ -1,0 +1,40 @@
+<template>
+
+  <div id="landing-alianza">
+    <v-row>
+      <v-col class="col-md-6 col-xs-12">
+        <v-card>
+
+          <v-card-text class="display-1 text--primary text-center">
+            <h1 style="color:#263547;font-size:30px;"><strong>PRÉSTAMOS PERSONALES</strong></h1><br>
+            <h1 style="color:#263547;font-size:50px;"><strong>EN EFECTIVO</strong></h1>
+            <p class="text">
+              ¡Prestamos personales, hasta $100.000 por débito automático, Presentando tus últimos 2 recibos de sueldos y el detalle de los movimientos bancarios de los últimos dos meses!
+            </p>
+
+          </v-card-text>
+        </v-card>
+
+      </v-col>
+      <v-col class="col-md-6 col-xs-12">
+        <simucred>
+        </simucred>
+      </v-col>
+    </v-row>
+  </div>
+
+</template>
+<script>
+import simucred from './simu_cred.vue';
+export default {
+  name: 'landingAlianza',
+
+  components: {
+    simucred,
+
+  },
+}
+</script>
+
+
+

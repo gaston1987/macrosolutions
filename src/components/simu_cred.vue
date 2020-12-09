@@ -1,47 +1,41 @@
 <template>
-  <v-main fluid>
+  <v-main>
 
-    <v-row>
-      <v-col
-        cols="12"
-        md="4"
+    <v-card
+      elevation="24"
+      class="mx-auto"
+      v-if="modo=='calculador'"
+      outlined
+      rounded
+      dark
+      colorxxx="light-blue darken-3"
+      imgxx="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
+      img="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
+    >
+
+      <v-card-title>
+        <p class="font-weight-black">
+          ¡Sacá tu crédito 100% online!
+        </p>
+      </v-card-title>
+
+      <v-divider></v-divider>
+
+      <v-slider
+        v-model="ex1.val"
+        @change="calCuo"
+        :thumb-color="ex1.color"
+        thumb-label="always"
+        :label="ex1.label"
+        track-color="green"
+        height="150"
+        thumb-size="50"
+        step="1000"
+        max="120000"
+        min="0"
+        ticks
       >
-
-        <v-card
-          elevation="24"
-          class="mx-auto"
-          v-if="modo=='calculador'"
-          outlined
-          rounded
-          dark
-          colorxxx="light-blue darken-3"
-          imgxx="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
-          img="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
-        >
-
-          <v-card-title>
-            <p class="font-weight-black">
-              ¡Sacá tu crédito 100% online!
-            </p>
-          </v-card-title>
-
-          <v-divider></v-divider>
-
-          <v-slider
-            v-model="ex1.val"
-            @change="calCuo"
-            :thumb-color="ex1.color"
-            thumb-label="always"
-            :label="ex1.label"
-            track-color="green"
-            height="150"
-            thumb-size="50"
-            step="1000"
-            max="120000"
-            min="0"
-            ticks
-          >
-            <!-- 
+        <!-- 
             <template v-slot:append>
               <v-text-field
                 v-model="ex1.val"
@@ -54,24 +48,24 @@
             </template>
           -->
 
-          </v-slider>
+      </v-slider>
 
-          <v-slider
-            v-model="ex2.val"
-            :thumb-color="ex1.color"
-            thumb-label="always"
-            @change="calCuo"
-            :label="ex2.label"
-            track-color="green"
-            height="50"
-            thumb-size="50"
-            :tick-labels="cuotasLabel"
-            step="3"
-            max="24"
-            min="3"
-            ticks
-          >
-            <!-- 
+      <v-slider
+        v-model="ex2.val"
+        :thumb-color="ex1.color"
+        thumb-label="always"
+        @change="calCuo"
+        :label="ex2.label"
+        track-color="green"
+        height="50"
+        thumb-size="50"
+        :tick-labels="cuotasLabel"
+        step="3"
+        max="24"
+        min="3"
+        ticks
+      >
+        <!-- 
             <template v-slot:append>
               <v-text-field
                 v-model="ex2.val"
@@ -84,8 +78,8 @@
             </template>
             -->
 
-          </v-slider>
-          <!--  
+      </v-slider>
+      <!--  
           <p
             v-if="impcuo!=0"
             class="font-weight-black"
@@ -101,248 +95,245 @@
             :items="items2"
           ></v-select>        
           -->
-          <div class="d-flex">
-            <p
-              v-if="impcuo!=0"
-              class="font-weight-black"
-            >Valor de la cuota: ${{ Intl.NumberFormat("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(impcuo)}}(*)</p>
-            <v-spacer>
-            </v-spacer>
-            <v-btn
-              :disabled="impcuo==0"
-              color="success"
-              class="mr-4"
-              @click="solicitar"
-              rounded
-            >
-              Solicitar
-            </v-btn>
-          </div>
-
-          <p
-            v-if="impcuo!=0"
-            style="font-size: 10px;"
-          >
-            *Cuota aproximada, Plazo de validez de simulación 15 días, Cartera de consumo, Sujeto a verificación comercial y crediticia del departamento de créditos, Tasa fija en pesos, Sistema de amortización francés. Perfil A (comportamiento en pagos “Excelente”) TEA: 82,44%. Perfil B (comportamiento en pagos “Muy Bueno”) TEA: 116,20%. Perfil C (comportamiento en pagos “Bueno”) TEA: 146,98%. CFT min: 99,83%. CFT max: 214,06%. El costo financiero total nominal anual incluye capital, intereses, comisión de originación e IVA. Los impuestos nacionales y provinciales estarán a cargo del cliente.
-
-          </p>
-
-        </v-card>
-
-        <v-card
-          elevation="24"
-          class="mx-auto"
-          v-if="modo=='datero'"
-          outlined
+      <div class="d-flex">
+        <p
+          v-if="impcuo!=0"
+          class="font-weight-black"
+        >Valor de la cuota: ${{ Intl.NumberFormat("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(impcuo)}}(*)</p>
+        <v-spacer>
+        </v-spacer>
+        <v-btn
+          :disabled="impcuo==0"
+          color="success"
+          class="mr-4"
+          @click="solicitar"
           rounded
-          dark
-          color="light-blue darken-3"
-          img="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
-          imgyy="https://thenetnow.com/wp-content/uploads/2017/01/homepage-internet.png"
-          imgxx="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
         >
-          <v-card-title class="py-2">
-            <p class="font-weight-black">
-              Ingresa tus datos
-            </p>
+          Solicitar
+        </v-btn>
+      </div>
+
+      <p
+        v-if="impcuo!=0"
+        style="font-size: 10px;"
+      >
+        *Cuota aproximada, Plazo de validez de simulación 15 días, Cartera de consumo, Sujeto a verificación comercial y crediticia del departamento de créditos, Tasa fija en pesos, Sistema de amortización francés. Perfil A (comportamiento en pagos “Excelente”) TEA: 82,44%. Perfil B (comportamiento en pagos “Muy Bueno”) TEA: 116,20%. Perfil C (comportamiento en pagos “Bueno”) TEA: 146,98%. CFT min: 99,83%. CFT max: 214,06%. El costo financiero total nominal anual incluye capital, intereses, comisión de originación e IVA. Los impuestos nacionales y provinciales estarán a cargo del cliente.
+
+      </p>
+
+    </v-card>
+
+    <v-card
+      elevation="24"
+      class="mx-auto"
+      v-if="modo=='datero'"
+      outlined
+      rounded
+      dark
+      color="light-blue darken-3"
+      img="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
+      imgyy="https://thenetnow.com/wp-content/uploads/2017/01/homepage-internet.png"
+      imgxx="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
+    >
+      <v-card-title class="py-2">
+        <p class="font-weight-black">
+          Ingresa tus datos
+        </p>
+      </v-card-title>
+
+      <v-divider></v-divider>
+
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+      >
+
+        <v-text-field
+          v-model="form['dni']"
+          class="py-5"
+          dense
+          :counter="8"
+          type="number"
+          label="Nro.DNI."
+          clearable
+          filled
+          required
+          rounded
+          outlined
+        ></v-text-field>
+
+        <v-text-field
+          v-model="form['name']"
+          dense
+          :rules="nameRules"
+          label="Apellido y Nombre"
+          clearable
+          filled
+          required
+          rounded
+          outlined
+        ></v-text-field>
+
+        <v-radio-group
+          v-model="form['sexo']"
+          row
+          required
+        >
+          <template v-slot:label>
+            <p style="font-size: 15px;"> <strong>Genero:</strong></p>
+          </template>
+          <v-radio
+            label="Masculino"
+            value="M"
+          ></v-radio>
+          <v-radio
+            label="Femenino"
+            value="F"
+          ></v-radio>
+          <v-radio
+            label="Otro"
+            value="O"
+          ></v-radio>
+        </v-radio-group>
+
+        <v-row>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-text-field
+              v-model="form['tel_area']"
+              label="Cod.Area"
+              type="number"
+              dense
+              prefix="+54 - 0"
+              clearable
+              required
+              rounded
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <v-text-field
+              v-model="form['tel_nro']"
+              type="number"
+              dense
+              label="Nro.Celular"
+              prefix="15"
+              clearable
+              required
+              rounded
+              outlined
+            ></v-text-field>
+          </v-col>
+        </v-row>
+
+        <v-text-field
+          v-model="form['email']"
+          dense
+          :rules="emailRules"
+          label="E-mail"
+          clearable
+          filled
+          required
+          rounded
+          outlined
+        ></v-text-field>
+
+        <v-text-field
+          v-model="form['ingNeto']"
+          dense
+          type="number"
+          prepend-inner-icon="mdi-currency-usd"
+          label="Ingreso Mensual Neto"
+          required
+          clearable
+          filled
+          rounded
+          outlined
+        ></v-text-field>
+
+        <v-checkbox
+          v-model="checkbox"
+          :rules="[v => !!v || 'Debes aceptar continuar!']"
+          color="green"
+        >
+          <template v-slot:label>
+            <div @click.stop="">
+              Acepta los
+              <a
+                href="#"
+                style="color:white"
+                @click.prevent="terms = true"
+              >Términos y Condiciones?</a>
+            </div>
+          </template>
+        </v-checkbox>
+
+        <v-btn
+          :disabled="!valid"
+          small
+          color="success"
+          class="mr-4"
+          @click="submitForm"
+          rounded
+        >
+          Solicitar Ya!
+        </v-btn>
+
+        <v-btn
+          color="error"
+          small
+          class="mr-4"
+          @click="reset"
+          rounded
+        >
+          Cancelar
+        </v-btn>
+
+        <v-btn
+          color="primary"
+          small
+          class="mr-4"
+          @click="modo='calculador'"
+          rounded
+        >
+          Regresa
+        </v-btn>
+
+      </v-form>
+      <v-dialog
+        v-model="terms"
+        width="70%"
+      >
+        <v-card>
+          <v-card-title class="title">
+            Términos y Condiciones
           </v-card-title>
-
-          <v-divider></v-divider>
-
-          <v-form
-            ref="form"
-            v-model="valid"
-            lazy-validation
+          <v-card-text
+            v-for="n in 5"
+            :key="n"
           >
-
-            <v-text-field
-              v-model="form['dni']"
-              class="py-5"
-              dense
-              :counter="8"
-              type="number"
-              label="Nro.DNI."
-              clearable
-              filled
-              required
-              rounded
-              outlined
-            ></v-text-field>
-
-            <v-text-field
-              v-model="form['name']"
-              dense
-              :rules="nameRules"
-              label="Apellido y Nombre"
-              clearable
-              filled
-              required
-              rounded
-              outlined
-            ></v-text-field>
-
-            <v-radio-group
-              v-model="form['sexo']"
-              row
-              required
-            >
-              <template v-slot:label>
-                <p style="font-size: 15px;"> <strong>Sexo:</strong></p>
-              </template>
-              <v-radio
-                label="Masculino"
-                value="M"
-              ></v-radio>
-              <v-radio
-                label="Femenino"
-                value="F"
-              ></v-radio>
-              <v-radio
-                label="Otro"
-                value="O"
-              ></v-radio>
-            </v-radio-group>
-
-            <v-row>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-text-field
-                  v-model="form['tel_area']"
-                  label="Cod.Area"
-                  type="number"
-                  dense
-                  prefix="+54 - 0"
-                  clearable
-                  required
-                  rounded
-                  outlined
-                ></v-text-field>
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-text-field
-                  v-model="form['tel_nro']"
-                  type="number"
-                  dense
-                  label="Nro.Celular"
-                  prefix="15"
-                  clearable
-                  required
-                  rounded
-                  outlined
-                ></v-text-field>
-              </v-col>
-            </v-row>
-
-            <v-text-field
-              v-model="form['email']"
-              dense
-              :rules="emailRules"
-              label="E-mail"
-              clearable
-              filled
-              required
-              rounded
-              outlined
-            ></v-text-field>
-
-            <v-text-field
-              v-model="form['ingNeto']"
-              dense
-              type="number"
-              prepend-inner-icon="mdi-currency-usd"
-              label="Ingreso Mensual Neto"
-              required
-              clearable
-              filled
-              rounded
-              outlined
-            ></v-text-field>
-
-            <v-checkbox
-              v-model="checkbox"
-              :rules="[v => !!v || 'Debes aceptar continuar!']"
-              color="green"
-            >
-              <template v-slot:label>
-                <div @click.stop="">
-                  Acepta los
-                  <a
-                    href="#"
-                    style="color:white"
-                    @click.prevent="terms = true"
-                  >Términos y Condiciones?</a>
-                </div>
-              </template>
-            </v-checkbox>
-
+            {{ content }}
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
             <v-btn
-              :disabled="!valid"
-              small
-              color="success"
-              class="mr-4"
-              @click="submitForm"
-              rounded
+              text
+              color="purple"
+              @click="terms = false"
             >
-              Solicitar Ya!
+              Ok
             </v-btn>
-
-            <v-btn
-              color="error"
-              small
-              class="mr-4"
-              @click="reset"
-              rounded
-            >
-              Cancelar
-            </v-btn>
-
-            <v-btn
-              color="primary"
-              small
-              class="mr-4"
-              @click="modo='calculador'"
-              rounded
-            >
-              Regresa
-            </v-btn>
-
-          </v-form>
-          <v-dialog
-            v-model="terms"
-            width="70%"
-          >
-            <v-card>
-              <v-card-title class="title">
-                Términos y Condiciones
-              </v-card-title>
-              <v-card-text
-                v-for="n in 5"
-                :key="n"
-              >
-                {{ content }}
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn
-                  text
-                  color="purple"
-                  @click="terms = false"
-                >
-                  Ok
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-
+          </v-card-actions>
         </v-card>
+      </v-dialog>
 
-      </v-col>
-    </v-row>
+    </v-card>
 
   </v-main>
 </template>

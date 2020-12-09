@@ -15,13 +15,14 @@
 
     <v-btn class="botones">
       <a
-        href="#"
+        href="landingAlianza"
         v-smooth-scroll
       >MACROCREDITOS</a>
     </v-btn>
 
     <v-btn class="botones">
-      <a href="#clientes"
+      <a
+        href="#clientes"
         v-smooth-scroll
       >CLIENTES</a>
     </v-btn>
@@ -54,7 +55,7 @@ export default {
     onSimu () {
       // eslint-disable-next-line no-console
       console.log(['onSimu)'])
-      this.$router.push({ name: "simu_cred" })
+      this.$router.push({ name: "landingAlianza" })
         .catch(() => { })
     },
   }

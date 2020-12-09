@@ -1,21 +1,18 @@
 <template>
   <div id="contacto">
-    <v-content>
+    <v-main>
       <v-row width="90%">
-            <v-col
+        <v-col
           xs="12"
           sm="12"
           md="1"
-  
-        
         >
-  </v-col>
+        </v-col>
 
         <v-col
           xs="12"
           sm="12"
           md="5"
-         
           class="float-left"
           flat
           pr-5
@@ -39,22 +36,18 @@
           </v-card>
 
         </v-col>
-       
-         <v-col
+
+        <v-col
           xs="12"
           sm="12"
           md="1"
-  
-        
         >
-  </v-col>
-
+        </v-col>
 
         <v-col
           xs="12"
           sm="12"
           md="5"
-  
           class="float-right"
         >
           <v-card>
@@ -169,7 +162,7 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-content>
+    </v-main>
   </div>
 </template>
 
@@ -197,7 +190,7 @@ export default {
 </script>
 
 <style scoped>
-#contacto{
+#contacto {
   width: 95% !important;
 }
 </style>

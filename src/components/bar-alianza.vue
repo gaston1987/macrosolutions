@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div>
     <v-app-bar
       app
@@ -20,7 +20,7 @@
               position="center"
               class="animate__animated animate__fadeInUp"
             />
-            <h3>De pequeñas a grandes soluciones</h3>
+            <h3>Prestamos personales</h3>
           </router-link>
         </div>
       </v-toolbar-title>
@@ -40,10 +40,38 @@
             min-width="96"
             text
           > <a
-              href="#servicio"
+              href="#landing-alianza"
               v-smooth-scroll
             >
-              Servicios </a>
+              Simulador de Creditos </a>
+          </v-tab>
+
+          <v-tab
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          >
+            <a
+              href="#cns-cred"
+              v-smooth-scroll
+            >
+              Consulte su Credito</a>
+          </v-tab>
+
+          <v-tab
+            :ripple="false"
+            active-class="text--primary"
+            class="font-weight-bold"
+            min-width="96"
+            text
+          >
+            <a
+              href="http://creditos.am-sistemas.com/"
+              target='new'
+            >
+              Red de Venta</a>
           </v-tab>
 
           <v-tab
@@ -55,56 +83,13 @@
           > <a
               href="#"
               v-smooth-scroll
-              @click="onSimu"
+              @click="onMacro"
             >
-              MacroCreditos</a>
-          </v-tab>
-
-          <v-tab
-            :ripple="false"
-            active-class="text--primary"
-            class="font-weight-bold"
-            min-width="96"
-            text
-          ><a
-              href="#clientes"
-              v-smooth-scroll
-            >
-              Clientes</a>
-          </v-tab>
-
-          <v-tab
-            :ripple="false"
-            active-class="text--primary"
-            class="font-weight-bold"
-            min-width="96"
-            text
-          ><a
-              href="#contacto"
-              v-smooth-scroll
-            >
-              Contacto</a>
+              Regresa a MacroSolutions</a>
           </v-tab>
 
         </v-tabs>
       </div>
-
-      <v-card-actions
-        id="social"
-        class="white justify-center animate__animated animate__fadeInRight"
-      >
-        <v-btn
-          v-for="(social, i) in socials"
-          :key="i"
-          :color="social.color"
-          fab
-          icon
-          small
-          position="right"
-        >
-          <v-icon>{{ social.icon }}</v-icon>
-        </v-btn>
-      </v-card-actions>
 
       <v-app-bar-nav-icon
         class="hidden-md-and-up"
@@ -115,64 +100,59 @@
         elevation="5"
       />
     </v-app-bar>
+    <parallax-alianza>
+    </parallax-alianza>
 
-    <home-drawer
-      v-model="drawer"
-      :items="items"
-    />
+    <landing-alianza>
+    </landing-alianza>
+
+    <cns-credito>
+    </cns-credito>
+
   </div>
 </template>
 
 
     <script>
+import LandingAlianza from './landing-alianza.vue';
+import ParallaxAlianza from './parallax-alianza.vue';
+import CnsCredito from './cns-credito.vue';
+
 export default {
 
   name: 'HomeAppBar',
 
   components: {
-    HomeDrawer: () => import('./Drawer'),
+    LandingAlianza,
+    ParallaxAlianza,
+    CnsCredito
   },
 
 
 
   data () {
 
+
     return {
-      socials: [
-        {
-          icon: "mdi-facebook",
-          color: "indigo",
-        },
-        {
-          icon: "mdi-linkedin",
-          color: "cyan darken-1",
-        },
-        {
-          icon: "mdi-instagram",
-          color: "red lighten-3",
-        },
-      ],
+
       drawer: null,
 
-      items: [
-        'Servicios',
-        'Macrocreditos',
-        'Clientes',
-        'Contacto',
-      ],
+
     };
   },
   methods: {
 
-    onSimu () {
+    onMacro () {
       // eslint-disable-next-line no-console
-      console.log(['onSimu)'])
-      this.$router.push({ name: "landingAlianza" })
+      //console.log(['onSimu)'])
+      this.$router.push({ name: "BarIndex" })
         .catch(() => { })
     },
   }
 };
 </script>
+
+
 
 
 <style>
@@ -208,11 +188,11 @@ export default {
 
 <style lang="sass">
 #home-app-bar
-  .v-tabs-slider
-    max-width: 24px
-    margin: 0 auto
+.v-tabs-slider
+  max-width: 24px
+  margin: 0 auto
 
-    .v-tab
-      &::before
-        display: none
+  .v-tab
+    &::before
+      display: none
 </style>

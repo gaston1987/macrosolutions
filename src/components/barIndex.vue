@@ -1,7 +1,6 @@
 <template>
   <v-app id="inspire">
     <bar />
-   <!-- <menu-bar /> -->
 
     <carrousel />
     <div class="divider"></div>
@@ -13,9 +12,6 @@
       <contacto />
       <dialogChat />
     </div>
-
-    <simucred>
-    </simucred>
 
     <v-footer :padless="true">
       <v-card
@@ -44,7 +40,6 @@ import clientes from '@/components/clientes';
 import contacto from '@/components/contacto';
 import dialogChat from '@/components/dialogChat';
 
-import simucred from './simu_cred.vue';
 export default {
   name: 'barIndex',
 
@@ -56,9 +51,7 @@ export default {
     parallax,
     clientes,
     contacto,
-    dialogChat,
-    simucred,
-
+    dialogChat
   },
 
   methods: {
@@ -105,7 +98,7 @@ export default {
   padding: 5px;
   color: dimgray;
   text-align: center;
-   text-transform:none !important;
+  text-transform: none !important;
 }
 
 #inspire a {
