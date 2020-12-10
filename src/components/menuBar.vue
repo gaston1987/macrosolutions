@@ -45,6 +45,7 @@
     </v-btn>
   </v-bottom-navigation>
 </template>
+
 <script>
 export default {
   data () {
@@ -62,3 +63,12 @@ export default {
 
 };
 </script>
+
+<style>
+
+.botones{
+
+    background-color:blueviolet !important;
+
+}
+</style>
