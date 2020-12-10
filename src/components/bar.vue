@@ -20,8 +20,9 @@
               position="center"
               class="animate__animated animate__fadeInUp"
             />
-            <h3>De pequeñas a grandes soluciones</h3>
+            
           </router-link>
+          <h3>De pequeñas a grandes soluciones</h3>
         </div>
       </v-toolbar-title>
 

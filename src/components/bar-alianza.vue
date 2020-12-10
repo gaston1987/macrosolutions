@@ -20,14 +20,15 @@
               position="center"
               class="animate__animated animate__fadeInUp"
             />
-            <h3>Prestamos personales</h3>
+          
           </router-link>
+            <h3>Prestamos personales</h3>
         </div>
       </v-toolbar-title>
 
       <v-spacer />
 
-      <div>
+      <div id="menuali">
         <v-tabs
           class="hidden-sm-and-down"
           optional
@@ -165,13 +166,22 @@ export default {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
-
+  text-decoration: none !important;
   padding: 5px;
   color: dimgray;
   text-align: center;
   text-transform: none !important;
+}
+
+
+
+
+#menuali a{
+
+text-decoration: none !important;
+
 }
 
 @media only screen and (max-width: 600px) {

@@ -64,11 +64,3 @@ export default {
 };
 </script>
 
-<style>
-
-.botones{
-
-    background-color:blueviolet !important;
-
-}
-</style>
