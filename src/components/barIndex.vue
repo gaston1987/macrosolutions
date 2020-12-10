@@ -1,7 +1,6 @@
 <template>
   <v-app id="inspire">
     <bar />
-
     <carrousel />
     <div class="divider"></div>
     <servicios />
@@ -24,7 +23,7 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>INDEV e-bussines</strong>
+          {{ new Date().getFullYear() }} — <a href="https://indev.com.ar/" target="_blank"> INDEV - Deploying E-business </a>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -87,7 +86,11 @@ export default {
 .icon {
   border: 0px !important;
 }
+#inspire{
+ 
+    width: 100%;
 
+}
 #inspire h3 {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -109,6 +112,13 @@ export default {
 .divider {
   padding-top: 20px;
   padding-bottom: 15px;
+}
+
+.white--text a{
+
+  color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 </style>
 

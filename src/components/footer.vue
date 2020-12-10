@@ -10,7 +10,7 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>INDEV e-bussines</strong>
+          {{ new Date().getFullYear() }} —<a href="https://indev.com.ar/"> <strong>INDEV - Deploying E-business</strong> </a>
         </v-card-text>
       </v-card>
     </v-footer>
