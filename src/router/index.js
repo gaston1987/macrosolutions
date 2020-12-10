@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import simu_cred from '@/components/simu_cred'
+import barIndex from '@/components/barIndex'
+import barAlianza from '@/components/bar-alianza'
 
 
 Vue.use(Router)
@@ -8,11 +9,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/simu_cred',
-      name: 'simu_cred',
-      component: simu_cred
+      path: '/',
+      name: 'BarIndex',
+      component: barIndex
     },
-   
+    {
+      path: '/landingAlianza',
+      name: 'landingAlianza',
+      component: barAlianza
+    },
+
 
     { path: '/', redirect: '/inicio' }
   ]

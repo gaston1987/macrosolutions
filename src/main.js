@@ -4,6 +4,9 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+import LoadScript from 'vue-plugin-load-script';
+
+Vue.use(LoadScript);
 // importo smooth scroll
 import VueSmoothScroll from 'vue2-smooth-scroll'
 
