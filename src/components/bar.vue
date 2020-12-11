@@ -20,7 +20,7 @@
               position="center"
               class="animate__animated animate__fadeInUp"
             />
-            
+
           </router-link>
           <h3>De pequeñas a grandes soluciones</h3>
         </div>

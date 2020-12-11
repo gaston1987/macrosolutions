@@ -8,25 +8,42 @@
     <div class="divider"></div>
     <clientes />
     <div class="text-right">
-      <contacto />
+
       <dialogChat />
     </div>
+    <v-col cols="12">
+      <v-footer :padless="true">
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="secondary white--text text-center"
+        >
 
-    <v-footer :padless="true">
-      <v-card
-        flat
-        tile
-        width="100%"
-        class="secondary white--text text-center"
-      >
+          <v-divider></v-divider>
+          <contacto />
+          <v-divider></v-divider>
+          <v-btn
+            v-for="(social, i) in socials"
+            :key="i"
+            :color="social.color"
+            fab
+            icon
+            x-large
+            position="right"
+          >
+            <v-icon>{{ social.icon }}</v-icon>
+          </v-btn>
 
-        <v-divider></v-divider>
-
-        <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <a href="https://indev.com.ar/" target="_blank"> INDEV - Deploying E-business </a>
-        </v-card-text>
-      </v-card>
-    </v-footer>
+          <v-card-text class="white--text">
+            {{ new Date().getFullYear() }} — <a
+              href="https://indev.com.ar/"
+              target="_blank"
+            > INDEV - Deploying E-business </a>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    </v-col>
   </v-app>
 </template>
 
@@ -52,7 +69,25 @@ export default {
     contacto,
     dialogChat
   },
+  data () {
 
+    return {
+      socials: [
+        {
+          icon: "mdi-facebook",
+          color: "indigo",
+        },
+        {
+          icon: "mdi-linkedin",
+          color: "cyan darken-1",
+        },
+        {
+          icon: "mdi-instagram",
+          color: "red lighten-3",
+        },
+      ],
+    };
+  },
   methods: {
     getImage () {
       const min = 550
@@ -86,10 +121,8 @@ export default {
 .icon {
   border: 0px !important;
 }
-#inspire{
- 
-    width: 100%;
-
+#inspire {
+  width: 100%;
 }
 #inspire h3 {
   font-size: 16px;
@@ -114,10 +147,9 @@ export default {
   padding-bottom: 15px;
 }
 
-.white--text a{
-
+.white--text a {
   color: #ffffff !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 </style>
