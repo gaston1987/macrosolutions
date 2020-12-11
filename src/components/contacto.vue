@@ -7,6 +7,7 @@
         sm="12"
         md="1"
       >
+    
       </v-col>
 
       <v-col
@@ -15,7 +16,7 @@
         md="5"
         class="float-left"
         flat
-        pr-5
+        pl-5
        
       >
         <v-card

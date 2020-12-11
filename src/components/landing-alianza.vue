@@ -10,7 +10,7 @@
 
           <v-card-text class="display-1 text--primary text-center">
             <h1 style="color:#FFFFFF;font-size:30px;"><strong>PRÉSTAMOS PERSONALES</strong></h1><br>
-            <h1 style="color:#D81B60;font-size:50px;"><strong>EN EFECTIVO</strong></h1>
+            <h1 style="color:#D81B60;font-size:50px;"><strong>EN EFECTIVO</strong></h1><br>
             <p class="text">
               ¡Prestamos personales, hasta $100.000 por débito automático, Presentando tus últimos 2 recibos de sueldos y el detalle de los movimientos bancarios de los últimos dos meses!
             </p>
