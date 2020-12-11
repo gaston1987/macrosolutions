@@ -43,7 +43,6 @@
         <v-text-field
           v-model="form['credito']"
           dense
-          :rules="nameRules"
           label="Nro.Credito"
           clearable
           filled

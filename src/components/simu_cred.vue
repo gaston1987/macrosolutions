@@ -14,8 +14,7 @@
     >
 
       <v-card-title>
-        <p class="font-weight-black">
-          ¡Sacá tu crédito 100% online!
+        <p class="font-weight-black"> ¡Sacá tu crédito 100% online!
         </p>
       </v-card-title>
 
