@@ -16,10 +16,12 @@
         class="float-left"
         flat
         pr-5
+       
       >
         <v-card
           flat
           pr-10
+          
         >
           <div>
             <iframe
@@ -32,11 +34,11 @@
               tabindex="0"
             ></iframe>
 
-            <p style="text-align:left; margin-top:30px">
+            <p style="text-align:center; margin-top:30px">
               <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
               <b> 25 de Mayo 431, Piso 3, of. F </b>
             </p>
-            <p style="text-align:left">
+            <p style="text-align:center">
               <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
               <b> Tel: +54 11 52527626 </b>
             </p>
@@ -45,7 +47,7 @@
         </v-card>
 
       </v-col>
-      <v-divider vertical></v-divider>
+      
       <v-col
         xs="12"
         sm="12"

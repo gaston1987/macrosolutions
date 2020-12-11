@@ -7,6 +7,7 @@
     <parallax />
     <div class="divider"></div>
     <clientes />
+    <contacto />
     <div class="text-right">
 
       <dialogChat />
@@ -20,9 +21,6 @@
           class="secondary white--text text-center"
         >
 
-          <v-divider></v-divider>
-          <contacto />
-          <v-divider></v-divider>
           <v-btn
             v-for="(social, i) in socials"
             :key="i"
