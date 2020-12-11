@@ -2,21 +2,33 @@
   <v-main>
 
     <v-card
-      elevation="24"
-      class="mx-auto"
+      elevation="10"
+      class="mx-auto mt-0"
       v-if="modo=='calculador'"
       outlined
       rounded
-      dark
-      colorxxx="light-blue darken-3"
-      imgxx="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
-      img="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
+      flat
+      light
+      width="90%"
+      mt-1
+   
+      
+      
     >
-
-      <v-card-title>
-        <p class="font-weight-black">
-          ¡Sacá tu crédito 100% online!
-        </p>
+    <v-system-bar
+      color="amber darken-2"
+      dark
+    >
+    <v-spacer></v-spacer>
+</v-system-bar>
+      <v-card-title  class="text-center" >
+       
+        <h2 class="font-weight-black">
+          ¡Sacá tu crédito 100% online!  <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
+          <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
+          <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
+        </h2>
+       
       </v-card-title>
 
       <v-divider></v-divider>
@@ -567,3 +579,24 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
   },
 }
 </script>
+
+
+<style>
+.v-content .v-card.v-sheet.theme--light {
+    
+    border: 5px solid rgb(0, 0, 0) !important
+}
+
+.v-input__slot{
+
+  padding: 10px!important;
+  color: black !important;
+
+}
+
+.v-label theme--light{
+
+  color: black !important;
+}
+
+</style>

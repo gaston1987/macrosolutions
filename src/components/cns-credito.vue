@@ -1,11 +1,13 @@
 <template>
-  <div id="cns-cred">
+  <div id="cns-cred" style="margin-top:50px; margin-bottom:30px; ">
 
     <v-card
-      elevation="24"
+      elevation=20
       class="mx-auto"
       outlined
       rounded
+      width="80%"
+      mt-20
       dark
       colorxxx="light-blue darken-3"
       imgxx="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
@@ -13,9 +15,9 @@
     >
 
       <v-card-title>
-        <p class="font-weight-black">
+        <h2 >
           ¡Consulta tu Crédito!
-        </p>
+        </h2>
       </v-card-title>
 
       <v-divider></v-divider>
@@ -28,7 +30,7 @@
 
         <v-text-field
           v-model="form['dni']"
-          class="py-5"
+          class="pa-5"
           dense
           :counter="8"
           type="number"
@@ -46,6 +48,7 @@
           :rules="nameRules"
           label="Nro.Credito"
           clearable
+          class="pa-5"
           filled
           required
           rounded
@@ -56,7 +59,7 @@
           :disabled="!valid"
           small
           color="success"
-          class="mr-4"
+          class="mr-4 mb-10 ml-5"
           @click="submitForm"
           rounded
         >
@@ -66,7 +69,7 @@
         <v-btn
           color="error"
           small
-          class="mr-4"
+          class="mr-4 mb-10"
           @click="reset"
           rounded
         >
