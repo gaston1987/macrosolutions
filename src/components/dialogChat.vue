@@ -38,7 +38,7 @@
                 :class="fav ? 'green--text' : ''"
                 icon
               >
-                <v-icon>mdi-account-check</v-icon>
+                <v-icon>mdi-face-agent</v-icon>
               </v-btn>
             </v-list-item-action>
           </v-list-item>
@@ -73,24 +73,103 @@
             </v-list-item-action>
             <v-list-item-title>SIMULADOR DE CREDITOS</v-list-item-title>
           </v-list-item>
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-newspaper-variant-outline</v-icon>
-            </v-list-item-action>
-            <v-list-item-title>REQUISITOS</v-list-item-title>
-          </v-list-item>
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-clock-time-nine-outline</v-icon>
-            </v-list-item-action>
-            <v-list-item-title>HORARIOS</v-list-item-title>
-          </v-list-item>
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-whatsapp</v-icon>
-            </v-list-item-action>
-            <v-list-item-title>CONTACTO</v-list-item-title>
-          </v-list-item>
+
+          <v-dialog
+            v-model="dialog"
+            width="500"
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-list-item
+                link
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-list-item-action>
+                  <v-icon>mdi-newspaper-variant-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>REQUISITOS</v-list-item-title>
+              </v-list-item>
+            </template>
+            <v-card>
+              <v-card-title class="headline blue lighten-2">
+                REQUISITOS
+              </v-card-title>
+
+              <v-list-item>
+                <v-list-item-action>
+                  <v-icon>mdi-card-account-details-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>FOTOCOPIA DEL DNI</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-action>
+                  <v-icon>mdi-file-document-multiple-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>ULTIMOS 3 RECIBOS DE SUELDO</v-list-item-title>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-action>
+                  <v-icon>mdi-file-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>BOLETA DE SERVICIO</v-list-item-title>
+              </v-list-item>
+
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  color="primary"
+                  text
+                  @click="dialog = false"
+                >
+                  Cerrar
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+
+          <v-dialog
+            v-model="dialog2"
+            width="500"
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-list-item
+                link
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-list-item-action>
+                  <v-icon>mdi-clock-time-nine-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>HORARIOS</v-list-item-title>
+              </v-list-item>
+            </template>
+            <v-card>
+              <v-card-title class="headline blue lighten-2">
+                HORARIOS
+              </v-card-title>
+
+              <v-list-item>
+                <v-list-item-action>
+                  <v-icon>mdi-clock-outline</v-icon>
+                </v-list-item-action>
+                <v-list-item-title>LUNES A VIERNES DE 9hs a 18hs</v-list-item-title>
+              </v-list-item>
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  color="primary"
+                  text
+                  @click="dialog2 = false"
+                >
+                  Cerrar
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-list>
 
         <v-card-actions>
@@ -110,6 +189,8 @@ export default {
     menu: false,
     message: false,
     hints: true,
+    dialog: false,
+    dialog2: false,
   }),
   methods: {
 
