@@ -4,8 +4,8 @@
     <v-row>
       <v-col>
         <v-card
-         class="prestamocard mx-auto mt-10"
-         width="90%"        
+          class="prestamocard mx-auto mt-10"
+          width="90%"
         >
 
           <v-card-text class="display-1 text--primary text-center">
@@ -14,8 +14,7 @@
             <p class="text">
               ¡Prestamos personales, hasta $100.000 por débito automático, Presentando tus últimos 2 recibos de sueldos y el detalle de los movimientos bancarios de los últimos dos meses!
             </p>
-              <v-img
-            
+            <v-img
               src="@/assets/presta_1.png"
               contain
               position="center"
@@ -31,34 +30,35 @@
         </simucred>
       </v-col>
     </v-row>
+    <div class="text-right">
+
+      <dialogChat />
+    </div>
   </div>
 
 </template>
 <script>
+import dialogChat from '@/components/dialogChat';
 import simucred from './simu_cred.vue';
 export default {
   name: 'landingAlianza',
 
   components: {
     simucred,
+    dialogChat,
 
   },
 }
 </script>
 
 <style>
-
-.prestamocard{
- background-color: transparent !important; 
- box-shadow:0px !important;
-
+.prestamocard {
+  background-color: transparent !important;
+  box-shadow: 0px !important;
 }
-.text{
-
- color: white !important;
+.text {
+  color: white !important;
 }
-
-
 </style>
 
 

@@ -1,81 +1,127 @@
-    <template>
-  <v-menu
-    top
-    origin="center center"
-    transition="scale-transition"
-  >
-    <template v-slot:activator="{ on, attrs }">
 
-      <v-btn
-        v-bind="attrs"
-        v-on="on"
-        class="mx-2"
-        fab
-        elevation="10"
-        large
-        color="green"
-        id="botw"
-      >
-        <v-icon color="white">
-          mdi-whatsapp
-        </v-icon>
-      </v-btn>
-    </template>
-
-    <v-card
-      class="mx-auto"
-      max-width="auto"
-      height="auto"
-      flat
-      color="#2b303e"
+ <template>
+  <div class="text-center">
+    <v-menu
+      v-model="menu"
+      :close-on-content-click="false"
+      :nudge-width="200"
+      offset-x
     >
-      <div class="text-right">
-        <v-fab-transition>
-          <v-btn
-            color="light-green accent-4"
-            icon
-            text
-            tile
-            small
-            ripple
-            class="embed-button-center mr-3"
-            @click="dialog = false"
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="indigo"
+          dark
+          v-bind="attrs"
+          v-on="on"
+          fab
+          id="botw"
+        >
+          <v-icon>mdi-android-messages</v-icon>
+        </v-btn>
+
+      </template>
+
+      <v-card>
+        <v-list>
+          <v-list-item>
+            <v-list-item-avatar>
+              <v-img src="https://www.macrosolutions.com.ar/images/uploads/logo-header.png"></v-img>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>MACROSOLUTIONS</v-list-item-title>
+              <v-list-item-subtitle>en línea</v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn
+                :class="fav ? 'green--text' : ''"
+                icon
+              >
+                <v-icon>mdi-account-check</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-list>
+
+        <v-divider></v-divider>
+
+        <v-list>
+
+          <v-card-text>
+            <p
+              class="font-weight-black"
+              style="max-width: 20rem;"
+            >👋 Hola!, soy Maca tu asistente virtual.
+              Tengo un equipo Macrosolutions que me está enseñando para poder ayudarte cada vez mejor.
+              Y también podemos conversar sobre los siguientes temas:
+              ¿Con cuál te puedo ayudar?</p>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-clipboard-search-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-title>CONSULTAS DE TRAMITES</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+            link
+            @click="onSimu"
           >
-            <v-icon>
-              mdi-close-circle
-            </v-icon>
+            <v-list-item-action>
+              <v-icon>mdi-currency-usd</v-icon>
+            </v-list-item-action>
+            <v-list-item-title>SIMULADOR DE CREDITOS</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-newspaper-variant-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-title>REQUISITOS</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-clock-time-nine-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-title>HORARIOS</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-whatsapp</v-icon>
+            </v-list-item-action>
+            <v-list-item-title>CONTACTO</v-list-item-title>
+          </v-list-item>
+        </v-list>
 
-          </v-btn>
-        </v-fab-transition>
-      </div>
-      <iframe
-        allow="microphone;"
-        width="400"
-        height="400"
-        src="https://console.dialogflow.com/api-client/demo/embedded/7059d5b3-4a9b-4a5b-99c7-b6d698e387b1"
-        text-color="primary"
-      >
-      </iframe>
+        <v-card-actions>
+          <v-spacer></v-spacer>
 
-    </v-card>
-
-  </v-menu>
+        </v-card-actions>
+      </v-card>
+    </v-menu>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'dialogChat',
-  data () {
-    return {
-      dialog: false,
-    }
-  },
-  components: {
-  },
+  data: () => ({
+    fav: true,
+    menu: false,
+    message: false,
+    hints: true,
+  }),
+  methods: {
 
+    onSimu () {
+      // eslint-disable-next-line no-console
+      console.log(['onSimu)'])
+      this.$router.push({ name: "landingAlianza" })
+        .catch(() => { })
+    },
+  }
 }
 </script>
-
 <style>
 .b-agent-demo .b-agent-demo_powered_by {
   display: none !important;
@@ -87,4 +133,6 @@ export default {
   z-index: 10;
 }
 </style>
+
+
 

@@ -11,24 +11,21 @@
       light
       width="90%"
       mt-1
-   
-      
-      
     >
-    <v-system-bar
-      color="amber darken-2"
-      dark
-    >
-    <v-spacer></v-spacer>
-</v-system-bar>
-      <v-card-title  class="text-center" >
-       
+      <v-system-bar
+        color="amber darken-2"
+        dark
+      >
+        <v-spacer></v-spacer>
+      </v-system-bar>
+      <v-card-title class="text-center">
+
         <h2 class="font-weight-black">
-          ¡Sacá tu crédito 100% online!  <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
+          ¡Sacá tu crédito 100% online! <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
           <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
           <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
         </h2>
-       
+
       </v-card-title>
 
       <v-divider></v-divider>
@@ -344,15 +341,16 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-
     </v-card>
 
   </v-main>
 </template>
 <script>
+
 import axios from 'axios';
 export default {
   name: 'simu_cred',
+
   data () {
 
     return {
@@ -583,20 +581,15 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 
 <style>
 .v-content .v-card.v-sheet.theme--light {
-    
-    border: 5px solid rgb(0, 0, 0) !important
+  border: 5px solid rgb(0, 0, 0) !important;
 }
 
-.v-input__slot{
-
-  padding: 10px!important;
-  color: black !important;
-
-}
-
-.v-label theme--light{
-
+.v-input__slot {
+  padding: 10px !important;
   color: black !important;
 }
 
+.v-label theme--light {
+  color: black !important;
+}
 </style>
