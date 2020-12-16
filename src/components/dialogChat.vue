@@ -25,7 +25,7 @@
         <v-list>
           <v-list-item>
             <v-list-item-avatar>
-              <v-img src="https://www.macrosolutions.com.ar/images/uploads/logo-header.png"></v-img>
+              <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
             </v-list-item-avatar>
 
             <v-list-item-content>
@@ -88,14 +88,33 @@
                   <v-icon>mdi-newspaper-variant-outline</v-icon>
                 </v-list-item-action>
                 <v-list-item-title>REQUISITOS</v-list-item-title>
+
               </v-list-item>
             </template>
             <v-card>
-              <v-card-title class="headline blue lighten-2">
-                REQUISITOS
-              </v-card-title>
 
               <v-list-item>
+                <v-list-item-avatar>
+                  <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+                </v-list-item-avatar>
+
+                <v-list-item-content>
+                  <v-list-item-title>MACROSOLUTIONS</v-list-item-title>
+                  <v-list-item-subtitle>en línea</v-list-item-subtitle>
+                </v-list-item-content>
+
+                <v-list-item-action>
+                  <v-btn
+                    :class="fav ? 'green--text' : ''"
+                    icon
+                  >
+                    <v-icon>mdi-face-agent</v-icon>
+                  </v-btn>
+                </v-list-item-action>
+              </v-list-item>
+              <v-divider></v-divider>
+              <v-list-item>
+
                 <v-list-item-action>
                   <v-icon>mdi-card-account-details-outline</v-icon>
                 </v-list-item-action>
@@ -146,10 +165,26 @@
               </v-list-item>
             </template>
             <v-card>
-              <v-card-title class="headline blue lighten-2">
-                HORARIOS
-              </v-card-title>
+              <v-list-item>
+                <v-list-item-avatar>
+                  <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+                </v-list-item-avatar>
 
+                <v-list-item-content>
+                  <v-list-item-title>MACROSOLUTIONS</v-list-item-title>
+                  <v-list-item-subtitle>en línea</v-list-item-subtitle>
+                </v-list-item-content>
+
+                <v-list-item-action>
+                  <v-btn
+                    :class="fav ? 'green--text' : ''"
+                    icon
+                  >
+                    <v-icon>mdi-face-agent</v-icon>
+                  </v-btn>
+                </v-list-item-action>
+              </v-list-item>
+              <v-divider></v-divider>
               <v-list-item>
                 <v-list-item-action>
                   <v-icon>mdi-clock-outline</v-icon>
