@@ -24,9 +24,17 @@
           </router-link>
             
         </div>
+        
       </v-toolbar-title>
-      <h3>ALIANZA <br>
-<strong>Prestamos personales</strong></h3>
+       <v-img
+              id="logo2"
+              src="@/assets/Alianza02.png"
+              contain
+              max-height="50px"
+              position="left"
+              class="animate__animated animate__fadeInUp"
+          
+            />
       <v-spacer />
 
       <div id="menuali">
@@ -180,9 +188,15 @@ export default {
 
 
 <style>
-#app-bar-ali {
-  background-image: -webkit-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%) !important;
 
+@font-face {
+font-family: "Nunito";
+src: url('../assets/fonts/Nunito-Regular.ttf');
+}
+
+#app-bar-ali {
+ /* background-image: -webkit-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%) !important; */
+  background-image: -webkit-linear-gradient(0deg, #b4e081e5 0%, hsl(128, 31%, 67%) 100%) !important;
 }
 
 #app-bar-ali a {
@@ -230,7 +244,8 @@ color: black !important;
 
 #alianza{
 
-  background-image: -webkit-linear-gradient(0deg, #2c89f3 0%, #26e9f0 100%) !important;
+font-family:"Nunito", !important;
+
 }
 #no-background-hover::before {
    background-color: transparent !important; 

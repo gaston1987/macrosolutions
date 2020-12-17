@@ -138,6 +138,7 @@
       v-if="modo=='datero'"
       outlined
       rounded
+      width="90%"
       dark
       color="light-blue darken-3"
       img="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
