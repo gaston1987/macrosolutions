@@ -9,7 +9,7 @@
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          color="indigo"
+          color="amber darken-2"
           dark
           v-bind="attrs"
           v-on="on"
@@ -37,6 +37,7 @@
               <v-btn
                 :class="fav ? 'green--text' : ''"
                 icon
+              
               >
                 <v-icon>mdi-face-agent</v-icon>
               </v-btn>

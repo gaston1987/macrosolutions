@@ -1,14 +1,22 @@
 <template>
 
   <div class="text-center">
-    <v-parallax src="@/assets/alianzaback.jpg">
+    <v-parallax src="@/assets/2784130.jpg" 
+    
+    
+    >
       <v-main>
+      
+              
         <v-card-text class="display-1 text--primary">
-          <p class="text"> A través de nuestra unidad de micro créditos asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.
+         
+          
+          <p class="texto animate__animated animate__fadeInUp"><span class="leyenda"> Consegui tu crédito personal, de manera rapida y con mínimos requisitos</span>
 
           </p>
 
         </v-card-text>
+       
       </v-main>
     </v-parallax>
   </div>
@@ -16,10 +24,30 @@
 </template>
 
 <style>
-.text {
+.texto {
   line-height: 200%;
   font-size: 30px;
-  color: black !important;
+  color:#fff;
+  font-family: "Nunito" !important;
+  margin-top: 300px;
+  
+}
+
+.texto p{
+ 
+  font-family: "Nunito" !important;
+
+  
+}
+.leyenda{
+
+  vertical-align:text-bottom !important;
+  background-color:#000 ;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Nunito" !important;
+
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,7 +5,7 @@
       
       height="80px"
       id="app-bar-ali"
-      elevation="5"
+      elevation="0"
     >
       <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
@@ -208,8 +208,7 @@ src: url('../assets/fonts/Nunito-Regular.ttf');
 
 #app-bar-ali h3 {
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Nunito";
   font-weight: 500;
   
   text-decoration: none !important;
@@ -221,6 +220,7 @@ src: url('../assets/fonts/Nunito-Regular.ttf');
 #app-bar-ali h3 strong{
   font-style: italic;
   font-size: 16px;
+  
 }
 
 
@@ -229,6 +229,7 @@ src: url('../assets/fonts/Nunito-Regular.ttf');
 
 text-decoration: none !important;
 color: black !important;
+  font-family: "Nunito";
 
 }
 
@@ -245,6 +246,7 @@ color: black !important;
 #alianza{
 
 font-family:"Nunito", !important;
+background-image: -webkit-linear-gradient(0deg, #b4e081e5 0%, hsl(128, 31%, 67%) 100%) !important;
 
 }
 #no-background-hover::before {

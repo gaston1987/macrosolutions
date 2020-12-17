@@ -1,5 +1,5 @@
 <template>
-  <v-main>
+  <v-main id="simu">
 
     <v-card
       elevation="10"
@@ -9,7 +9,7 @@
       rounded
       flat
       light
-      width="90%"
+      width="80%"
       mt-1
     >
       <v-system-bar
@@ -104,10 +104,12 @@
             :items="items2"
           ></v-select>        
           -->
-      <div class="d-flex">
+      <div class="d-flex"
+      >
         <p
           v-if="impcuo!=0"
           class="font-weight-black"
+          id="valor"
         >Valor de la cuota: ${{ Intl.NumberFormat("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(impcuo)}}(*)</p>
         <v-spacer>
         </v-spacer>
@@ -124,7 +126,7 @@
 
       <p
         v-if="impcuo!=0"
-        style="font-size: 10px;"
+        style="font-size: 10px; padding:10px"
       >
         *Cuota aproximada, Plazo de validez de simulación 15 días, Cartera de consumo, Sujeto a verificación comercial y crediticia del departamento de créditos, Tasa fija en pesos, Sistema de amortización francés. Perfil A (comportamiento en pagos “Excelente”) TEA: 82,44%. Perfil B (comportamiento en pagos “Muy Bueno”) TEA: 116,20%. Perfil C (comportamiento en pagos “Bueno”) TEA: 146,98%. CFT min: 99,83%. CFT max: 214,06%. El costo financiero total nominal anual incluye capital, intereses, comisión de originación e IVA. Los impuestos nacionales y provinciales estarán a cargo del cliente.
 
@@ -592,5 +594,28 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 
 .v-label theme--light {
   color: black !important;
+}
+
+#simu{
+
+  font-family: "Nunito" !important;
+}
+
+.d-flex 
+{
+ padding: 10px;
+
+}
+
+.d-flex p
+{
+ width: 80% !important;
+ font-size: 24px;
+
+}
+
+#valor{
+
+  color: red;
 }
 </style>
