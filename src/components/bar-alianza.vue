@@ -112,6 +112,10 @@
         elevation="5"
       />
     </v-app-bar>
+       <home-drawer
+      v-model="drawer"
+      :items="items"
+    />
     <parallax-alianza>
     </parallax-alianza>
 
@@ -157,7 +161,8 @@ export default {
   components: {
     LandingAlianza,
     ParallaxAlianza,
-    CnsCredito
+    CnsCredito,
+    HomeDrawer: () => import('./Drawer'),
   },
 
 
@@ -192,6 +197,12 @@ export default {
 @font-face {
 font-family: "Nunito";
 src: url('../assets/fonts/Nunito-Regular.ttf');
+}
+
+body{
+
+  margin: 0 auto;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 #app-bar-ali {
@@ -247,6 +258,7 @@ color: black !important;
 
 font-family:"Nunito", !important;
 background-image: -webkit-linear-gradient(0deg, #b4e081e5 0%, hsl(128, 31%, 67%) 100%) !important;
+
 
 }
 #no-background-hover::before {

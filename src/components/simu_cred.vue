@@ -3,7 +3,8 @@
 
     <v-card
       elevation="10"
-      class="mx-auto mt-0"
+      id="simucard"
+      class="mx-auto mt-0 mb-20"
       v-if="modo=='calculador'"
       outlined
       rounded
@@ -143,13 +144,13 @@
       width="90%"
       dark
       color="light-blue darken-3"
-      img="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
-      imgyy="https://thenetnow.com/wp-content/uploads/2017/01/homepage-internet.png"
-      imgxx="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
+      id="ingreso"
+    
+     
     >
       <v-card-title class="py-2">
         <p class="font-weight-black">
-          Ingresa tus datos
+          INGRESA TUS DATOS
         </p>
       </v-card-title>
 
@@ -163,7 +164,7 @@
 
         <v-text-field
           v-model="form['dni']"
-          class="py-5"
+          class="py-5 pr-10 pl-10"
           dense
           :counter="8"
           type="number"
@@ -177,6 +178,7 @@
 
         <v-text-field
           v-model="form['name']"
+           class="pr-10 pl-10"
           dense
           :rules="nameRules"
           label="Apellido y Nombre"
@@ -191,6 +193,7 @@
           v-model="form['sexo']"
           row
           required
+           class="pl-10"
         >
           <template v-slot:label>
             <p style="font-size: 15px;"> <strong>Genero:</strong></p>
@@ -224,6 +227,7 @@
               required
               rounded
               outlined
+               class="pr-10 pl-10"
             ></v-text-field>
           </v-col>
           <v-col
@@ -240,6 +244,7 @@
               required
               rounded
               outlined
+               class="pr-10 pl-10"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -254,6 +259,7 @@
           required
           rounded
           outlined
+           class="pr-10 pl-10"
         ></v-text-field>
 
         <v-text-field
@@ -267,15 +273,18 @@
           filled
           rounded
           outlined
+           class="pr-10 pl-10"
         ></v-text-field>
 
         <v-checkbox
+         class=" pl-10"
           v-model="checkbox"
           :rules="[v => !!v || 'Debes aceptar continuar!']"
           color="green"
         >
           <template v-slot:label>
-            <div @click.stop="">
+            <div  
+            @click.stop="">
               Acepta los
               <a
                 href="#"
@@ -290,7 +299,7 @@
           :disabled="!valid"
           small
           color="success"
-          class="mr-4"
+          class="mr-4 ml-10 mb-10 pa-5"
           @click="submitForm"
           rounded
         >
@@ -300,7 +309,7 @@
         <v-btn
           color="error"
           small
-          class="mr-4"
+            class="ml-10 mb-10 pa-5"
           @click="reset"
           rounded
         >
@@ -310,7 +319,7 @@
         <v-btn
           color="primary"
           small
-          class="mr-4"
+            class="ml-10 mb-10 pa-5"
           @click="modo='calculador'"
           rounded
         >
@@ -599,6 +608,7 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 #simu{
 
   font-family: "Nunito" !important;
+  margin-bottom: 30px;
 }
 
 .d-flex 

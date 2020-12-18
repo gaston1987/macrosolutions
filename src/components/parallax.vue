@@ -7,7 +7,7 @@
     >
       <v-main>
         <v-card-text class="display-1 text--primary">
-          <p class="text"> Somos una empresa dinámica con el objetivo de asistir técnica y administrativamente a pequeñas y medianas empresas de distintos rubros.
+          <p class="text" style="color:#000000 !important;"> Somos una empresa dinámica con el objetivo de asistir técnica y administrativamente a pequeñas y medianas empresas de distintos rubros.
 
             Nuestra principal especialización se concreta en el diseño e implementación de estructuras de financiación e impositivas apropiadas para cada empresa de acuerdo a los ciclos que conlleva cada industria en particular.
 

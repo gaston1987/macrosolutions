@@ -1,22 +1,29 @@
 <template>
-  <div id="cns-cred" style="margin-top:50px; margin-bottom:30px; ">
+  <div id="cns-cred" style="margin-top:50px; margin-bottom:50px; ">
 
     <v-card
       elevation=20
-      class="mx-auto"
+      id="cnscard"
+      class="mx-auto mb-20"
       outlined
       rounded
       width="80%"
       mt-20
-      dark
-      colorxxx="light-blue darken-3"
-      imgxx="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
-      img="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
+      light
     >
-
-      <v-card-title>
+  <v-system-bar
+        color="pink darken-2"
+        dark
+      >
+        <v-spacer></v-spacer>
+      </v-system-bar>
+      <v-card-title
+      background-color="primary"
+      colo
+      >
         <h2 >
-          ¡Consulta tu Crédito!
+        <strong>  ¡Consulta tu Crédito! </strong>  <v-icon style="color:rgb(216, 27, 96); padding-left:5px; font-size:40px">mdi-file-find</v-icon>
+        
         </h2>
       </v-card-title>
 
@@ -58,7 +65,7 @@
           :disabled="!valid"
           small
           color="success"
-          class="mr-4 mb-10 ml-5"
+          class="mr-4 mb-10 ml-5 pa-5"
           @click="submitForm"
           rounded
         >
@@ -68,7 +75,7 @@
         <v-btn
           color="error"
           small
-          class="mr-4 mb-10"
+          class="mr-4 mb-10 pa-5"
           @click="reset"
           rounded
         >
@@ -149,3 +156,13 @@ export default {
   },
 }
 </script>
+
+<style>
+
+#cns-cred{
+
+    font-family: "Nunito" !important; 
+    
+}
+
+</style>

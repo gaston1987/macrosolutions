@@ -37,12 +37,12 @@
           </v-col>
     
 </v-row>
-      
+      <requisitos />
       <v-col class="col-md-12 col-xs-12">
         <simucred>
         </simucred>
       </v-col>
-    
+        <consulta />
     <div class="text-right">
 
       <dialogChat />
@@ -51,13 +51,19 @@
 
 </template>
 <script>
+
+import requisitos from '@/components/requisitos.vue';
 import dialogChat from '@/components/dialogChat';
 import simucred from './simu_cred.vue';
+import consulta from '@/components/consulta.vue';
+
 export default {
   name: 'landingAlianza',
 
   components: {
+    requisitos,
     simucred,
+    consulta,
     dialogChat,
 
   },
@@ -77,6 +83,48 @@ export default {
 
 #landing-alianza h1{
     font-family: "Nunito" !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .text{
+
+    font-size: 28px !important;
+
+
+  }
+body{
+
+  margin: 0 auto !important;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+#simucard{
+
+  width: 100% !important;
+}
+
+#simucard h2{
+
+ font-size: 24px;
+}
+
+#requisitos{
+
+  padding: 20px;
+}
+
+#cnscard{
+
+  width: 90% !important;
+}
+
+#ingreso{
+
+  width: 100% !important;
+}
+
+
 }
 </style>
 
