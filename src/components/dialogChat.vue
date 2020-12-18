@@ -37,7 +37,6 @@
               <v-btn
                 :class="fav ? 'green--text' : ''"
                 icon
-              
               >
                 <v-icon>mdi-face-agent</v-icon>
               </v-btn>
@@ -48,21 +47,31 @@
         <v-divider></v-divider>
 
         <v-list>
-
-          <v-card-text>
-            <p
-              class="font-weight-black"
-              style="max-width: 20rem;"
-            > 👋 Hola!, soy Maca tu asistente virtual.
-              Tengo un equipo Macrosolutions que me está enseñando para poder ayudarte cada vez mejor.
-              Y también podemos conversar sobre los siguientes temas:
-              ¿Con cuál te puedo ayudar?</p>
-          </v-card-text>
+          <v-container>
+            <v-card
+              elevation="3"
+              outlined
+              shaped
+              width="auto"
+              color="white"
+            >
+              <v-card-text>
+                <p
+                  class="font-weight-black"
+                  style="max-width: 20rem;"
+                > 👋 Hola!, soy Maca tu asistente virtual.
+                  Tengo un equipo Macrosolutions que me está enseñando para poder ayudarte cada vez mejor.
+                  Y también podemos conversar sobre los siguientes temas:
+                  ¿Con cuál te puedo ayudar?</p>
+              </v-card-text>
+            </v-card>
+          </v-container>
           <v-divider></v-divider>
           <v-dialog
             v-model="dialog3"
             width="700"
           >
+
             <template v-slot:activator="{ on, attrs }">
               <v-list-item
                 link
