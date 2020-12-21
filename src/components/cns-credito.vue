@@ -48,6 +48,7 @@
           clearable
           filled
           required
+          class="pr-10 pl-10 py-10"
         ></v-text-field>
 
         <v-text-field
@@ -58,6 +59,7 @@
           clearable
           filled
           required
+          class="pr-10 pl-10"
         ></v-text-field>
 
         <v-row>
@@ -73,6 +75,7 @@
               prefix="+54 - 0"
               clearable
               required
+              class="pr-10 pl-10"
             ></v-text-field>
           </v-col>
           <v-col
@@ -87,6 +90,7 @@
               prefix="15"
               clearable
               required
+              class="pr-10 pl-10"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -99,13 +103,14 @@
           clearable
           filled
           required
+          class="pr-10 pl-10"
         ></v-text-field>
 
         <v-btn
           :disabled="!valid"
           small
           color="success"
-          class="mr-4 mb-10 ml-5 pa-5"
+          class="ml-10 mb-10 ml-5 pa-5"
           @click="submitForm"
           rounded
         >
@@ -115,7 +120,7 @@
         <v-btn
           color="error"
           small
-          class="mr-4 mb-10 pa-5"
+          class="ml-10 mb-10 pa-5"
           @click="reset"
           rounded
         >
