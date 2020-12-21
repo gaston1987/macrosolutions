@@ -10,7 +10,7 @@ import Vuetify from 'vuetify/lib'
 Vue.use(LoadScript);
 // importo smooth scroll
 import VueSmoothScroll from 'vue2-smooth-scroll'
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+//import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 
 Vue.use(VueSmoothScroll, {
   duration: 900,

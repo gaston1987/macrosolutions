@@ -6,11 +6,6 @@
 
 </template>
 
-<!-- 
-<template>
-  <barIndex />
-</template>-->
-
 
 
 <script>

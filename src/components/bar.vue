@@ -166,8 +166,6 @@ export default {
   methods: {
 
     onSimu () {
-      // eslint-disable-next-line no-console
-      console.log(['onSimu)'])
       this.$router.push({ name: "landingAlianza" })
         .catch(() => { })
     },

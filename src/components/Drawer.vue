@@ -1,8 +1,8 @@
 <template>
   <v-navigation-drawer
-    bottom
+    absolute
+    right
     color="transparent"
-    fixed
     height="auto"
     overlay-color="secondary"
     overlay-opacity=".7"
@@ -12,7 +12,8 @@
   >
     <v-list
       color="white"
-      shaped
+      nav
+      dense
     >
       <v-list-item
         class="boton"
@@ -31,22 +32,22 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeDrawer',
+export default {
+  name: 'HomeDrawer',
 
-    props: {
-      items: {
-        type: Array,
-        default: () => ([]),
-      },
+  props: {
+    items: {
+      type: Array,
+      default: () => ([]),
     },
-  }
+  },
+}
 </script>
 
 <style scoped>
-.boton{
-   font-size: 30px im !important;
+.boton {
+  font-size: 30px im !important;
   font-weight: bold;
-  text-transform:uppercase !important;
+  text-transform: uppercase !important;
 }
 </style>
