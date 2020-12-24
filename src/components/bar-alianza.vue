@@ -170,10 +170,10 @@ export default {
 
       drawer: null,
       items_alianza: [
-        'Simulador de Creditos',
-        'Consulta Creditos',
-        'Red de Venta',
-        'Regresa a Macrosolutions',
+        { label: 'Simulador de Creditos', link: '#landing-alianza' },
+        { label: 'Consulta Creditos', link: '#cns-creditos' },
+        { label: 'Red de Venta', link: '#red' },
+        { label: 'Regresa a Macrosolutions', link: 'regresa' },
       ],
 
 

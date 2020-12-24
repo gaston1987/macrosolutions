@@ -3,8 +3,7 @@
 
     <v-card
       elevation="10"
-      id="simucard"
-      class="mx-auto mt-0 mb-20"
+      class="mx-auto mt-0"
       v-if="modo=='calculador'"
       outlined
       rounded
@@ -135,26 +134,21 @@
     </v-card>
 
     <v-card
-      elevation="10"
-      id="simucard"
-      class="mx-auto mt-0 mb-20"
+      elevation="24"
+      class="mx-auto"
       v-if="modo=='datero'"
       outlined
       rounded
-      flat
-      light
-      width="80%"
-      mt-1
+      width="90%"
+      dark
+      color="light-blue darken-3"
+      img="https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper-preview.jpg"
+      imgyy="https://thenetnow.com/wp-content/uploads/2017/01/homepage-internet.png"
+      imgxx="https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg"
     >
-      <v-system-bar
-        color="amber darken-2"
-        dark
-      >
-        <v-spacer></v-spacer>
-      </v-system-bar>
-      <v-card-title class="text-center">
+      <v-card-title class="py-2">
         <p class="font-weight-black">
-          INGRESA TUS DATOS
+          Ingresa tus datos
         </p>
       </v-card-title>
 
@@ -168,33 +162,34 @@
 
         <v-text-field
           v-model="form['dni']"
-          class="py-5 pr-10 pl-10"
+          class="py-5"
           dense
           :counter="8"
           type="number"
           label="Nro.DNI."
-          :rules="dniRules"
           clearable
           filled
           required
+          rounded
+          outlined
         ></v-text-field>
 
         <v-text-field
           v-model="form['name']"
-          class="pr-10 pl-10"
           dense
           :rules="nameRules"
           label="Apellido y Nombre"
           clearable
           filled
           required
+          rounded
+          outlined
         ></v-text-field>
 
         <v-radio-group
           v-model="form['sexo']"
           row
           required
-          class="pl-10"
         >
           <template v-slot:label>
             <p style="font-size: 15px;"> <strong>Genero:</strong></p>
@@ -225,9 +220,9 @@
               dense
               prefix="+54 - 0"
               clearable
-              filled
               required
-              class="pr-10 pl-10"
+              rounded
+              outlined
             ></v-text-field>
           </v-col>
           <v-col
@@ -241,9 +236,9 @@
               label="Nro.Celular"
               prefix="15"
               clearable
-              filled
               required
-              class="pr-10 pl-10"
+              rounded
+              outlined
             ></v-text-field>
           </v-col>
         </v-row>
@@ -256,7 +251,8 @@
           clearable
           filled
           required
-          class="pr-10 pl-10"
+          rounded
+          outlined
         ></v-text-field>
 
         <v-text-field
@@ -265,14 +261,14 @@
           type="number"
           prepend-inner-icon="mdi-currency-usd"
           label="Ingreso Mensual Neto"
+          required
           clearable
           filled
-          required
-          class="pr-10 pl-10"
+          rounded
+          outlined
         ></v-text-field>
 
         <v-checkbox
-          class=" pl-10"
           v-model="checkbox"
           :rules="[v => !!v || 'Debes aceptar continuar!']"
           color="green"
@@ -282,6 +278,7 @@
               Acepta los
               <a
                 href="#"
+                style="color:white"
                 @click.prevent="terms = true"
               >Términos y Condiciones?</a>
             </div>
@@ -290,8 +287,9 @@
 
         <v-btn
           :disabled="!valid"
+          small
           color="success"
-          class="mr-4 ml-10 mb-10 pa-5"
+          class="mr-4"
           @click="submitForm"
           rounded
         >
@@ -300,7 +298,8 @@
 
         <v-btn
           color="error"
-          class="ml-10 mb-10 pa-5"
+          small
+          class="mr-4"
           @click="reset"
           rounded
         >
@@ -309,7 +308,8 @@
 
         <v-btn
           color="primary"
-          class="ml-10 mb-10 pa-5"
+          small
+          class="mr-4"
           @click="modo='calculador'"
           rounded
         >
@@ -343,66 +343,13 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-
-      <v-dialog
-        v-model="dialog"
-        hide-overlay
-        persistent
-        width="300"
-      >
-        <v-card
-          color="primary"
-          dark
-        >
-          <v-card-text>
-            Por favor espere
-            <v-progress-linear
-              indeterminate
-              color="white"
-              class="mb-0"
-            ></v-progress-linear>
-          </v-card-text>
-        </v-card>
-      </v-dialog>
-
-      <v-dialog
-        v-model="conf"
-        hide-overlay
-        persistent
-        width="300"
-      >
-        <v-card
-          color="success"
-          dark
-        >
-          <v-card-title>
-            Mensaje enviado con exito!
-
-          </v-card-title>
-          <v-card-text>
-            Muchas gracias por su consulta, en breve un asesor se comunicará con usted por alguno de los medios brindados
-
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn
-              color="primary"
-              text
-              @click="conf = false"
-            >
-              Cerrar
-            </v-btn>
-
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
     </v-card>
 
   </v-main>
 </template>
 <script>
 
-
+import axios from 'axios';
 export default {
   name: 'simu_cred',
 
@@ -425,22 +372,16 @@ export default {
         ],
         ingNeto: '',
       },
-      dialog: false,
       valid: true,
-      conf: false,
 
-      dniRules: [
-        v => !!v || 'El campo DNI es Obligatorio',
-        v => (v && v.length >= 7) || 'La longitud del DNI debe ser mayor a 7 digitos',
-        v => (v && v.length > 0) || 'El DNI debe ser mayor a 0',
+      nameRules: [
+        v => !!v || 'Nombre es requerido',
+        v => (v && v.length <= 10) || 'La longitud del nombre debe ser mayor a 10 caracteres',
       ],
+
       emailRules: [
         v => !!v || 'E-mail es requerido',
         v => /.+@.+\..+/.test(v) || 'E-mail debe ser válido',
-      ],
-      nameRules: [
-        v => !!v || 'Nombre es requerido',
-        v => (v && v.length >= 10) || 'La longitud del nombre debe ser mayor a 10 caracteres',
       ],
 
       checkbox: false,
@@ -585,13 +526,23 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
     },
 
     submitForm () {
+      this.sendEmail()
       if (!this.$refs.form.validate()) {
         return
       }
-      this.dialog = true
 
-      this.sendEmail()
-
+      this.valid = true
+      axios.post('/contact', this.form)
+        .then((res) => {
+          alert(res)
+          //Perform Success Action
+        })
+        .catch((error) => {
+          alert(error)
+          // error.response.status Check status code
+        }).finally(() => {
+          //Perform action in always
+        });
     },
 
     sendEmail () {
@@ -602,7 +553,7 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
             Username: "web@macrosolutions.com.ar",
             Password: "Dkno198000",
             //SecureToken: "82b06d19-25c4-451d-a485-df6822ea67f8",            
-            To: 'jose.evsa@gmail.com, gastonviotti@indev.com.ar, javierjaldo@indev.com.ar',
+            To: 'jose.evsa@gmail.com',
             From: "web@macrosolutions.com.ar",
             Subject: "Ingreso de datos por Simulador de Crédito:",
             Body: `<html>
@@ -618,14 +569,12 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
                    <tr>
                    <td><strong>Telefono:</strong></td>
                    <td>"${this.form.tel_area}-${this.form.tel_nro}"</td>
-                   <tr>
                    <td><strong>Email:</strong></td>
                    <td>"${this.form.email}</td>
                    </tr>
                    <tr>
                    <td><strong>Sexo:</strong></td>
                    <td>"${this.form.sexo}"</td>
-                   <tr>
                    <td><strong>Ingreso Neto:</strong></td>
                    <td>"${this.form.ingNeto}"</td>
                    </tr>
@@ -644,9 +593,8 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
           this.dialog = false
           // Failed to fetch script
         })
+
     },
-
-
 
 
     reset () {
@@ -658,8 +606,7 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
     resetValidation () {
       this.$refs.form.resetValidation()
     },
-  }
-
+  },
 }
 </script>
 
@@ -680,7 +627,6 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 
 #simu {
   font-family: "Nunito" !important;
-  margin-bottom: 30px;
 }
 
 .d-flex {

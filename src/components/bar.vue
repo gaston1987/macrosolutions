@@ -1,5 +1,6 @@
   <template>
   <div>
+
     <v-app-bar
       app
       color="white"
@@ -8,7 +9,19 @@
       id="home-app-bar"
       elevation="5"
     >
-      <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click="drawer = !drawer"
+        dark
+        color="blue accent-4"
+        medium
+        elevation="5"
+      />
+
+      <home-drawer
+        v-model="drawer"
+        :items="items"
+      />
 
       <v-toolbar-title>
         <div>
@@ -107,20 +120,8 @@
         </v-btn>
       </v-card-actions>
 
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        @click="drawer = !drawer"
-        dark
-        color="blue accent-4"
-        medium
-        elevation="5"
-      />
     </v-app-bar>
 
-    <home-drawer
-      v-model="drawer"
-      :items="items"
-    />
   </div>
 </template>
 
@@ -156,10 +157,10 @@ export default {
       drawer: null,
 
       items: [
-        'Servicios',
-        'Macrocreditos',
-        'Clientes',
-        'Contacto',
+        { label: 'Servicios', link: '#servicio' },
+        { label: 'Macrocreditos', link: 'landingAlianza' },
+        { label: 'Clientes', link: '#clientes' },
+        { label: 'Contacto', link: '#contacto' },
       ],
     };
   },

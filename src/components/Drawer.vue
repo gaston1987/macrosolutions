@@ -1,7 +1,6 @@
 <template>
   <v-navigation-drawer
     absolute
-    right
     color="transparent"
     height="auto"
     overlay-color="secondary"
@@ -15,18 +14,25 @@
       nav
       dense
     >
-      <v-list-item
-        class="boton"
-        v-for="name in items"
-        :key="name"
-        :to="{ name }"
-        :exact="name === 'Home'"
+      <v-list-item-group
+        v-model="selectedItem"
         color="primary"
       >
-        <v-list-item-content>
-          <v-list-item-title v-text="name" />
-        </v-list-item-content>
-      </v-list-item>
+        <v-list-item
+          class="boton"
+          v-for="item in items"
+          :key="item.link"
+          :href="item.link"
+          :to="item.link"
+        >
+          <v-list-item-content>
+            <v-list-item-title
+              class="text--primary"
+              v-text="item.label"
+            />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-item-group>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -34,6 +40,10 @@
 <script>
 export default {
   name: 'HomeDrawer',
+
+  data: () => ({
+    selectedItem: 1,
+  }),
 
   props: {
     items: {
