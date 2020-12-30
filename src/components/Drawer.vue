@@ -23,14 +23,17 @@
           v-for="item in items"
           :key="item.link"
           :href="item.link"
-          :to="item.link"
         >
-          <v-list-item-content>
+          <v-list-item-content v-if="item.link!='landingAlianza'">
             <v-list-item-title
               class="text--primary"
               v-text="item.label"
             />
           </v-list-item-content>
+          <router-link
+            v-if="item.link=='landingAlianza'"
+            to="/landingAlianza"
+          >MacroCreditos</router-link>
         </v-list-item>
       </v-list-item-group>
     </v-list>

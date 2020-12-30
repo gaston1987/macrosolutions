@@ -69,7 +69,7 @@
         track-color="green"
         height="50"
         thumb-size="50"
-        :tick-labels="cuotasLabel"
+        :tick-labels="$vuetify.breakpoint.mobile ? [] :cuotasLabel"
         step="3"
         max="24"
         min="3"

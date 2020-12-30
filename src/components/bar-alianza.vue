@@ -6,6 +6,7 @@
       id="app-bar-ali"
       elevation="0"
     >
+
       <!--      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />-->
 
       <v-toolbar-title>
@@ -50,7 +51,7 @@
             id="no-background-hover"
             color="transparent"
           > <a
-              href="#landing-alianza"
+              href="#simu"
               v-smooth-scroll
             >
               Simulador de Creditos </a>
@@ -100,7 +101,6 @@
 
         </v-tabs>
       </div>
-
       <v-app-bar-nav-icon
         class="hidden-md-and-up"
         @click="drawer = !drawer"
@@ -109,11 +109,13 @@
         medium
         elevation="5"
       />
+      <home-drawer
+        v-model="drawer"
+        :items="this.items_alianza"
+      />
+
     </v-app-bar>
-    <home-drawer
-      v-model="drawer"
-      :items="this.items_alianza"
-    />
+
     <parallax-alianza>
     </parallax-alianza>
 
@@ -170,10 +172,10 @@ export default {
 
       drawer: null,
       items_alianza: [
-        { label: 'Simulador de Creditos', link: '#landing-alianza' },
-        { label: 'Consulta Creditos', link: '#cns-creditos' },
-        { label: 'Red de Venta', link: '#red' },
-        { label: 'Regresa a Macrosolutions', link: 'regresa' },
+        { label: 'Simulador de Creditos', link: '#simu' },
+        { label: 'Consulta Creditos', link: '#cns-cred' },
+        { label: 'Red de Venta', link: 'http://creditos.am-sistemas.com/' },
+        { label: 'Regresa a Macrosolutions', link: '/' },
       ],
 
 

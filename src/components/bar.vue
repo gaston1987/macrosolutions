@@ -66,12 +66,8 @@
             class="font-weight-bold"
             min-width="96"
             text
-          > <a
-              href="#"
-              v-smooth-scroll
-              @click="onSimu"
-            >
-              MacroCreditos</a>
+          >
+            <router-link to="/landingAlianza">MacroCreditos</router-link>
           </v-tab>
 
           <v-tab

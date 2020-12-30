@@ -3,21 +3,18 @@
   <div id="landing-alianza">
     <v-row>
 
+      <v-col class="col-md-3 col-xs-12">
+        <v-img
+          src="@/assets/presta_left.png"
+          contain
+          width="300px"
+          position="center"
+          style="padding-top:50px;"
+          class="animate__animated animate__fadeInUp"
+        />
+      </v-col>
 
-      <v-col class="col-md-3 col-xs-12"> 
-           <v-img
-              src="@/assets/presta_left.png"
-              contain
-              width="300px"
-              position="center"
-              style="padding-top:50px;"
-              
-              class="animate__animated animate__fadeInUp"
-            />
-            </v-col>
-
-
-      <v-col class="col-md-9 col-xs-12"> 
+      <v-col class="col-md-9 col-xs-12">
         <v-card
           elevation="0"
           class="prestamocard mx-auto mt-10"
@@ -30,19 +27,18 @@
             <p class="text">
               ¡Prestamos personales, hasta $100.000 por débito automático, Presentando tus últimos 2 recibos de sueldos y el detalle de los movimientos bancarios de los últimos dos meses!
             </p>
-           
 
           </v-card-text>
         </v-card>
-          </v-col>
-    
-</v-row>
-      <requisitos />
-      <v-col class="col-md-12 col-xs-12">
-        <simucred>
-        </simucred>
       </v-col>
-        <consulta />
+
+    </v-row>
+    <requisitos />
+    <v-col class="col-md-12 col-xs-12">
+      <simucred>
+      </simucred>
+    </v-col>
+    <consulta />
     <div class="text-right">
 
       <dialogChat />
@@ -76,55 +72,42 @@ export default {
   box-shadow: 0px !important;
 }
 .text {
-  color:#ffffff !important;
+  color: #ffffff !important;
   font-family: "Nunito" !important;
-  
 }
 
-#landing-alianza h1{
-    font-family: "Nunito" !important;
+#landing-alianza h1 {
+  font-family: "Nunito" !important;
 }
-
 
 @media only screen and (max-width: 600px) {
-  .text{
-
+  .text {
     font-size: 28px !important;
-
-
   }
-body{
+  body {
+    margin: 0 auto !important;
+    overflow: hidden; /* Hide scrollbars */
+  }
 
-  margin: 0 auto !important;
-  overflow: hidden; /* Hide scrollbars */
-}
+  #simucard {
+    width: 100% !important;
+  }
 
-#simucard{
+  #simucard h2 {
+    font-size: 24px;
+  }
 
-  width: 100% !important;
-}
+  #requisitos {
+    padding: 20px;
+  }
 
-#simucard h2{
+  #cnscard {
+    width: 90% !important;
+  }
 
- font-size: 24px;
-}
-
-#requisitos{
-
-  padding: 20px;
-}
-
-#cnscard{
-
-  width: 90% !important;
-}
-
-#ingreso{
-
-  width: 100% !important;
-}
-
-
+  #ingreso {
+    width: 100% !important;
+  }
 }
 </style>
 
