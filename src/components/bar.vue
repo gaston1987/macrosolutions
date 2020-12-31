@@ -199,6 +199,15 @@ export default {
     width: 90%;
   }
 }
+
+
+.v-tab:hover{
+
+   background-color: rgba(0, 0, 255, 0.2) !important;
+  
+   
+
+}
 </style>
 
 
