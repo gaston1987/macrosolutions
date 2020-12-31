@@ -19,13 +19,20 @@
       >
         <v-spacer></v-spacer>
       </v-system-bar>
-      <v-card-title class="text-center">
-
-        <h2 class="font-weight-black">
-          ¡Sacá tu crédito 100% online! <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
-          <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
-          <v-icon style="color:green; padding-left:5px; font-size:40px">mdi-currency-usd-circle</v-icon>
-        </h2>
+      <v-card-title class="text-center font-weight-black">
+        ¡Sacá tu crédito 100% online!
+        <v-icon
+          class="hidden-md-and-down"
+          style="color:green; padding-left:5px; font-size:40px"
+        >mdi-currency-usd-circle</v-icon>
+        <v-icon
+          class="hidden-md-and-down"
+          style="color:green; padding-left:5px; font-size:40px"
+        >mdi-currency-usd-circle</v-icon>
+        <v-icon
+          class="hidden-md-and-down"
+          style="color:green; padding-left:5px; font-size:40px"
+        >mdi-currency-usd-circle</v-icon>
 
       </v-card-title>
 
@@ -45,18 +52,6 @@
         min="0"
         ticks
       >
-        <!-- 
-            <template v-slot:append>
-              <v-text-field
-                v-model="ex1.val"
-                class="mt-0 pt-0"
-                hide-details
-                single-line
-                type="number"
-                style="width: 100px"
-              ></v-text-field>
-            </template>
-          -->
 
       </v-slider>
 
@@ -75,36 +70,9 @@
         min="3"
         ticks
       >
-        <!-- 
-            <template v-slot:append>
-              <v-text-field
-                v-model="ex2.val"
-                class="mt-0 pt-0"
-                hide-details
-                single-line
-                type="number"
-                style="width: 40px"
-              ></v-text-field>
-            </template>
-            -->
 
       </v-slider>
-      <!--  
-          <p
-            v-if="impcuo!=0"
-            class="font-weight-black"
-          >Valor aproximado de la cuota: ${{ Intl.NumberFormat("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(impcuo)}}(*)</p>
 
-            
-          <v-select
-            v-model="select2"
-            label="Seleccione cantidad de Cuotas"
-            outlined
-            rounded
-            filled
-            :items="items2"
-          ></v-select>        
-          -->
       <div class="d-flex">
         <p
           v-if="impcuo!=0"
@@ -152,10 +120,11 @@
       >
         <v-spacer></v-spacer>
       </v-system-bar>
-      <v-card-title class="text-center">
-        <p class="font-weight-black">
-          INGRESA TUS DATOS
-        </p>
+      <v-card-title class="text-center font-weight-black">
+
+        INGRESA TUS DATOS
+
+        <v-icon style="color:#FFA000; padding-left:10px; font-size:30px">mdi-form-select</v-icon>
       </v-card-title>
 
       <v-divider></v-divider>
@@ -195,6 +164,7 @@
           row
           required
           class="pl-10"
+          v-if="!$vuetify.breakpoint.mobile"
         >
           <template v-slot:label>
             <p style="font-size: 15px;"> <strong>Genero:</strong></p>
@@ -212,6 +182,19 @@
             value="O"
           ></v-radio>
         </v-radio-group>
+
+        <v-select
+          v-model="form['sexo']"
+          :items="sexo"
+          required
+          label="Genero"
+          dense
+          filled
+          class="pr-10 pl-10"
+          v-if="$vuetify.breakpoint.mobile"
+        >
+
+        </v-select>
 
         <v-row>
           <v-col
@@ -288,33 +271,39 @@
           </template>
         </v-checkbox>
 
-        <v-btn
-          :disabled="!valid"
-          color="success"
-          class="mr-4 ml-10 mb-10 pa-5"
-          @click="submitForm"
-          rounded
+        <v-row
+          align="center"
+          justify="center"
         >
-          Solicitar Ya!
-        </v-btn>
 
-        <v-btn
-          color="error"
-          class="ml-10 mb-10 pa-5"
-          @click="reset"
-          rounded
-        >
-          Cancelar
-        </v-btn>
+          <v-btn
+            :disabled="!valid"
+            :small="$vuetify.breakpoint.mobile"
+            color="success"
+            @click="submitForm"
+            rounded
+          >
+            Solicitar Ya!
+          </v-btn>
 
-        <v-btn
-          color="primary"
-          class="ml-10 mb-10 pa-5"
-          @click="modo='calculador'"
-          rounded
-        >
-          Regresa
-        </v-btn>
+          <v-btn
+            color="error"
+            :small="$vuetify.breakpoint.mobile"
+            @click="reset"
+            rounded
+          >
+            Cancelar
+          </v-btn>
+
+          <v-btn
+            color="primary"
+            :small="$vuetify.breakpoint.mobile"
+            @click="modo='calculador'"
+            rounded
+          >
+            Regresa
+          </v-btn>
+        </v-row>
 
       </v-form>
       <v-dialog
@@ -417,17 +406,18 @@ export default {
         tel_nro: '',
         name: '',
         email: '',
-        sexo: [
-          'Masculino',
-          'Femenino',
-          'Otro',
-          'Prefiero no decir',
-        ],
+        sexo: '',
         ingNeto: '',
       },
       dialog: false,
       valid: true,
       conf: false,
+      sexo: [
+        'Masculino',
+        'Femenino',
+        'Otro',
+        'Prefiero no decir',
+      ],
 
       dniRules: [
         v => !!v || 'El campo DNI es Obligatorio',

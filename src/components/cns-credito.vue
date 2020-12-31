@@ -21,14 +21,12 @@
         <v-spacer></v-spacer>
       </v-system-bar>
       <v-card-title
+        class="text-center font-weight-black"
         background-color="primary"
-        colo
       >
-        <h2>
-          <strong> ¡Consulta tu Crédito! </strong>
-          <v-icon style="color:rgb(216, 27, 96); padding-left:5px; font-size:40px">mdi-file-find</v-icon>
+        ¡Consulta tu Crédito!
+        <v-icon style="color:rgb(216, 27, 96); padding-left:5px; font-size:40px">mdi-file-find</v-icon>
 
-        </h2>
       </v-card-title>
 
       <v-divider></v-divider>
@@ -105,27 +103,29 @@
           required
           class="pr-10 pl-10"
         ></v-text-field>
-
-        <v-btn
-          :disabled="!valid"
-          small
-          color="success"
-          class="ml-10 mb-10 ml-5 pa-5"
-          @click="submitForm"
-          rounded
+        <v-row
+          align="center"
+          justify="center"
         >
-          Consultar
-        </v-btn>
+          <v-btn
+            :disabled="!valid"
+            :small="$vuetify.breakpoint.mobile"
+            color="success"
+            @click="submitForm"
+            rounded
+          >
+            Consultar
+          </v-btn>
 
-        <v-btn
-          color="error"
-          small
-          class="ml-10 mb-10 pa-5"
-          @click="reset"
-          rounded
-        >
-          Cancelar
-        </v-btn>
+          <v-btn
+            color="error"
+            :small="$vuetify.breakpoint.mobile"
+            @click="reset"
+            rounded
+          >
+            Cancelar
+          </v-btn>
+        </v-row>
 
       </v-form>
       <v-dialog
