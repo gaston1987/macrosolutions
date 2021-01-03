@@ -34,7 +34,7 @@ export default {
           src: 'https://i.postimg.cc/7LXk1WBM/digital-marketing-1725340-1920.jpg',
         },
         {
-          src: 'https://i.postimg.cc/bY5qF4qm/stock-exchange-3972311-1920.jpg',
+          src: 'https://wallpapercave.com/wp/wp2128226.jpg',
         },
       ],
     }
