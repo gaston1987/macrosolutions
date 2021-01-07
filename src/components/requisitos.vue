@@ -53,6 +53,8 @@
 <style>
 #requisitos {
   background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 #requisitos h1 {

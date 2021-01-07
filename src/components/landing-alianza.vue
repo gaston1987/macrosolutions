@@ -1,11 +1,12 @@
 <template>
 
   <div id="landing-alianza">
+  <requisitos />
     <v-row>
 
       <v-col class="col-md-3 col-xs-12">
         <v-img
-          src="@/assets/presta_left.png"
+          src="@/assets/presta_left01.png"
           contain
           width="300px"
           position="center"
@@ -33,7 +34,23 @@
       </v-col>
 
     </v-row>
-    <requisitos />
+
+    <v-row>
+
+        <v-img
+          src="@/assets/prestabottom01.png"
+          contain
+          max-width="800px"
+          position="center"
+          style="margin-top:-50px;padding-bottom:120px;margin:0 auto;"
+          class="animate__animated animate__fadeInUp"
+         />
+
+        
+    </v-row>
+
+
+   
     <v-col class="col-md-12 col-xs-12">
       <simucred>
       </simucred>

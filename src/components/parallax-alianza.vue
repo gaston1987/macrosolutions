@@ -42,11 +42,13 @@
 .leyenda{
 
   vertical-align:text-bottom !important;
-  background-color:#000 ;
+  background-color:#23587e ;
   padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: "Nunito" !important;
+  border: 0px solid;
+  border-radius: 30px ;
 
 }
 
