@@ -346,95 +346,16 @@ export default {
       dialog2: false,
       dialog3: false,
       dialog4: false,
-      form: {
-        dni: '',
-        name: '',
-        tel_area: '',
-        tel_nro: '',
-        email: ''
-      },
-      valid: true,
-      conf: false,
-      dniRules: [
-        v => !!v || 'El campo DNI es Obligatorio',
-        v => (v && v.length >= 7) || 'La longitud del DNI debe ser mayor a 7 digitos',
-        v => (v && v.length > 0) || 'El DNI debe ser mayor a 0',
-      ],
-      emailRules: [
-        v => !!v || 'E-mail es requerido',
-        v => /.+@.+\..+/.test(v) || 'E-mail debe ser válido',
-      ],
-      nameRules: [
-        v => !!v || 'Nombre es requerido',
-        v => (v && v.length >= 10) || 'La longitud del nombre debe ser mayor a 10 caracteres',
-      ],
     }
   },
   methods: {
 
     onSimu () {
       // eslint-disable-next-line no-console
-      console.log(['onSimu)'])
+      //console.log(['onSimu)'])
       this.$router.push({ name: "landingAlianza" })
         .catch(() => { })
     },
-    submitForm () {
-      if (!this.$refs.form.validate()) {
-        return
-      }
-      this.dialog = true
-
-      this.sendEmail()
-
-    },
-
-    sendEmail () {
-      this.$loadScript("https://smtpjs.com/v3/smtp.js")
-        .then(() => {                                         //this Promise return nothing!!!
-          window.Email && window.Email.send({
-            Host: "mail.macrosolutions.com.ar",
-            Username: "web@macrosolutions.com.ar",
-            Password: "Dkno198000",
-            //SecureToken: "82b06d19-25c4-451d-a485-df6822ea67f8",            
-            To: 'jose.evsa@gmail.com',
-            From: "web@macrosolutions.com.ar",
-            Subject: "Consulta Credito DNI:" + this.form.dni,
-            Body: `<html>
-                   <table style="border: 1px solid black">
-                   <tr>
-                   <td><strong>DNI:</strong></td>
-                   <td>"${this.form.dni}"</td>
-                   </tr>
-                   <tr>
-                   <td><strong>Apellido y Nombre:</strong></td>
-                   <td>"${this.form.name}"</td>
-                   </tr>
-                   <tr>
-                   <td><strong>Telefono:</strong></td>
-                   <td>"${this.form.tel_area}-${this.form.tel_nro}"</td>
-                   </tr>
-                   <tr>
-                   <td><strong>Email:</strong></td>
-                   <td>"${this.form.email}"</td>
-                   </tr>
-                   </table>
-                   </html>
-                   `
-          }).then(() => {
-            this.dialog = false
-            this.conf = true
-            this.reset()
-          }
-          );
-        })
-        .catch((e) => {
-          alert(e)
-          this.dialog = false
-          // Failed to fetch script
-        })
-    },
-
-
 
     reset () {
       this.$refs.form.reset()
