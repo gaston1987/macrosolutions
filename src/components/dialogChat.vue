@@ -10,13 +10,17 @@
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           color="amber darken-2"
-          dark
           v-bind="attrs"
           v-on="on"
-          fab
           id="botw"
+          elevation="24"
+          large
+          fab
         >
-          <v-icon>mdi-android-messages</v-icon>
+          <img
+            width="70px"
+            src="@/assets/avatar_chat.png"
+          />
         </v-btn>
 
       </template>
@@ -25,7 +29,10 @@
         <v-list>
           <v-list-item>
             <v-list-item-avatar>
-              <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+              <img
+                width="70px"
+                src="@/assets/avatar_chat.png"
+              />
             </v-list-item-avatar>
 
             <v-list-item-content>

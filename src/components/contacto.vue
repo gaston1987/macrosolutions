@@ -55,7 +55,7 @@
       >
         <div
           id="form-contact"
-          style="margin-top:50px; margin-bottom:50px; "
+          style="margin-top:5px; margin-bottom:50px; "
         >
 
           <v-card

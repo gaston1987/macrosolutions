@@ -4,9 +4,9 @@
     <carrousel />
     <div class="divider"></div>
     <servicios />
-    <parallax />
+
     <div class="divider"></div>
-    <clientes />
+    <cardNosotros />
     <contacto />
     <div class="text-right">
 
@@ -49,10 +49,11 @@
 import bar from '@/components/bar';
 import carrousel from '@/components/carrousel';
 import servicios from '@/components/servicios';
-import parallax from '@/components/parallax';
-import clientes from '@/components/clientes';
+//import parallax from '@/components/parallax';
+//import clientes from '@/components/clientes';
 import contacto from '@/components/contacto';
 import dialogChat from '@/components/dialogChat';
+import cardNosotros from '@/components/cardNosotros';
 
 export default {
   name: 'barIndex',
@@ -62,10 +63,11 @@ export default {
     bar,
     carrousel,
     servicios,
-    parallax,
-    clientes,
+    //parallax,
+    //clientes,
     contacto,
-    dialogChat
+    dialogChat,
+    cardNosotros
   },
   data () {
 
