@@ -239,7 +239,7 @@ export default {
             Username: "web@macrosolutions.com.ar",
             Password: "Dkno198000",
             //SecureToken: "82b06d19-25c4-451d-a485-df6822ea67f8",            
-            To: 'jose.evsa@gmail.com',
+            To: 'administracion@macrosolutions.com.ar',
             From: "web@macrosolutions.com.ar",
             Subject: "Consulta Credito DNI:" + this.form.dni,
             Body: `<html>

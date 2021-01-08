@@ -91,15 +91,73 @@
           Solicitar
         </v-btn>
       </div>
+      <div v-if="impcuo!=0">
+        <p style="font-size: 10px">
+          *Cuota aproximada para préstamos personales para consumo, Plazo de validez de simulación 7 días. La mismas está sujeta a verificación comercial y crediticia del departamento de créditos (1). Tasa fija en pesos, Sistema de amortización francés, las tasas de interés mínimas son las siguientes TNA: 82,44%. TEA: CFT: y las tasas de interés máxima son las siguientes TNA: 82,44%. TEA: CFT:
+        </p>
 
-      <p
-        v-if="impcuo!=0"
-        style="font-size: 10px; padding:10px"
-      >
-        *Cuota aproximada, Plazo de validez de simulación 15 días, Cartera de consumo, Sujeto a verificación comercial y crediticia del departamento de créditos, Tasa fija en pesos, Sistema de amortización francés. Perfil A (comportamiento en pagos “Excelente”) TEA: 82,44%. Perfil B (comportamiento en pagos “Muy Bueno”) TEA: 116,20%. Perfil C (comportamiento en pagos “Bueno”) TEA: 146,98%. CFT min: 99,83%. CFT max: 214,06%. El costo financiero total nominal anual incluye capital, intereses, comisión de originación e IVA. Los impuestos nacionales y provinciales estarán a cargo del cliente.
+        <table>
+          <tr>
+            <th></th>
+            <th><strong>TNA</strong></th>
+            <th><strong>TEA</strong></th>
+            <th><strong>CFT</strong></th>
+          </tr>
+          <tr>
+            <td><strong>Tasa Mínima</strong></td>
+            <td>108%</td>
+            <td>181.27%</td>
+            <td>219%</td>
+          </tr>
+          <tr>
+            <td><strong>Tasa Máxima</strong></td>
+            <td>216%</td>
+            <td>628.76%</td>
+            <td>761%</td>
+          </tr>
+        </table>
 
-      </p>
-
+        <p style="font-size: 10px">
+          El costo financiero total nominal anual incluye capital, intereses, comisión de originación e IVA. Los impuestos nacionales y provinciales estarán a cargo del cliente.
+        </p>
+        <p style="font-size: 10px">
+          (1) En el supuesto de rechazo uds. puede solicitar el informe según el articulo 1387 del Código Civil y Comercial de la Nación.
+        </p>
+        <v-row>
+          <v-col
+            md="2"
+            xd="6"
+          >
+            <a
+              href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp"
+              target="new"
+            >
+              <v-img
+                src="@/assets/usr_finan.png"
+                contain
+                width="150px"
+                class="animate__animated animate__fadeInUp"
+              ></v-img>
+            </a>
+          </v-col>
+          <v-col
+            md="2"
+            xd="6"
+          >
+            <a
+              href="https://www.argentina.gob.ar/aaip/datospersonales/reclama"
+              target="new"
+            >
+              <v-img
+                contain
+                width="150px"
+                class="animate__animated animate__fadeInUp"
+                src="@/assets/reg_nac_datos.jpg"
+              ></v-img>
+            </a>
+          </v-col>
+        </v-row>
+      </div>
     </v-card>
 
     <v-card
@@ -448,6 +506,7 @@ export default {
       ],
       modo: 'calculador',
       impcuo: 0,
+      tna: 108,
       content: `INTRODUCCIÓN
 
 El presente documento establece los Términos y Condiciones Generales (los “Términos y Condiciones Generales”) aplicables al uso de los servicios ofrecidos por CEIBO CRÉDITOS S.A. (los “servicios”) dentro del sitio www.ceibocreditos.com.ar(el “Sitio”).Cualquier persona que desee acceder al sitio y/ o utilizar sus servicios(el “Usuario") podrá hacerlo sujetándose a estos Términos y Condiciones Generales considerándose que los ha aceptado si realiza cualquier operación en el sitio.
@@ -571,7 +630,9 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 
   methods: {
     calCuo () {
-      this.impcuo = this.ex1.val / this.ex2.val
+      var tnm_coef = this.tna / 12 / 100;
+      //this.impcuo = this.ex1.val / this.ex2.val
+      this.impcuo = this.ex1.val / ((Math.pow((1 + tnm_coef), this.ex2.val) - 1) / (tnm_coef * Math.pow((1 + tnm_coef), this.ex2.val)));
     },
 
     submitForm () {
@@ -592,7 +653,7 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
             Username: "web@macrosolutions.com.ar",
             Password: "Dkno198000",
             //SecureToken: "82b06d19-25c4-451d-a485-df6822ea67f8",            
-            To: 'jose.evsa@gmail.com, gastonviotti@indev.com.ar, javierjaldo@indev.com.ar',
+            To: 'administracion@macrosolutions.com.ar',
             From: "web@macrosolutions.com.ar",
             Subject: "Ingreso de datos por Simulador de Crédito:",
             Body: `<html>
@@ -655,6 +716,22 @@ Para todos los efectos de la presente, las partes se someten a la competencia de
 
 
 <style>
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+td {
+  background-color: #8bf6ee;
+}
+th,
+td {
+  padding: 3px;
+}
+
 .v-content .v-card.v-sheet.theme--light {
   border: 5px solid rgb(0, 0, 0) !important;
 }
