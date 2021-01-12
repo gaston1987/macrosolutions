@@ -1,7 +1,7 @@
 <template>
 
   <div id="landing-alianza">
-  <requisitos />
+    <requisitos />
     <v-row>
 
       <v-col class="col-md-3 col-xs-12">
@@ -14,12 +14,11 @@
           class="animate__animated animate__fadeInUp"
         />
       </v-col>
-
-      <v-col class="col-md-9 col-xs-12">
+      <v-col class="col-md-7 col-xs-12">
         <v-card
           elevation="0"
           class="prestamocard mx-auto mt-10"
-          width="90%"
+          width="100%"
         >
 
           <v-card-text class="display-1 text--primary text-center">
@@ -32,25 +31,21 @@
           </v-card-text>
         </v-card>
       </v-col>
-
     </v-row>
 
     <v-row>
 
-        <v-img
-          src="@/assets/prestabottom01.png"
-          contain
-          max-width="800px"
-          position="center"
-          style="margin-top:-50px;padding-bottom:120px;margin:0 auto;"
-          class="animate__animated animate__fadeInUp"
-         />
+      <v-img
+        src="@/assets/prestabottom01.png"
+        contain
+        max-width="800px"
+        position="center"
+        style="margin-top:-50px;padding-bottom:120px;margin:0 auto;"
+        class="animate__animated animate__fadeInUp"
+      />
 
-        
     </v-row>
 
-
-   
     <v-col class="col-md-12 col-xs-12">
       <simucred>
       </simucred>
