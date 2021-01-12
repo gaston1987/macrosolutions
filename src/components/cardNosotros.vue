@@ -12,11 +12,13 @@
         <v-card
           class="pt-10"
           flat
+        
         >
           <v-img
-            max-height="216"
-            max-width="419"
+            
+            max-width="280"
             contain
+            style="margin-left:20px;"
             position="center"
             src="@/assets/marca_final2021.png"
             class="animate__animated animate__fadeInUp"
@@ -24,9 +26,9 @@
 
           <v-spacer></v-spacer>
 
-          <v-divider></v-divider>
+        
 
-          <v-card-text>
+          <v-card-text style="margin-top:20px;">
             Somos una empresa dinámica con el objetivo de asistir técnica y administrativamente a pequeñas y medianas empresas de distintos rubros.
 
             Nuestra principal especialización se concreta en el diseño e implementación de estructuras de financiación e impositivas apropiadas para cada empresa de acuerdo a los ciclos que conlleva cada industria en particular.
@@ -36,11 +38,13 @@
       </v-col>
       <v-divider vertical></v-divider>
       <v-col class="col-md-3 col-xs-12">
-        <v-card flat>
+        <v-card
+         
+        flat>
 
           <v-img
-            max-height="216"
-            max-width="419"
+            style="margin-left:70px;"
+            max-width="180"
             contain
             position="center"
             src="@/assets/ALIANZA_FINAL.png"
@@ -52,10 +56,14 @@
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>
-          <v-divider></v-divider>
+        
 
-          <v-card-text>
-            Alianza es la unidad de micro créditos de Macrosolutions donde asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.
+          <v-card-text 
+
+           >
+               <v-row >
+         <p style="text-align:justify;margin-top:10px;"> Alianza es la unidad de micro créditos de Macrosolutions donde asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.</p>
+               </v-row>
           </v-card-text>
         </v-card>
       </v-col>

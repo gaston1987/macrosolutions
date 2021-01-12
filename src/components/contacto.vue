@@ -8,16 +8,17 @@
         md="5"
         class="float-left"
         flat
-        pl-5
+        ml-5
       >
         <v-card
           flat
-          pr-10
+          pr-5
+           ml-20
         >
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
-              style="border:0"
+              style="border:0;margin-left:50px; margin-top:10px"
               width="100%"
               height="440px"
               allowfullscreen=""
