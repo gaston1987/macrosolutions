@@ -327,11 +327,7 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-        <v-list-item
-          link
-          v-bind="attrs"
-          v-on="on"
-        >
+        <v-list-item link>
           <v-list-item-action>
 
             <v-icon>mdi-whatsapp</v-icon>

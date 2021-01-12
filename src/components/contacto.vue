@@ -68,7 +68,7 @@
 
               <v-card-title class="font-weight-black">
                 Contáctenos
-                <v-icon style="#007ebf; padding-left:5px; font-size:40px">mdi-human-greeting-proximity</v-icon>
+                <v-icon style="#007ebf; padding-left:250px; font-size:40px">mdi-account-box-outline</v-icon>
               </v-card-title>
               <v-spacer></v-spacer>
 
