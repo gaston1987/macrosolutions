@@ -94,7 +94,7 @@
             <v-card>
               <v-list-item>
                 <v-list-item-avatar>
-                  <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+                  <v-img src="@/assets/avatar_chat.png"></v-img>
                 </v-list-item-avatar>
 
                 <v-list-item-content>
@@ -184,7 +184,7 @@
 
             <v-list-item>
               <v-list-item-avatar>
-                <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+                <v-img src="@/assets/avatar_chat.png"></v-img>
               </v-list-item-avatar>
 
               <v-list-item-content>
@@ -272,7 +272,7 @@
           <v-card>
             <v-list-item>
               <v-list-item-avatar>
-                <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHIOt7XY-8McijLKAL5xBZeYJJdXa1dI0vmg&usqp=CAU"></v-img>
+                <v-img src="@/assets/avatar_chat.png"></v-img>
               </v-list-item-avatar>
 
               <v-list-item-content>
@@ -313,8 +313,8 @@
 
               <v-list-item-title>LUNES A VIERNES DE 9hs a 18hs</v-list-item-title>
             </v-list-item>
-            <v-divider></v-divider>
 
+            <v-divider></v-divider>
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
@@ -327,12 +327,21 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
+        <v-list-item
+          link
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-list-item-action>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
+            <v-icon>mdi-whatsapp</v-icon>
 
-        </v-card-actions>
+          </v-list-item-action>
+          <v-list-item-title>CHATEÁ CON NOSTROS!</v-list-item-title>
+        </v-list-item>
+        <v-divider></v-divider>
       </v-card>
+
     </v-menu>
   </div>
 </template>
@@ -353,6 +362,7 @@ export default {
       dialog2: false,
       dialog3: false,
       dialog4: false,
+      dialog5: false,
     }
   },
   methods: {

@@ -3,6 +3,7 @@
     fluid
     class="my-8"
   >
+    <v-divider></v-divider>
     <v-row
       justify="space-around"
       no-gutters
@@ -12,36 +13,54 @@
           class="pt-10"
           flat
         >
-
           <v-img
+            max-height="216"
+            max-width="419"
             contain
             position="center"
-            style="padding-top:50px;"
+            src="@/assets/marca_final2021.png"
             class="animate__animated animate__fadeInUp"
-            src="@/assets/ALIANZA_FINAL.png"
           ></v-img>
 
+          <v-spacer></v-spacer>
+
+          <v-divider></v-divider>
+
+          <v-card-text>
+            Somos una empresa dinámica con el objetivo de asistir técnica y administrativamente a pequeñas y medianas empresas de distintos rubros.
+
+            Nuestra principal especialización se concreta en el diseño e implementación de estructuras de financiación e impositivas apropiadas para cada empresa de acuerdo a los ciclos que conlleva cada industria en particular.
+          </v-card-text>
         </v-card>
 
       </v-col>
-
+      <v-divider vertical></v-divider>
       <v-col class="col-md-3 col-xs-12">
-
         <v-card flat>
 
           <v-img
+            max-height="216"
+            max-width="419"
             contain
             position="center"
-            style="padding-top:350px;"
+            src="@/assets/ALIANZA_FINAL.png"
             class="animate__animated animate__fadeInUp"
-            src="@/assets/marca_final2021.png"
           ></v-img>
 
-        </v-card>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-divider></v-divider>
 
+          <v-card-text>
+            Alianza es la unidad de micro créditos de Macrosolutions donde asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
-
+    <v-divider></v-divider>
   </v-container>
 </template>
 

@@ -3,16 +3,8 @@
     <v-main>
 
       <v-col
-        xs="12"
-        sm="12"
-        md="1"
-      >
-
-      </v-col>
-
-      <v-col
-        xs="12"
-        sm="12"
+        xs="8"
+        sm="8"
         md="5"
         class="float-left"
         flat
@@ -48,9 +40,7 @@
       </v-col>
 
       <v-col
-        xs="12"
-        sm="12"
-        md="5"
+        md="6"
         class="float-right"
       >
         <div
