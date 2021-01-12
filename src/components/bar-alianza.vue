@@ -124,7 +124,6 @@
 
     <cns-credito>
     </cns-credito>
-
     <v-col cols="12">
       <v-footer :padless="true">
         <v-card
@@ -133,7 +132,23 @@
           width="100%"
           class="secondary white--text text-center"
         >
-
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
+            style="border:0"
+            width="100%"
+            height="440px"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+          <p style="text-align:center; margin-top:30px">
+            <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
+            <b> 25 de Mayo 431, Piso 3, of. F </b>
+          </p>
+          <p style="text-align:center">
+            <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
+            <b> Tel: +54 11 52527626 </b>
+          </p>
           <v-btn
             v-for="(social, i) in socials"
             :key="i"
@@ -164,6 +179,7 @@
 import LandingAlianza from './landing-alianza.vue';
 import ParallaxAlianza from './parallax-alianza.vue';
 import CnsCredito from './cns-credito.vue';
+
 
 export default {
 
