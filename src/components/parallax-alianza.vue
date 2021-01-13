@@ -3,6 +3,8 @@
   <div class="text-center">
     <v-parallax src="@/assets/2784130.jpg" 
     
+    height="618"
+    
     
     >
       <v-main>
