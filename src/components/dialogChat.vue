@@ -14,13 +14,21 @@
           v-on="on"
           id="botw"
           elevation="24"
-          large
+          x-large
           fab
         >
-          <img
-            width="70px"
-            src="@/assets/avatar_chat.png"
-          />
+          <v-badge
+            color="info"
+            left=true
+            content="!"
+          >
+            <v-avatar size="100">
+              <img
+                width="70px"
+                src="@/assets/avatar_chat.png"
+              />
+            </v-avatar>
+          </v-badge>
         </v-btn>
 
       </template>
