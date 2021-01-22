@@ -335,7 +335,11 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-        <v-list-item link>
+        <v-list-item
+          link
+          href="https://api.whatsapp.com/send?phone=5491123765493"
+          target="blank"
+        >
           <v-list-item-action>
 
             <v-icon>mdi-whatsapp</v-icon>
