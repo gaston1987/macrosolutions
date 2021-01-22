@@ -80,7 +80,7 @@
               href="#clientes"
               v-smooth-scroll
             >
-              Clientes</a>
+              Nosotros</a>
           </v-tab>
 
           <v-tab
@@ -155,7 +155,7 @@ export default {
       items: [
         { label: 'Servicios', link: '#servicio' },
         { label: 'Macrocreditos', link: 'landingAlianza' },
-        { label: 'Clientes', link: '#clientes' },
+        { label: 'Nosotros', link: '#nosotros' },
         { label: 'Contacto', link: '#contacto' },
       ],
     };
@@ -200,13 +200,8 @@ export default {
   }
 }
 
-
-.v-tab:hover{
-
-   background-color: rgba(0, 0, 255, 0.2) !important;
-  
-   
-
+.v-tab:hover {
+  background-color: rgba(0, 0, 255, 0.2) !important;
 }
 </style>
 

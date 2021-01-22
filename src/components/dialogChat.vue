@@ -76,7 +76,7 @@
                   style="max-width: 20rem;"
                 > 👋 Hola!, soy Maca tu asistente virtual.
                   Tengo un equipo Macrosolutions que me está enseñando para poder ayudarte cada vez mejor.
-                  Y también podemos conversar sobre los siguientes temas:
+                  También podemos conversar sobre los siguientes temas:
                   ¿Con cuál te puedo ayudar?</p>
               </v-card-text>
             </v-card>
