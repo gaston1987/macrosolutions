@@ -15,8 +15,28 @@
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
+    >
+ 
+  
+<v-row
+          class="fill-height"
+          align="center"
+          justify="center"
+          
+        >
+  <div class="display-2"
+  style="background-color:rgba(0, 0, 255, 0.4);padding-bottom:10px;border-radius: 20px;"
+  
+  >
+  <div class="subt1" style="opacity:1.0; padding:5px;">
+            <h2 align="center">MACRO SOLUTIONS</h2>
+                <h3>Desarrollamos asistencia técnica y administrativa
+                para pequeñas y medianas empresas</h3> </div>
+          </div>
+          </v-row>
+
+</v-carousel-item>
+</v-carousel>
 </template>
 
 <script>
@@ -25,21 +45,38 @@ export default {
     return {
       items: [
         {
-          src: 'https://i.postimg.cc/k5ckntLF/sup001.jpg',
+          src: 'https://i.postimg.cc/6Q72y00T/slide-1.jpg',
         },
         {
-          src: 'https://i.postimg.cc/NF2vcfQp/conference-room-768441-1920.jpg',
+          src: 'https://i.postimg.cc/Hnkyzgms/slide-0002.jpg',
         },
+     
         {
-          src: 'https://i.postimg.cc/7LXk1WBM/digital-marketing-1725340-1920.jpg',
-        },
-        {
-          src: 'https://wallpapercave.com/wp/wp2128226.jpg',
+          src: 'https://i.postimg.cc/4dNznZjQ/slide004.jpg',
         },
       ],
     }
   },
 }
 </script>
+
+<style>
+
+.subt1 h3{
+ 
+ font-size: 18px !important;
+ color: #FFFFFF !important;
+ font-style: normal !important;
+ line-height: 22px;
+
+
+}
+
+.subt1 h2{
+ 
+ font-weight: bold;
+}
+  
+</style>
 
 
