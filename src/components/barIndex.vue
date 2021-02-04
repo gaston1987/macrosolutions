@@ -12,7 +12,7 @@
 
       <dialogChat />
     </div>
-    <v-col cols="12">
+    <v-col cols="12" class="pie">
       <v-footer :padless="true">
         <v-card
           flat
@@ -152,6 +152,12 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+.pie{
+
+  padding: 0px !important;
+}
+
 </style>
 
 
