@@ -25,7 +25,7 @@
           
         >
   <div class="display-2"
-  style="background-color:rgba(0, 0, 255, 0.4);padding-bottom:10px;border-radius: 20px;"
+  style="background-color:rgba(0, 0, 255, 0.6);padding-bottom:10px;border-radius: 20px;"
   
   >
   <div class="subt1" style="opacity:1.0; padding:5px;">
