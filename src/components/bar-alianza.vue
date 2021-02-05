@@ -124,7 +124,7 @@
 
     <cns-credito>
     </cns-credito>
-    <v-col cols="12">
+    <v-col cols="12" class="pie">
       <v-footer :padless="true">
         <v-card
           flat

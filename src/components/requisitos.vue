@@ -1,11 +1,11 @@
 <template>
   <div id="requisitos">
-    <h1 class="text-center">¡Sacá tu credito en pocos pasos!</h1>
-    <h2 class="text-center">Presentando:</h2>
+    <h1 class="text-center">¡Sacá tu crédito en pocos pasos!</h1>
+    <!-- <h2 class="text-center">Presentando:</h2> -->
     <v-row justify="center" class="mt-10">
-      <v-col class="col-md-3 col-xs-12">
+      <v-col class="col-md-5 col-xs-12 offset-md-1"  >
         <v-img
-          src="@/assets/dni01.png"
+          src="@/assets/presen.jpg"
           contain
           max-height="180px"
           position="center"
@@ -13,15 +13,60 @@
           class="animate__animated animate__fadeInUp"
         />
       <h3> 
-            Fotocopia del DNI
+            Crédito Presencial
         </h3>
+   <v-list  style="margin-top:20px;" >
+       <v-list-item-group v-model="model">
+              <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >FOTOCOPIA DNI</v-list-item-title>
+                    </v-list-item-content>
 
+              </v-list-item>
+
+               <v-list-item>
+                <v-list-item-icon>
+                       <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >ULTIMOS RECIBOS DE SUELDO</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+
+
+               <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >BOLETA DE SERVICIO</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+
+
+               <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title>MOVIMIENTOS BANCARIOS</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
        
+   </v-list-item-group>
+       </v-list>
+
       </v-col>
 
-      <v-col class="col-md-3 col-xs-12">
+      <v-col class="col-md-5 col-xs-12 offset-md-1">
         <v-img
-          src="@/assets/sueldo01.png"
+          src="@/assets/virtual.jpg"
           contain
           max-height="180px"
           position="center"
@@ -29,11 +74,57 @@
           class="animate__animated animate__fadeInUp"
         />
         <h3> 
-            Ultimos recibos de sueldo
+            Crédito Online
         </h3>
+        <v-list style="margin-right:20px; margin-top:20px;" >
+       <v-list-item-group v-model="model" >
+              <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >FOTO DE DNI</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+
+               <v-list-item>
+                <v-list-item-icon>
+                       <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >FOTO DE ULTIMO RECIBO DE SUELDO</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+
+
+               <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title >FOTO DE MOVIMIENTOS BANCARIOS</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+
+
+               <v-list-item>
+                <v-list-item-icon>
+                      <v-icon  color="blue darken-2">mdi-check-circle</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title>FOTO DE COMPROBANTE DE CBU</v-list-item-title>
+                    </v-list-item-content>
+
+              </v-list-item>
+       
+   </v-list-item-group>
+       </v-list>
       </v-col>
 
-      <v-col class="col-md-3 col-xs-12">
+      <!-- <v-col class="col-md-3 col-xs-12">
         <v-img
           src="@/assets/factura01.png"
           contain
@@ -45,7 +136,7 @@
          <h3> 
             Boleta de Servicio
         </h3>
-      </v-col>
+      </v-col> -->
     </v-row>
   </div>
 </template>
