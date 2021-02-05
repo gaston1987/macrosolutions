@@ -1,7 +1,7 @@
 <template>
 
   <div class="text-center">
-    <v-parallax src="@/assets/2784130.jpg" 
+    <v-parallax  src="@/assets/2784130.jpg" 
     
     height="618"
     
@@ -59,6 +59,16 @@
     line-height: 180%;
     font-size: 20px;
   }
+
+  .leyenda{
+
+    background:none;
+    color:#23587e ;
+    font-weight: bold;
+
+  }
+
+
 }
 </style>
 
