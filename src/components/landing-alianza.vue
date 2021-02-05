@@ -25,7 +25,7 @@
             <h1 style="color:rgb(44, 31, 119);font-size:30px;"><strong>PRÉSTAMOS PERSONALES</strong></h1><br>
             <h1 style="color:#D81B60;font-size:50px;"><strong>EN EFECTIVO</strong></h1><br>
             <p class="text">
-              ¡Prestamos personales, hasta $100.000 por débito automático, Presentando tus últimos 2 recibos de sueldos y el detalle de los movimientos bancarios de los últimos dos meses!
+              Préstamos personales hasta $100.000. Lo depositamos en tu cuenta bancaria. Lo usas como quieras. Lo devolves en cuotas, por débito automático o pago en las sucursales de cobro adheridas.
             </p>
 
           </v-card-text>

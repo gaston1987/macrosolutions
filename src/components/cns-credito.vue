@@ -15,17 +15,17 @@
       light
     >
       <v-system-bar
-        color="pink darken-2"
+        color="#2C1F77"
         dark
       >
         <v-spacer></v-spacer>
       </v-system-bar>
       <v-card-title
         class="text-center font-weight-black"
-        background-color="primary"
+        background-color="#2C1F77"
       >
         ¡Consulta tu Crédito!
-        <v-icon style="color:rgb(216, 27, 96); padding-left:5px; font-size:40px">mdi-file-find</v-icon>
+        <v-icon style="color:#2C1F77; padding-left:5px; font-size:40px">mdi-file-find</v-icon>
 
       </v-card-title>
 

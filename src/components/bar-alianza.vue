@@ -130,7 +130,8 @@
           flat
           tile
           width="100%"
-          class="secondary white--text text-center"
+          class="white--text text-center"
+          style=" background: #585454"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
@@ -160,6 +161,92 @@
           >
             <v-icon>{{ social.icon }}</v-icon>
           </v-btn>
+        </v-card>
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="secondary white--text text-center"
+        >
+          <v-row
+            justify="center"
+            class="white--text"
+            style="font-size: 12px"
+          >
+            <a class="pr-3 pt-5">Terminos y Condiciones | </a>
+
+            <a class="pr-3 pt-5">Politicas de Privacidad | </a>
+
+            <a class="pr-3 pt-5">Solicitud de Credito Modelo</a>
+
+          </v-row>
+
+          <v-row justify="center">
+            <v-col
+              md="2"
+              xd="12"
+            >
+              <a
+                href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp"
+                target="new"
+              >
+                <v-img
+                  src="@/assets/afip.jpg"
+                  contain
+                  height="100px"
+                  class="animate__animated animate__fadeInUp"
+                ></v-img>
+              </a>
+            </v-col>
+            <v-col
+              md="2"
+              xd="12"
+            >
+              <a
+                href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp"
+                target="new"
+              >
+                <v-img
+                  src="@/assets/usr_finan.png"
+                  contain
+                  width="200px"
+                  class="animate__animated animate__fadeInUp"
+                ></v-img>
+              </a>
+            </v-col>
+            <v-col
+              md="2"
+              xd="12"
+            >
+              <a
+                href="https://www.argentina.gob.ar/aaip/datospersonales/reclama"
+                target="new"
+              >
+                <v-img
+                  contain
+                  width="200px"
+                  class="animate__animated animate__fadeInUp"
+                  src="@/assets/reg_nac_datos.jpg"
+                ></v-img>
+              </a>
+            </v-col>
+            <v-col
+              md="2"
+              xd="12"
+            >
+              <a
+                href="http://www.bcra.gob.ar"
+                target="new"
+              >
+                <v-img
+                  contain
+                  width="90px"
+                  class="animate__animated animate__fadeInUp"
+                  src="@/assets/logo_bcra.png"
+                ></v-img>
+              </a>
+            </v-col>
+          </v-row>
 
           <v-card-text class="white--text">
             {{ new Date().getFullYear() }} — <a
@@ -168,6 +255,7 @@
             > INDEV - Deploying E-business </a>
           </v-card-text>
         </v-card>
+
       </v-footer>
     </v-col>
 

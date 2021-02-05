@@ -14,13 +14,14 @@
       mt-1
     >
       <v-system-bar
-        color="amber darken-2"
+        :color="ex2.color"
         dark
       >
         <v-spacer></v-spacer>
       </v-system-bar>
       <v-card-title class="text-center font-weight-black">
         ¡Sacá tu crédito 100% online!
+        <!-- 
         <v-icon
           class="hidden-md-and-down"
           style="color:green; padding-left:5px; font-size:40px"
@@ -33,6 +34,7 @@
           class="hidden-md-and-down"
           style="color:green; padding-left:5px; font-size:40px"
         >mdi-currency-usd-circle</v-icon>
+        -->
 
       </v-card-title>
 
@@ -41,7 +43,7 @@
       <v-slider
         v-model="ex1.val"
         @change="calCuo"
-        :thumb-color="ex1.color"
+        :thumb-color="ex2.color"
         thumb-label="always"
         :label="ex1.label"
         track-color="green"
@@ -57,7 +59,7 @@
 
       <v-slider
         v-model="ex2.val"
-        :thumb-color="ex1.color"
+        :thumb-color="ex2.color"
         thumb-label="always"
         @change="calCuo"
         :label="ex2.label"
@@ -123,40 +125,7 @@
         <p style="font-size: 10px">
           (1) En el supuesto de rechazo uds. puede solicitar el informe según el articulo 1387 del Código Civil y Comercial de la Nación.
         </p>
-        <v-row>
-          <v-col
-            md="2"
-            xd="6"
-          >
-            <a
-              href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp"
-              target="new"
-            >
-              <v-img
-                src="@/assets/usr_finan.png"
-                contain
-                width="150px"
-                class="animate__animated animate__fadeInUp"
-              ></v-img>
-            </a>
-          </v-col>
-          <v-col
-            md="2"
-            xd="6"
-          >
-            <a
-              href="https://www.argentina.gob.ar/aaip/datospersonales/reclama"
-              target="new"
-            >
-              <v-img
-                contain
-                width="150px"
-                class="animate__animated animate__fadeInUp"
-                src="@/assets/reg_nac_datos.jpg"
-              ></v-img>
-            </a>
-          </v-col>
-        </v-row>
+
       </div>
     </v-card>
 
@@ -173,7 +142,7 @@
       mt-1
     >
       <v-system-bar
-        color="amber darken-2"
+        color="#2C1F77"
         dark
       >
         <v-spacer></v-spacer>
@@ -182,7 +151,7 @@
 
         INGRESA TUS DATOS
 
-        <v-icon style="color:#FFA000; padding-left:10px; font-size:30px">mdi-form-select</v-icon>
+        <v-icon style="color:#2C1F77; padding-left:10px; font-size:30px">mdi-form-select</v-icon>
       </v-card-title>
 
       <v-divider></v-divider>
@@ -456,8 +425,8 @@ export default {
   data () {
 
     return {
-      ex1: { label: 'Seleccione Monto', val: 0, color: 'orange' },
-      ex2: { label: 'Seleccione Cuotas', val: 0, color: 'orange' },
+      ex1: { label: 'Seleccione Monto', val: 0, color: '#2C1F77' },
+      ex2: { label: 'Seleccione Cuotas', val: 0, color: '#2C1F77' },
       form: {
         dni: '',
         tel_area: '',
