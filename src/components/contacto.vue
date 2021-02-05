@@ -1,29 +1,27 @@
 <template>
   <div id="contacto">
-    <v-main>
-
+   
+     <v-row justify="center" >
       <v-col
-        xs="8"
-        sm="8"
-        md="5"
-        class="float-left"
+       
         flat
-        ml-5
+        class="col-md-5 col-xs-12 col-sm-12  offset-md-1"
+        
       >
         <v-card
           flat
-          pr-5
-           ml-20
+ 
         >
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
-              style="border:0;margin-left:50px; margin-top:10px"
+              style="border:0; margin-top:10px"
               width="100%"
               height="440px"
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
+              
             ></iframe>
 
             <p style="text-align:center; margin-top:30px">
@@ -41,23 +39,24 @@
       </v-col>
 
       <v-col
-        md="6"
-        class="float-right"
+        class="col-md-6 col-xs-12 col-sm-12  offset-md-0"
+       
       >
         <div
           id="form-contact"
-          style="margin-top:5px; margin-bottom:50px; "
+          style="margin-top:5px; margin-bottom:50px !important; "
         >
 
           <v-card
             elevation=20
             id="cnscard"
-            class="mx-auto mb-20"
+            class="mx-auto pb-20"
             outlined
             rounded
             width="80%"
             mt-20
             light
+            pb-5
           >
 
             <v-toolbar
@@ -66,10 +65,10 @@
               dark
               flat
             >
-
-              <v-card-title class="font-weight-black">
+               <v-icon style="#007ebf;  font-size:40px;">mdi-account-box-outline</v-icon>
+              <v-card-title class="font-weight-black" style="min-width:300px">
                 Contáctenos
-                <v-icon style="#007ebf; padding-left:250px; font-size:40px">mdi-account-box-outline</v-icon>
+               
               </v-card-title>
               <v-spacer></v-spacer>
 
@@ -151,6 +150,8 @@
               <v-row
                 align="center"
                 justify="center"
+                mb-5
+                style="margin-bottom:20px"
               >
                 <v-btn
                   :disabled="!valid"
@@ -228,8 +229,8 @@
           </v-card>
         </div>
       </v-col>
-
-    </v-main>
+     </v-row>
+   
 
   </div>
 
