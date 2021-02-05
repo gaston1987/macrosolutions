@@ -15,7 +15,7 @@
       <h3> 
             Crédito Presencial
         </h3>
-   <v-list  style="margin-top:20px;" >
+   <v-list flat  style="margin-top:20px;" >
        <v-list-item-group v-model="model">
               <v-list-item>
                 <v-list-item-icon>
@@ -76,7 +76,7 @@
         <h3> 
             Crédito Online
         </h3>
-        <v-list style="margin-right:20px; margin-top:20px;" >
+        <v-list flat style="margin-top:20px;" >
        <v-list-item-group v-model="model" >
               <v-list-item>
                 <v-list-item-icon>
