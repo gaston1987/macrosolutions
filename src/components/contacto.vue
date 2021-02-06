@@ -1,17 +1,12 @@
 <template>
   <div id="contacto">
-   
-     <v-row justify="center" >
+
+    <v-row justify="center">
       <v-col
-       
         flat
         class="col-md-5 col-xs-12 col-sm-12  offset-md-1"
-        
       >
-        <v-card
-          flat
- 
-        >
+        <v-card flat>
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
@@ -21,7 +16,6 @@
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
-              
             ></iframe>
 
             <p style="text-align:center; margin-top:30px">
@@ -38,10 +32,7 @@
 
       </v-col>
 
-      <v-col
-        class="col-md-6 col-xs-12 col-sm-12  offset-md-0"
-       
-      >
+      <v-col class="col-md-6 col-xs-12 col-sm-12  offset-md-0">
         <div
           id="form-contact"
           style="margin-top:5px; margin-bottom:50px !important; "
@@ -65,10 +56,13 @@
               dark
               flat
             >
-               <v-icon style="#007ebf;  font-size:40px;">mdi-account-box-outline</v-icon>
-              <v-card-title class="font-weight-black" style="min-width:300px">
+              <v-icon style="#007ebf;  font-size:40px;">mdi-account-box-outline</v-icon>
+              <v-card-title
+                class="font-weight-black"
+                style="min-width:300px"
+              >
                 Contáctenos
-               
+
               </v-card-title>
               <v-spacer></v-spacer>
 
@@ -88,7 +82,6 @@
                 type="number"
                 label="Nro.DNI."
                 clearable
-                filled
                 required
                 class="pr-10 pl-10 py-10"
               ></v-text-field>
@@ -99,7 +92,6 @@
                 :rules="nameRules"
                 label="Apellido y Nombre"
                 clearable
-                filled
                 required
                 class="pr-10 pl-10"
               ></v-text-field>
@@ -143,10 +135,33 @@
                 :rules="emailRules"
                 label="E-mail"
                 clearable
-                filled
                 required
                 class="pr-10 pl-10"
               ></v-text-field>
+
+              <v-combobox
+                class="pr-10 pl-10"
+                label="Motivo?"
+                clearable
+                multiple
+                small-chips
+                v-model="form['motivo']"
+                :items="items"
+                :rules="selectRules"
+                required
+              >
+              </v-combobox>
+              <v-textarea
+                v-model="form.desMotivo"
+                color="teal"
+                class="pr-10 pl-10"
+              >
+                <template v-slot:label>
+                  <div>
+                    Describinos tu consulta <small>(opcional)</small>
+                  </div>
+                </template>
+              </v-textarea>
               <v-row
                 align="center"
                 justify="center"
@@ -229,8 +244,7 @@
           </v-card>
         </div>
       </v-col>
-     </v-row>
-   
+    </v-row>
 
   </div>
 
@@ -249,7 +263,9 @@ export default {
         name: '',
         tel_area: '',
         tel_nro: '',
-        email: ''
+        email: '',
+        motivo: '',
+        desMotivo: '',
       },
       dialog: false,
       conf: false,
@@ -266,6 +282,17 @@ export default {
       nameRules: [
         v => !!v || 'Nombre es requerido',
         v => (v && v.length >= 10) || 'La longitud del nombre debe ser mayor a 10 caracteres',
+      ],
+      selectRules: [
+        v => !!v || 'Motivo es requerido',],
+      items: [
+        'Quiero activar el botón de arrepentimiento',
+        'Quiero activar el botón de baja y cancelar el crédito',
+        'Quiero que me manden una copia de la solicitud de crédito',
+        'Quiero que me manden el cronograma de pagos y el saldo de deuda',
+        'Quiero hacer una consulta',
+        'Quiero hacer un reclamo',
+        'Otros: Aclarar',
       ],
     }
   },
@@ -309,6 +336,14 @@ export default {
                    <tr>
                    <td><strong>Email:</strong></td>
                    <td>"${this.form.email}"</td>
+                   </tr>
+                   <tr>
+                   <td><strong>Motivo:</strong></td>
+                   <td>"${this.form.motivo}"</td>
+                   </tr>
+                   <tr>
+                   <td><strong>Motivo:</strong></td>
+                   <td>"${this.form.desMotivo}"</td>
                    </tr>
                    </table>
                    </html>

@@ -10,7 +10,7 @@
       class="mx-auto mb-20"
       outlined
       rounded
-      width="80%"
+      width="81.5%"
       mt-20
       light
     >
@@ -20,12 +20,16 @@
       >
         <v-spacer></v-spacer>
       </v-system-bar>
+      <v-icon style="color:#2C1F77; padding-left:2px; font-size:40px">mdi-file-find</v-icon>
       <v-card-title
         class="text-center font-weight-black"
         background-color="#2C1F77"
       >
-        ¡Consulta tu Crédito!
-        <v-icon style="color:#2C1F77; padding-left:5px; font-size:40px">mdi-file-find</v-icon>
+
+        Tenes Dudas?
+        Podes completar el formulario con tus datos aclarando la consulta y
+        nos contactaremos para enviarte la información solicitada.
+        También podes chatear con Ali quien te responderá en el acto.
 
       </v-card-title>
 
@@ -44,7 +48,6 @@
           type="number"
           label="Nro.DNI."
           clearable
-          filled
           required
           class="pr-10 pl-10 py-10"
         ></v-text-field>
@@ -55,7 +58,6 @@
           :rules="nameRules"
           label="Apellido y Nombre"
           clearable
-          filled
           required
           class="pr-10 pl-10"
         ></v-text-field>
@@ -99,10 +101,31 @@
           :rules="emailRules"
           label="E-mail"
           clearable
-          filled
           required
           class="pr-10 pl-10"
         ></v-text-field>
+        <v-combobox
+          class="pr-10 pl-10"
+          label="Motivo?"
+          clearable
+          multiple
+          small-chips
+          v-model="form['motivo']"
+          :items="items"
+          :rules="selectRules"
+        >
+        </v-combobox>
+        <v-textarea
+          v-model="form.desMotivo"
+          color="teal"
+          class="pr-10 pl-10"
+        >
+          <template v-slot:label>
+            <div>
+              Describinos tu consulta <small>(opcional)</small>
+            </div>
+          </template>
+        </v-textarea>
         <v-row
           align="center"
           justify="center"
@@ -198,7 +221,9 @@ export default {
         name: '',
         tel_area: '',
         tel_nro: '',
-        email: ''
+        email: '',
+        motivo: '',
+        desMotivo: '',
       },
       dialog: false,
       conf: false,
@@ -215,6 +240,17 @@ export default {
       nameRules: [
         v => !!v || 'Nombre es requerido',
         v => (v && v.length >= 10) || 'La longitud del nombre debe ser mayor a 10 caracteres',
+      ],
+      selectRules: [
+        v => !!v || 'Motivo es requerido',],
+      items: [
+        'Quiero activar el botón de arrepentimiento',
+        'Quiero activar el botón de baja y cancelar el crédito',
+        'Quiero que me manden una copia de la solicitud de crédito',
+        'Quiero que me manden el cronograma de pagos y el saldo de deuda',
+        'Quiero hacer una consulta',
+        'Quiero hacer un reclamo',
+        'Otros: Aclarar',
       ],
     }
   },
@@ -259,6 +295,14 @@ export default {
                    <tr>
                    <td><strong>Email:</strong></td>
                    <td>"${this.form.email}"</td>
+                   </tr>
+                   <tr>
+                   <td><strong>Motivo:</strong></td>
+                   <td>"${this.form.motivo}"</td>
+                   </tr>
+                    <tr>
+                   <td><strong>Motivo:</strong></td>
+                   <td>"${this.form.desMotivo}"</td>
                    </tr>
                    </table>
                    </html>

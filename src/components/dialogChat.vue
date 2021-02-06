@@ -74,7 +74,7 @@
                 <p
                   class="font-weight-black"
                   style="max-width: 20rem;"
-                > 👋 Hola!, soy Maca tu asistente virtual.
+                > 👋 Hola!, soy Ali tu asistente virtual.
                   Tengo un equipo Macrosolutions que me está enseñando para poder ayudarte cada vez mejor.
                   También podemos conversar sobre los siguientes temas:
                   ¿Con cuál te puedo ayudar?</p>
@@ -173,7 +173,7 @@
 
         <v-dialog
           v-model="dialog4"
-          width="500"
+          width="auto"
         >
           <template v-slot:activator="{ on, attrs }">
             <v-list-item
@@ -210,42 +210,8 @@
               </v-list-item-action>
             </v-list-item>
             <v-container>
-              <v-card
-                elevation="3"
-                outlined
-                shaped
-                width="auto"
-                color="white"
-              >
-                <v-card-text>
-                  <p
-                    class="font-weight-black"
-                    style="max-width: 40rem;"
-                  > 📋 Los requisitos para obtener un crédito son los siguientes:</p>
-                </v-card-text>
-              </v-card>
+              <requisitos></requisitos>
             </v-container>
-            <v-divider></v-divider>
-            <v-list-item>
-
-              <v-list-item-action>
-                <v-icon>mdi-card-account-details-outline</v-icon>
-              </v-list-item-action>
-              <v-list-item-title>FOTOCOPIA DEL DNI</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-action>
-                <v-icon>mdi-file-document-multiple-outline</v-icon>
-              </v-list-item-action>
-              <v-list-item-title>ULTIMOS 3 RECIBOS DE SUELDO</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-action>
-                <v-icon>mdi-file-outline</v-icon>
-              </v-list-item-action>
-              <v-list-item-title>BOLETA DE SERVICIO</v-list-item-title>
-            </v-list-item>
-
             <v-divider></v-divider>
 
             <v-card-actions>
@@ -356,8 +322,9 @@
 
 <script>
 import cnsCredito from './cns-credito.vue'
+import requisitos from './requisitos.vue'
 export default {
-  components: { cnsCredito },
+  components: { cnsCredito, requisitos },
   name: 'dialogChat',
   data () {
     return {
