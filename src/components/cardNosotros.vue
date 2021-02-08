@@ -17,7 +17,7 @@
           <v-img
             max-width="280"
             contain
-            style="margin-left:20px;"
+            style="margin:0 auto;"
             position="center"
             src="@/assets/marca_final2021.png"
             class="animate__animated animate__fadeInUp"
@@ -41,7 +41,7 @@
         <v-card flat>
           <router-link to="/landingAlianza">
           <v-img
-            style="margin-left:70px;"
+            style="margin:0 auto;"
             max-width="180"
             contain
             position="center"
