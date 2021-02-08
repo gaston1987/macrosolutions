@@ -142,6 +142,31 @@
             aria-hidden="false"
             tabindex="0"
           ></iframe>
+
+            <v-row justify="center">
+
+                <v-col
+              flat
+              class="col-md-6 col-xs-12 col-sm-12 ">
+              
+              <h3>Sobre Nosotros</h3>
+              <p style="text-align:justify; padding:25px">Alianza es la unidad de micro créditos de Macrosolutions SA. Nos especializamos en la colocación y administración de micro créditos
+personales utilizando herramientas y tecnología que nos permite determinar la capacidad 
+de pago de nuestros clientes a los efectos no generar efectos contraproducentes por sobreendeudamiento. Creemos fuertemente en la inclusión
+Financiera y en ser la puerta de acceso al sistema bancario.
+</p>
+                 
+
+                 </v-col>
+
+
+
+
+              <v-col
+              flat
+              class="col-md-6 col-xs-12 col-sm-12 ">
+          
+
           <p style="text-align:center; margin-top:30px">
             <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
             <b> 25 de Mayo 431, Piso 3, of. F </b>
@@ -160,7 +185,12 @@
             position="right"
           >
             <v-icon>{{ social.icon }}</v-icon>
-          </v-btn>
+               </v-btn>
+              </v-col>
+            
+
+
+            </v-row>
         </v-card>
         <v-card
           flat
