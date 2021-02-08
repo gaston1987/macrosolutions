@@ -1,7 +1,7 @@
 <template>
   <div id="requisitos">
     <h1 class="text-center">¡Sacá tu crédito en pocos pasos!</h1>
-    <!-- <h2 class="text-center">Presentando:</h2> -->
+     <h2 class="text-center">Presentando:</h2> 
     <v-row justify="center" class="mt-10">
       <v-col class="col-md-5 col-xs-12 offset-md-1"  >
         <v-img
