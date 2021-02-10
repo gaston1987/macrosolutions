@@ -1,4 +1,5 @@
 <template>
+
   <v-app id="inspire">
     <bar />
     <carrousel />
@@ -12,35 +13,82 @@
 
       <dialogChat />
     </div>
-    <v-col cols="12" class="pie">
+    <v-col
+      cols="12"
+      class="pie"
+    >
       <v-footer :padless="true">
         <v-card
           flat
           tile
           width="100%"
-          class="secondary white--text text-center"
+          class="white--text text-center"
+          style=" background: #585454"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
+            style="border:0"
+            width="100%"
+            height="440px"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+
+          <v-row justify="center">
+            <v-col
+              flat
+              class="col-md-6 col-xs-12 col-sm-12 "
+            >
+
+              <p style="text-align:center; margin-top:30px">
+                <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
+                <b> 25 de Mayo 431, Piso 3, of. F </b>
+              </p>
+              <p style="text-align:center">
+                <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
+                <b> Tel: +54 11 52527626 </b>
+              </p>
+
+            </v-col>
+
+          </v-row>
+        </v-card>
+
+        <v-col
+          cols="12"
+          class="pie"
         >
 
-          <v-btn
-            v-for="(social, i) in socials"
-            :key="i"
-            :color="social.color"
-            fab
-            icon
-            x-large
-            position="right"
+          <v-card
+            flat
+            tile
+            width="100%"
+            class="secondary white--text text-center"
           >
-            <v-icon>{{ social.icon }}</v-icon>
-          </v-btn>
 
-          <v-card-text class="white--text">
-            {{ new Date().getFullYear() }} — <a
-              href="https://indev.com.ar/"
-              target="_blank"
-            > INDEV - Deploying E-business </a>
-          </v-card-text>
-        </v-card>
+            <v-btn
+              v-for="(social, i) in socials"
+              :key="i"
+              :color="social.color"
+              fab
+              icon
+              x-large
+              position="right"
+            >
+              <v-icon>{{ social.icon }}</v-icon>
+            </v-btn>
+
+            <v-card-text class="white--text">
+              {{ new Date().getFullYear() }} — <a
+                href="https://indev.com.ar/"
+                target="_blank"
+              > INDEV - Deploying E-business </a>
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-footer>
+
     </v-col>
   </v-app>
 </template>
@@ -153,11 +201,9 @@ export default {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.pie{
-
+.pie {
   padding: 0px !important;
 }
-
 </style>
 
 

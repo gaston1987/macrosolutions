@@ -124,7 +124,10 @@
 
     <cns-credito>
     </cns-credito>
-    <v-col cols="12" class="pie">
+    <v-col
+      cols="12"
+      class="pie"
+    >
       <v-footer :padless="true">
         <v-card
           flat
@@ -143,54 +146,67 @@
             tabindex="0"
           ></iframe>
 
-            <v-row justify="center">
+          <v-row justify="center">
 
-                <v-col
+            <v-col
               flat
-              class="col-md-6 col-xs-12 col-sm-12 ">
-              
+              class="col-md-6 col-xs-12 col-sm-12 "
+            >
+
               <h3>Sobre Nosotros</h3>
+              <v-card
+                flat
+                class="mx-auto mb-20"
+                outlined
+                rounded
+                width="30%"
+                mt-20
+                light
+              >
+                <v-img
+                  style="margin:0 auto;"
+                  max-width="180"
+                  contain
+                  position="center"
+                  src="@/assets/ALIANZA_FINAL.png"
+                  class="animate__animated animate__fadeInUp"
+                ></v-img>
+              </v-card>
               <p style="text-align:justify; padding:25px">Alianza es la unidad de micro créditos de Macrosolutions SA. Nos especializamos en la colocación y administración de micro créditos
-personales utilizando herramientas y tecnología que nos permite determinar la capacidad 
-de pago de nuestros clientes a los efectos no generar efectos contraproducentes por sobreendeudamiento. Creemos fuertemente en la inclusión
-Financiera y en ser la puerta de acceso al sistema bancario.
-</p>
-                 
+                personales utilizando herramientas y tecnología que nos permite determinar la capacidad
+                de pago de nuestros clientes a los efectos no generar efectos contraproducentes por sobreendeudamiento. Creemos fuertemente en la inclusión
+                Financiera y en ser la puerta de acceso al sistema bancario.
+              </p>
 
-                 </v-col>
+            </v-col>
 
-
-
-
-              <v-col
+            <v-col
               flat
-              class="col-md-6 col-xs-12 col-sm-12 ">
-          
+              class="col-md-6 col-xs-12 col-sm-12 "
+            >
 
-          <p style="text-align:center; margin-top:30px">
-            <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
-            <b> 25 de Mayo 431, Piso 3, of. F </b>
-          </p>
-          <p style="text-align:center">
-            <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
-            <b> Tel: +54 11 52527626 </b>
-          </p>
-          <v-btn
-            v-for="(social, i) in socials"
-            :key="i"
-            :color="social.color"
-            fab
-            icon
-            x-large
-            position="right"
-          >
-            <v-icon>{{ social.icon }}</v-icon>
-               </v-btn>
-              </v-col>
-            
+              <p style="text-align:center; margin-top:30px">
+                <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
+                <b> 25 de Mayo 431, Piso 3, of. F </b>
+              </p>
+              <p style="text-align:center">
+                <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
+                <b> Tel: +54 11 52527626 </b>
+              </p>
+              <v-btn
+                v-for="(social, i) in socials"
+                :key="i"
+                :color="social.color"
+                fab
+                icon
+                x-large
+                position="right"
+              >
+                <v-icon>{{ social.icon }}</v-icon>
+              </v-btn>
+            </v-col>
 
-
-            </v-row>
+          </v-row>
         </v-card>
         <v-card
           flat

@@ -1,256 +1,229 @@
 <template>
-  <div id="contacto">
+  <v-container dense>
+    <div
+      id="cns-cred"
+      style="margin-top:50px; margin-bottom:50px; "
+    >
 
-    <v-row justify="center">
-      <v-col
-        flat
-        class="col-md-5 col-xs-12 col-sm-12  offset-md-1"
-        style="padding:0px !important;"
-
+      <v-card
+        elevation=20
+        id="cnscard"
+        class="mx-auto mb-20"
+        outlined
+        rounded
+        width="100%"
+        mt-20
+        light
       >
-        <v-card flat>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
-              style="border:0; margin-top:20px !important;"
-              width="100%"
-              height="440px"
-              pa-0
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
 
-            <p style="text-align:center; margin-top:30px">
-              <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
-              <b> 25 de Mayo 431, Piso 3, of. F </b>
-            </p>
-            <p style="text-align:center">
-              <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
-              <b> Tel: +54 11 52527626 </b>
-            </p>
-          </div>
-
-        </v-card>
-
-      </v-col>
-
-      <v-col class="col-md-6 col-xs-12 col-sm-12  offset-md-0">
-        <div
-          id="form-contact"
-          style="margin-top:5px; margin-bottom:50px !important; "
+        <v-card
+          elevation=20
+          id="cnscard"
+          class="mx-auto pb-20"
+          outlined
+          rounded
+          width="100%"
+          mt-20
+          light
+          pb-5
         >
 
-          <v-card
-            elevation=20
-            id="cnscard"
-            class="mx-auto pb-20"
-            outlined
-            rounded
-            width="80%"
-            mt-20
-            light
-            pb-5
+          <v-toolbar
+            color="#007ebf"
+            cards
+            dark
+            flat
+          >
+            <v-icon style="#007ebf;  font-size:40px;">mdi-account-box-outline</v-icon>
+            <v-card-title
+              class="font-weight-black"
+              style="min-width:300px"
+            >
+              Contáctenos
+
+            </v-card-title>
+            <v-spacer></v-spacer>
+
+          </v-toolbar>
+
+          <v-divider></v-divider>
+          <v-form
+            ref="form"
+            v-model="valid"
+            lazy-validation
           >
 
-            <v-toolbar
-              color="#007ebf"
-              cards
-              dark
-              flat
-            >
-              <v-icon style="#007ebf;  font-size:40px;">mdi-account-box-outline</v-icon>
-              <v-card-title
-                class="font-weight-black"
-                style="min-width:300px"
+            <v-text-field
+              v-model="form['dni']"
+              :counter="8"
+              :rules="dniRules"
+              type="number"
+              label="Nro.DNI."
+              clearable
+              required
+              class="pr-10 pl-10 py-10"
+            ></v-text-field>
+
+            <v-text-field
+              v-model="form['name']"
+              dense
+              :rules="nameRules"
+              label="Apellido y Nombre"
+              clearable
+              required
+              class="pr-10 pl-10"
+            ></v-text-field>
+
+            <v-row>
+              <v-col
+                cols="12"
+                sm="6"
               >
-                Contáctenos
+                <v-text-field
+                  v-model="form['tel_area']"
+                  label="Cod.Area"
+                  type="number"
+                  dense
+                  prefix="+54 - 0"
+                  clearable
+                  required
+                  class="pr-10 pl-10"
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+              >
+                <v-text-field
+                  v-model="form['tel_nro']"
+                  type="number"
+                  dense
+                  label="Nro.Celular"
+                  prefix="15"
+                  clearable
+                  required
+                  class="pr-10 pl-10"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+
+            <v-text-field
+              v-model="form['email']"
+              dense
+              :rules="emailRules"
+              label="E-mail"
+              clearable
+              required
+              class="pr-10 pl-10"
+            ></v-text-field>
+
+            <v-combobox
+              class="pr-10 pl-10"
+              label="Motivo?"
+              clearable
+              multiple
+              small-chips
+              v-model="form['motivo']"
+              :items="items"
+              :rules="selectRules"
+              required
+            >
+            </v-combobox>
+            <v-textarea
+              v-model="form.desMotivo"
+              color="teal"
+              class="pr-10 pl-10"
+            >
+              <template v-slot:label>
+                <div>
+                  Describinos tu consulta <small>(opcional)</small>
+                </div>
+              </template>
+            </v-textarea>
+            <v-row
+              align="center"
+              justify="center"
+              mb-5
+              style="margin-bottom:20px"
+            >
+              <v-btn
+                :disabled="!valid"
+                :small="$vuetify.breakpoint.mobile"
+                color="primary"
+                @click="submitForm"
+                rounded
+              >
+                Consultar
+              </v-btn>
+
+              <v-btn
+                color="error"
+                :small="$vuetify.breakpoint.mobile"
+                @click="reset"
+                rounded
+              >
+                Cancelar
+              </v-btn>
+            </v-row>
+
+          </v-form>
+          <v-dialog
+            v-model="dialog"
+            hide-overlay
+            persistent
+            width="300"
+          >
+            <v-card
+              color="primary"
+              dark
+            >
+              <v-card-text>
+                Enviando...
+                <v-progress-linear
+                  indeterminate
+                  color="white"
+                  class="mb-0"
+                ></v-progress-linear>
+              </v-card-text>
+            </v-card>
+          </v-dialog>
+
+          <v-dialog
+            v-model="conf"
+            hide-overlay
+            persistent
+            width="300"
+          >
+            <v-card
+              color="#007ebf"
+              dark
+            >
+              <v-card-title>
+                Mensaje enviado con exito!
 
               </v-card-title>
-              <v-spacer></v-spacer>
+              <v-card-text>
+                Muchas gracias por su consulta, en breve un asesor se comunicará con usted.
 
-            </v-toolbar>
-
-            <v-divider></v-divider>
-            <v-form
-              ref="form"
-              v-model="valid"
-              lazy-validation
-            >
-
-              <v-text-field
-                v-model="form['dni']"
-                :counter="8"
-                :rules="dniRules"
-                type="number"
-                label="Nro.DNI."
-                clearable
-                required
-                class="pr-10 pl-10 py-10"
-              ></v-text-field>
-
-              <v-text-field
-                v-model="form['name']"
-                dense
-                :rules="nameRules"
-                label="Apellido y Nombre"
-                clearable
-                required
-                class="pr-10 pl-10"
-              ></v-text-field>
-
-              <v-row>
-                <v-col
-                  cols="12"
-                  sm="6"
-                >
-                  <v-text-field
-                    v-model="form['tel_area']"
-                    label="Cod.Area"
-                    type="number"
-                    dense
-                    prefix="+54 - 0"
-                    clearable
-                    required
-                    class="pr-10 pl-10"
-                  ></v-text-field>
-                </v-col>
-                <v-col
-                  cols="12"
-                  sm="6"
-                >
-                  <v-text-field
-                    v-model="form['tel_nro']"
-                    type="number"
-                    dense
-                    label="Nro.Celular"
-                    prefix="15"
-                    clearable
-                    required
-                    class="pr-10 pl-10"
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-
-              <v-text-field
-                v-model="form['email']"
-                dense
-                :rules="emailRules"
-                label="E-mail"
-                clearable
-                required
-                class="pr-10 pl-10"
-              ></v-text-field>
-
-              <v-combobox
-                class="pr-10 pl-10"
-                label="Motivo?"
-                clearable
-                multiple
-                small-chips
-                v-model="form['motivo']"
-                :items="items"
-                :rules="selectRules"
-                required
-              >
-              </v-combobox>
-              <v-textarea
-                v-model="form.desMotivo"
-                color="teal"
-                class="pr-10 pl-10"
-              >
-                <template v-slot:label>
-                  <div>
-                    Describinos tu consulta <small>(opcional)</small>
-                  </div>
-                </template>
-              </v-textarea>
-              <v-row
-                align="center"
-                justify="center"
-                mb-5
-                style="margin-bottom:20px"
-              >
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
                 <v-btn
-                  :disabled="!valid"
-                  :small="$vuetify.breakpoint.mobile"
-                  color="primary"
-                  @click="submitForm"
-                  rounded
+                  color="white"
+                  text
+                  @click="conf = false"
                 >
-                  Consultar
+                  Cerrar
                 </v-btn>
 
-                <v-btn
-                  color="error"
-                  :small="$vuetify.breakpoint.mobile"
-                  @click="reset"
-                  rounded
-                >
-                  Cancelar
-                </v-btn>
-              </v-row>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-card>
+      </v-card>
+    </div>
 
-            </v-form>
-            <v-dialog
-              v-model="dialog"
-              hide-overlay
-              persistent
-              width="300"
-            >
-              <v-card
-                color="primary"
-                dark
-              >
-                <v-card-text>
-                  Enviando...
-                  <v-progress-linear
-                    indeterminate
-                    color="white"
-                    class="mb-0"
-                  ></v-progress-linear>
-                </v-card-text>
-              </v-card>
-            </v-dialog>
-
-            <v-dialog
-              v-model="conf"
-              hide-overlay
-              persistent
-              width="300"
-            >
-              <v-card
-                color="#007ebf"
-                dark
-              >
-                <v-card-title>
-                  Mensaje enviado con exito!
-
-                </v-card-title>
-                <v-card-text>
-                  Muchas gracias por su consulta, en breve un asesor se comunicará con usted.
-
-                </v-card-text>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn
-                    color="white"
-                    text
-                    @click="conf = false"
-                  >
-                    Cerrar
-                  </v-btn>
-
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </v-card>
-        </div>
-      </v-col>
-    </v-row>
-
-  </div>
-
+  </v-container>
 </template>
 
 
@@ -384,6 +357,10 @@ export default {
 }
 
 #form-contact {
+  font-family: "Nunito" !important;
+}
+
+#cns-cred {
   font-family: "Nunito" !important;
 }
 </style>
