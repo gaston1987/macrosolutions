@@ -91,10 +91,10 @@
             class="font-weight-bold"
             min-width="96"
             text
+            @click="onMacro"
           > <a
               href="#"
               v-smooth-scroll
-              @click="onMacro"
             >
               Regresa a MacroSolutions</a>
           </v-tab>

@@ -2,6 +2,7 @@
   <v-container
     fluid
     class="my-8"
+    id="nosotros"
   >
 
     <v-row

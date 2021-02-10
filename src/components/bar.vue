@@ -66,8 +66,9 @@
             class="font-weight-bold"
             min-width="96"
             text
+            @click="onSimu"
           >
-            <router-link to="/landingAlianza">MacroCreditos</router-link>
+            <a>MacroCreditos</a>
           </v-tab>
 
           <v-tab
@@ -77,7 +78,7 @@
             min-width="96"
             text
           ><a
-              href="#clientes"
+              href="#nosotros"
               v-smooth-scroll
             >
               Nosotros</a>
@@ -166,6 +167,7 @@ export default {
       this.$router.push({ name: "landingAlianza" })
         .catch(() => { })
     },
+
   }
 };
 </script>

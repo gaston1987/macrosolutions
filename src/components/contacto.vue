@@ -1,7 +1,7 @@
 <template>
   <v-container dense>
     <div
-      id="cns-cred"
+      id="contacto"
       style="margin-top:50px; margin-bottom:50px; "
     >
 

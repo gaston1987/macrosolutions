@@ -19,7 +19,7 @@
         >
           <v-badge
             color="info"
-            left=true
+            :left=true
             content="!"
           >
             <v-avatar size="100">
