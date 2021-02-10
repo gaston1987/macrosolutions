@@ -19,23 +19,22 @@
         dark
         height="30px"
       >
-       <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
+        <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
         <v-spacer></v-spacer>
       </v-system-bar>
-     
+
       <v-card-title
         class="text-center font-weight-black"
         background-color="#2C1F77"
         width="90%"
         style="width:90%;"
-        
       >
-      
-      <p>
-        ¿Tenes Dudas?
-        Podes completar el formulario con tus datos aclarando la consulta y
-        nos contactaremos para enviarte la información solicitada.
-        También podes chatear con Ali quien te responderá en el acto. </p>
+
+        <p>
+          ¿Tenes Dudas?
+          Podes completar el formulario con tus datos aclarando la consulta y
+          nos contactaremos para enviarte la información solicitada.
+          También podes chatear con Ali quien te responderá en el acto. </p>
 
       </v-card-title>
 

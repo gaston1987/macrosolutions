@@ -9,11 +9,12 @@
       no-gutters
     >
       <v-col class="col-md-3 col-xs-12">
+
         <v-card
           class="pt-10"
           flat
         >
-       
+
           <v-img
             max-width="280"
             contain
@@ -22,13 +23,10 @@
             src="@/assets/marca_final2021.png"
             class="animate__animated animate__fadeInUp"
           ></v-img>
-        
+
           <v-spacer></v-spacer>
 
-          <v-card-text
-           
-            style="margin-top:20px; text-align:center;font-size:18px"
-          >
+          <v-card-text style="margin-top:20px; text-align:center;font-size:18px">
             Somos una empresa dinámica con el objetivo de asistir técnica y administrativamente a pequeñas y medianas empresas de distintos rubros.
 
             Nuestra principal especialización se concreta en el diseño e implementación de estructuras de financiación e impositivas apropiadas para cada empresa de acuerdo a los ciclos que conlleva cada industria en particular.
@@ -36,19 +34,19 @@
         </v-card>
 
       </v-col>
-     
+
       <v-col class="col-md-3 col-xs-12">
         <v-card flat>
           <router-link to="/landingAlianza">
-          <v-img
-            style="margin:0 auto;"
-            max-width="180"
-            contain
-            position="center"
-            src="@/assets/ALIANZA_FINAL.png"
-            class="animate__animated animate__fadeInUp"
-          ></v-img>
-            </router-link>
+            <v-img
+              style="margin:0 auto;"
+              max-width="180"
+              contain
+              position="center"
+              src="@/assets/ALIANZA_FINAL.png"
+              class="animate__animated animate__fadeInUp"
+            ></v-img>
+          </router-link>
 
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>
@@ -58,16 +56,15 @@
 
           <v-card-text>
             <v-row>
-              <p
-             
-                style="text-align:center;font-size:18px;margin-top:10px;"
-              > Alianza es la unidad de micro créditos de Macrosolutions donde asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.</p>
+              <p style="text-align:center;font-size:18px;margin-top:10px;"> Alianza es la unidad de micro créditos de Macrosolutions donde asistimos financieramente al cliente final de cada comercio o PYME con la que trabajamos.</p>
             </v-row>
           </v-card-text>
         </v-card>
+
       </v-col>
+
     </v-row>
-    
+
   </v-container>
 </template>
 
