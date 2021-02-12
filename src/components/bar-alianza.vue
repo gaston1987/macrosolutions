@@ -133,8 +133,8 @@
           flat
           tile
           width="100%"
-          class="font-weight-black text-center"
-          style=" background:#bae28f"
+          class="white--text text-center"
+          style=" background: #585454"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0539735026796!2d-58.37322388484934!3d-34.60279666495628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33532cf4f7049%3A0xf99b0dbe84a50b6d!2s25+de+Mayo+431%2C+C1002ABI+CABA!5e0!3m2!1ses!2sar!4v1506382137560"
@@ -154,16 +154,24 @@
             >
 
               <h3>Sobre Nosotros</h3>
-
-              <v-img
-                style="margin:0 auto;"
-                max-width="180"
-                contain
-                position="center"
-                src="@/assets/ALIANZA_FINAL.png"
-                class="animate__animated animate__fadeInUp"
-              ></v-img>
-
+              <v-card
+                flat
+                class="mx-auto mb-20"
+                outlined
+                rounded
+                width="30%"
+                mt-20
+                light
+              >
+                <v-img
+                  style="margin:0 auto;"
+                  max-width="180"
+                  contain
+                  position="center"
+                  src="@/assets/ALIANZA_FINAL.png"
+                  class="animate__animated animate__fadeInUp"
+                ></v-img>
+              </v-card>
               <p style="text-align:justify; padding:25px">Alianza es la unidad de micro créditos de Macrosolutions SA. Nos especializamos en la colocación y administración de micro créditos
                 personales utilizando herramientas y tecnología que nos permite determinar la capacidad
                 de pago de nuestros clientes a los efectos no generar efectos contraproducentes por sobreendeudamiento. Creemos fuertemente en la inclusión
@@ -177,7 +185,7 @@
               class="col-md-6 col-xs-12 col-sm-12 "
             >
 
-              <p style="text-align:center; margin-top:100px">
+              <p style="text-align:center; margin-top:30px">
                 <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-office-building-marker-outline</v-icon>
                 <b> 25 de Mayo 431, Piso 3, of. F </b>
               </p>
