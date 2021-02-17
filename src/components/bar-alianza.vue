@@ -151,28 +151,12 @@
             <v-col
               flat
               class="col-md-6 col-xs-12 col-sm-12 "
+              pt-20
             >
 
-              <h3>Sobre Nosotros</h3>
-              <v-card
-                flat
-                class="mx-auto mb-20"
-                outlined
-                rounded
-                width="30%"
-                mt-20
-                light
-              >
-                <v-img
-                  style="margin:0 auto;"
-                  max-width="180"
-                  contain
-                  position="center"
-                  src="@/assets/ALIANZA_FINAL.png"
-                  class="animate__animated animate__fadeInUp"
-                ></v-img>
-              </v-card>
-              <p style="text-align:justify; padding:25px">Alianza es la unidad de micro créditos de Macrosolutions SA. Nos especializamos en la colocación y administración de micro créditos
+              <h3 style="margin-top:20px;">Sobre Nosotros</h3>
+       
+              <p style="text-align:justify; padding:25px">ALIANZA es la unidad de micro créditos de Macrosolutions SA. Nos especializamos en la colocación y administración de micro créditos
                 personales utilizando herramientas y tecnología que nos permite determinar la capacidad
                 de pago de nuestros clientes a los efectos no generar efectos contraproducentes por sobreendeudamiento. Creemos fuertemente en la inclusión
                 Financiera y en ser la puerta de acceso al sistema bancario.
