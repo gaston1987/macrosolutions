@@ -342,10 +342,10 @@
             Términos y Condiciones
           </v-card-title>
           <v-card-text
-            v-for="n in 5"
+            v-for="n in 1"
             :key="n"
           >
-            {{ content }}
+            <span v-html="content"></span>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -476,124 +476,188 @@ export default {
       modo: 'calculador',
       impcuo: 0,
       tna: 108,
-      content: `INTRODUCCIÓN
-
-El presente documento establece los Términos y Condiciones Generales (los “Términos y Condiciones Generales”) aplicables al uso de los servicios ofrecidos por CEIBO CRÉDITOS S.A. (los “servicios”) dentro del sitio www.ceibocreditos.com.ar(el “Sitio”).Cualquier persona que desee acceder al sitio y/ o utilizar sus servicios(el “Usuario") podrá hacerlo sujetándose a estos Términos y Condiciones Generales considerándose que los ha aceptado si realiza cualquier operación en el sitio.
-
-1. PRINCIPIOS BÁSICOS
-
-1.1.El Usuario que no acepte estos Términos y Condiciones Generales, los cuales tienen un carácter obligatorio y vinculante, deberá abstenerse de ingresar al sitio y de utilizar los servicios en él ofrecidos.
-
-1.2.El Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en las Políticas de Privacidad así como en los demás documentos incorporados a los mismos por referencia, previo a operar en el Sitio.
-
-1.3.El Usuario reconoce y acepta que el presente contrato y las relaciones surgidas a través del mismo, tendrán como principios esenciales la buena fe y el deber de colaboración entre las partes.En consecuencia, se obliga a interactuar en el sitio sobre la base de esos principios.
-
-1.4.Los servicios del sitio sólo están disponibles para personas físicas que tengan capacidad legal para contratar.
-
-1.5.No podrán utilizar los servicios las personas que no tengan esa capacidad, las personas jurídicas, los menores de edad o los usuarios que hayan sido suspendidos temporalmente o inhabilitados definitivamente por CEIBO CRÉDITOS S.A.
-
- 
-
-2. DATOS PERSONALES – SOLICITUD DE CRÉDITO
-
-2.1.El usuario deberá completar el formulario de solicitud en todos sus campos con datos válidos y proporcionando sus datos personales de manera precisa y veraz para poder utilizar los servicios que brinda el Sitio.Asume igualmente el compromiso de actualizar esos datos personales cada vez que los mismos se modifiquen, notificando tal hecho a CEIBO CRÉDITOS S.A..
-
-2.2.El usuario garantiza la veracidad, exactitud y vigencia de los datos personales ingresados, respondiendo por ello ante CEIBO CRÉDITOS S.A., y el acreedor si este fuera otra entidad y cualquier organismo controlador que lo requiera.
-
-2.3.CEIBO CRÉDITOS S.A., y en su caso el acreedor si éste fuera otra entidad, podrá solicitar al usuario la presentación o envío de cualquier comprobante y / o dato adicional que considere necesario a efectos de corroborar sus datos personales, así como suspender temporal o definitivamente al usuario cuyos datos no hayan podido ser confirmados sin que ello genere derecho alguno al usuario.CEIBO CRÉDITOS S.A.podrá solicitar la información complementaria que estime pertinente con miras a verificar la veracidad de los datos personales aportados por el usuario.
-
-
-2.4.CEIBO CRÉDITOS S.A.y en su caso, también al acreedor si éste fuera otra entidad, se reserva el derecho de rechazar cualquier solicitud de registración así como el de cancelar una registración previamente aceptada, sin que esté obligado a comunicar o exponer las razones de su decisión y sin que ello genere derecho alguno a favor del usuario.
-
-2.5.El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326.La DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES, Organo de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales.
-
-3. MODIFICACIÓN DE LOS TERMINOS Y CONDICIONES GENERALES
-
-CEIBO CRÉDITOS S.A.podrá actualizar y modificar en cualquier momento los Términos y Condiciones Generales, los que entrarán en vigencia a partir del momento en que sean publicados en el Sitio o notificadas al Usuario, lo que ocurra primero.Respecto de las operaciones ya concertadas, las modificaciones que tengan incidencia relevante en las condiciones contractuales, se efectuarán de acuerdo a lo que determinen las disposiciones que le sean aplicables, y serán notificadas por e - mail al cliente.En el caso que éste no aceptase las modificaciones, podrá dar por rescindido el contrato, dentro de los cinco días de haber sido notificado, lo que deberá comunicar en forma fehaciente, procediendo a la precancelación del saldo adeudado con más los gastos incurridos en la operación en un plazo no mayor a 15 días a contar desde que hubiera comunicado la rescisión.
-
-4. PRIVACIDAD DE LA INFORMACIÓN
-
-El Usuario presta su plena conformidad con la Política de Privacidad establecida en un enlace separado en el Sitio.
-
-5. COMPROMISO DEL USUARIO
-
-El usuario se compromete a:
-
-        5.1 No efectuar actos u operaciones que generen riesgos al Sitio y / o tiendan a apropiarse de técnicas o contenidos del mismo.
-
-5.2.No transmitir mensajes anónimos o bajo un seudónimo
-
-5.3.No transmitir ningún archivo que contenga virus o cualquier otro elemento contaminante o destructivo para el Sitio como puede ser un robot, araña(spider), gusano, troyano, u otros aparatos automáticos o procesos manuales para monitorear o copiar las páginas del sitio o la información contenida en él
-
-5.4.No reproducir, transmitir, distribuir, exhibir públicamente o presentar públicamente las informaciones contenidas en el sitio sin el previo consentimiento otorgado por escrito por CEIBO CRÉDITOS S.A..
-
-5.5.En caso de efectuar el usuario cualquiera de las actividades mencionadas en los apartados anteriores, CEIBO CRÉDITOS S.A.podrá disponer de inmediato su suspensión temporaria o definitiva del sitio y la cancelación de su registración como usuario, sin perjuicio del cumplimiento de las obligaciones contraídas y de las acciones legales que pudieran corresponder, particularmente respecto de los daños causados.
-
- 
-
-6. RESPONSABILIDAD DE CEIBO CRÉDITOS S.A.
-
-6.1.CEIBO CRÉDITOS S.A.pone a disposición del usuario un espacio virtual donde el mismo accede voluntariamente y sujeto a los Términos y Condiciones Generales, a fin de utilizar los servicios y entretenimientos que el sitio brinda.No asume ninguna responsabilidad fuera de las que se especifiquen en los contratos a suscribir individualmente con cada Usuario.
-
-6.2.CEIBO CRÉDITOS S.A.no asume responsabilidad por la publicidad de terceros que contenga el sitio ni será responsable por las vinculaciones que el usuario establezca con ellos y / o con otros Usuarios.
-
-6.3.CEIBO CRÉDITOS S.A.no asume responsabilidad por las eventuales consecuencias de cualquier índole resultantes de fallas en el sistema, en el servidor o en Internet que pudieran surgir del acceso y / o uso del sitio bajo cualquier modalidad que el usuario empleara.
-
-6.4.CEIBO CRÉDITOS S.A.no garantiza el acceso y uso continuado o ininterrumpido de su sitio.El sistema puede eventualmente no estar disponible debido a dificultades técnicas o fallas de Internet.En tales casos se procurará restablecerlo con la mayor celeridad posible sin que por ello pueda imputársele algún tipo de responsabilidad.CEIBO CRÉDITOS S.A.no será responsable por eventuales errores u omisiones contenidos en el sitio.
-
-6.5 La información y los contenidos del Sitio pueden contener errores tipográficos o inexactitudes.CEIBO CRÉDITOS S.A.no asume responsabilidad alguna de poner al día o enmendar cualquier información.
-
-7. OTORGAMIENTO DE LOS CRÉDITOS
-
-CEIBO CRÉDITOS S.A.ofrece un servicio para que el Usuario pueda solicitar créditos personales online de destino libre.
-
-
-7.1.El usuario podrá solicitar a través del sitio el otorgamiento de créditos por los montos, plazos y condiciones ofrecidos por CEIBO CRÉDITOS S.A..A tal fin tendrá a su disposición en todo momento la siguiente información:
-
-        7.1.1.Los montos susceptibles de ser acordados, cantidad de cuotas que podrá elegir libremente entre un mínimo y un máximo, forma de pago y condiciones contractuales.
-
-7.2.Contando con la información señalada en el apartado anterior, el usuario podrá efectuar su solicitud de crédito en el Sitio, la cual le será respondida por CEIBO CRÉDITOS S.A.en una pantalla siguiente dentro del sitio al momento de la solicitud o dentro del plazo de 72 hs.hábiles, mediante e - mail dirigido a su dirección de correo electrónico o llamado telefónico.CEIBO CRÉDITOS S.A.no asume obligación alguna y podrá otorgar o denegar el crédito a su exclusivo arbitrio.El usuario autoriza a CEIBO CRÉDITOS S.A.a solicitar información de bases de datos complementaria y / o ratificatoria de la proporcionada por él a los fines de la evaluación crediticia.
-
-7.3.En caso de ser aprobado el crédito el Usuario será contactado por CEIBO CRÉDITOS S.A.mediante alguna de las vías de contacto informadas en la solicitud para ser asistido en la gestión del crédito, en caso de ser necesario.
-
-7.4.El usuario recibirá un e - mail con el texto de la solicitud de crédito a suscribir, la autorización de débito en cuenta y el pagaré mediante el cual se instrumentará su compromiso de pago, pudiendo libremente guardarlo en su ordenador y / o imprimirlo.Adicionalmente podrá solicitarse documentación adicional que será requerida para la liquidación del crédito.
-
-7.5.El usuario deberá elegir presentarse en alguna de las sucursales habilitadas de OCA o solicitar visita a domicilio a efectos de suscribir la documentación necesaria para instrumentar la operación, consistente en solicitud de crédito, autorización de débito en cuenta y pagaré, cuyos textos habrá analizado suficientemente, además de la documentación solicitada y detallada por correo electrónico al momento de confirmarse la instrucción de liquidación.
-
-7.6.La aprobación final del crédito y su posterior liquidación quedará sujeta al análisis de la documentación física recibida en las oficinas de CEIBO CRÉDITOS S.A..Asimismo el Usuario entiende y acepta que CEIBO CRÉDITOS S.A.podrá, bajo su exclusivo criterio, desistir del otorgamiento del préstamo en cualquier tramo de la operatoria.
-
-7.7.Una vez recibida la documentación física y previa conformidad por parte de CEIBO CRÉDITOS S.A., se procederá a su liquidación final, depositándose el importe neto a liquidar que surja de la solicitud de crédito en la cuenta informada por el Usuario.
-
-7.8.El usuario se obliga a devolver la suma recibida con más los intereses, gastos y comisiones correspondientes.Todos los pagos que deba efectuar el usuario a causa de la presente, se harán efectivos mediante débitos automáticos de la cuenta indicada por el usuario e identificada con su CBU(clave bancaria única).
-
-7.9.A ese fin, el usuario autoriza a CEIBO CRÉDITOS S.A., y en su caso, también al acreedor si éste fuera otra entidad y / o a cualquier otra entidad intermedia contratada por CEIBO CRÉDITOS S.A.para tal fin, a efectuar tales débitos exclusivamente por los importes y en las fechas de vencimiento pactadas o las derivadas del uso de modalidades acordadas, obligándose el usuario a mantener en su referida cuenta bancaria los fondos suficientes para que esos débitos puedan hacerse efectivos.
-
-7.10.En caso que por cualquier motivo no pudiera efectuarse alguno de los débitos bancarios de cada cuota, CEIBO CRÉDITOS S.A.notificará el rechazo del débito a fin de que el usuario proceda al pago de la suma debida.En tal caso, se considerará como fecha de mora la del rechazo del débito.Dicha notificación será realizada por e - mail, mensaje de texto, llamado telefónico o cualquier otro medio de contacto disponible.
-
-7.11.A criterio de CEIBO CRÉDITOS S.A.podrá notificarse al Usuario que la suma se ha debitado correctamente.
-
-8. PROPIEDAD INTELECTUAL.
-
-Los contenidos de las pantallas relativas a los servicios del sitio como así también los programas, bases de datos, redes, archivos que permiten al Usuario acceder y usar su Cuenta, son de propiedad exclusiva de CEIBO CRÉDITOS S.A.y están protegidas por las leyes y los tratados internacionales de derecho de autor, marcas, patentes, modelos y diseños industriales.El uso indebido y la reproducción total o parcial de dichos contenidos quedan prohibidos, salvo autorización expresa y por escrito de CEIBO CRÉDITOS S.A..
-
-
-
-
-9. NOTIFICACIONES
-
-
-El usuario acepta la plena validez de las notificaciones enviadas a CEIBO CRÉDITOS S.A.y recibidas de la misma, o en su caso, también del acreedor si éste fuera otra entidad, a través del sitio y / o por e - mail, destacándose que el presente contrato se suscribe sobre la base de la buena fe contractual y el deber de colaboración de las partes.
-
-10. OTRAS DISPOSICIONES
-
-10.1.El usuario antes de aceptar los términos y condiciones generales ha tomado pleno conocimiento de los mismos, los ha tenido a la vista y leído con detenimiento y cuenta con copia de ellos a su disposición, pudiendo guardarla en su ordenador, imprimirla o retirar copia firmada por CEIBO CRÉDITOS S.A.en el domicilio especial fijado por la misma.
-
-10.2.El usuario presta desde ya su conformidad para que el acreedor pueda ceder libremente los derechos resultantes del préstamo solicitado, sin que ello pueda implicar modificación alguna de las obligaciones asumidas por el usuario.En caso que la cesión se realizara conforme a lo dispuesto en los arts. 70, 71 y 72 de la ley 24.441, no será requisito la notificación al Usuario, deudor del préstamo.
-
-11. JURISDICCIÓN Y LEY APLICABLE
-
-Para todos los efectos de la presente, las partes se someten a la competencia de la Justicia Nacional en lo Comercial de la Capital Federal.CEIBO CRÉDITOS S.A.constituye domicilio especial en Av.Felix Olazabal 1515, piso 12, oficina 1211 de la Ciudad Autónoma de Buenos Aires.`
-
+      content: `<h3>Aviso legal.</h3>
+<p>Macrosolutions S.A. es una sociedad inscripta ante la Registro Público de Comercio que
+funciona de acuerdo a su objeto social contenido en el contrato constitutivo y en
+cumplimiento absoluto de la legislación que regula su actividad. Macrosolutions S.A. cumple
+con sus obligaciones tributarias encontrándose registrada con la CUIT 30-71470096-7 y
+declara que la sede central de sus operaciones se encuentra ubicada en calle 25 de Mayo
+431, piso 3°F, CABA, Código Postal C1002ABI. (“en adelante “Macrosolutions”).</p>
+<p>El acceso a y/o uso del sitio web www.macrosolutions.com.ar (en lo posterior el sitio)
+requiere que los visitantes adhieran a estos términos y condiciones siendo bajo su única y
+exclusiva responsabilidad la lectura del presente documento, debiendo comprender y
+aceptar todas las políticas por el establecidas para el sitio y/o los productos que se
+comercialicen por su intermedio.</p>
+<p>El sitio NO DEBE ser utilizado para fines ilícitos o contrarios a la moral y las buenas
+costumbres. Macrosolutions se reserva el derecho de denunciar ante las autoridades los
+posibles fraudes, sustitución o robo de identidad que pudiera detectar como así
+interrupciones, hackeos o saturaciones que los usuarios pudieran realizar sobre el sitio o
+sus servidores. Ante el supuesto de que el Consumidor o Usuario NO ACEPTE los términos
+y condiciones, deberá abstenerse de ingresar la sitio, utilizar el simulador, solicitar servicios,
+o remitir información personal.</p>
+<p>La última actualización de los términos y condiciones ha sido realizada en fecha 08/02/2021.</p>
+<h3>Bienvenidos a Macrosolutions. El simulador.</h3>
+<p>Macrosolutions pone a disposición del usuario el presente sitio y el simulador de créditos,
+el cual ha sido desarrollado por uno o más proveedores, debiendo el usuario utilizarlo sin
+contravenir la legislación, la buena fe y el orden público. El uso de las herramientas puestas
+a disposición del visitante, implican la aceptación de los términos y condiciones y
+consecuentemente el usuario quedara obligado por las cláusulas que se enumeran a
+continuación.</p>
+<p>1.- El usuario declara tener plena capacidad legal y real para contratar. En caso contrario se
+abstendrá de navegar el sitio, utilizar el simulador o contratar servicios. Comprende que
+continuar en el sitio sin cumplir los requisitos expone su responsabilidad y de quien
+estuviera a su cargo o tutoría. El acceso a las prestaciones ofrecidas por Macrosolutions
+estarán solamente disponibles para personas físicas que: (i) Sean mayores de edad según la
+legislación vigente (18 años), (ii) Tengan capacidad legal para contratar, y (iii) Puedan
+acreditar ingresos lícitos, regulares y que resulten ser titulares de una cuenta bancaria en
+una Entidad Financiera sujeta al régimen del Banco Central de la República Argentina.</p>
+<p>2.- Los Usuarios que cumplan los requisitos del punto anterior podrán utilizar el
+sitio/aplicación y solicitar las prestaciones que Macrosolutions pudiera difundir por los
+mismos siendo condición ineludible completar el formulario de registración, en carácter de
+DECLARACION JURADA, sobre la veracidad y fidelidad de los datos allí completados.</p>
+<p>3.- Al enviar los datos recolectados o al realizar la solicitud de un servicio, el usuario autoriza
+expresamente a Macrosolutions a verificar su información personal, financiera y crediticia
+mediante consultas a bases de datos públicas o privadas. Declara bajo juramento que ha
+prestado su conformidad, asumiendo irrevocablemente la responsabilidad por cualquier
+daño, perjuicio o consecuencia que se pudiera originar por la consulta de datos para
+comprobar los antecedentes y pre-aprobar el otorgamiento del servicio.</p>
+<p>4.- Una vez enviado los datos a Macrosolutions, el Usuario tiene el derecho de acceso a sus
+datos personales, recolectados o almacenados por Macrosolutions, en forma gratuita en
+cualquier momento siempre que acreditare un interés legítimo conforme a lo establecido
+por el Artículo 14 de la Ley N° 25326 de Protección de Datos Personales.</p>
+<p>5.- El envió por parte del Usuario de una solicitud implica que asume que será evaluado
+crediticiamente y que la aprobación de la solicitud dependerá del análisis de riesgo
+crediticio realizado por Macrosolutions. El simple envió de una solicitud por medio del
+simulador no será vinculante en ningún modo para las partes si la misma no fuera aprobada
+por el oferente. En el supuesto de que Macrosolutions rechazara una solicitud de crédito
+por la información negativa registrada en una base de datos, informara al consumidor ante
+su pedido en forma inmediata y gratuita el resultado de la consulta y la base donde la
+obtuvo.</p>
+<p>6.- Una vez pre-aprobada la solicitud realizada por el usuario, el área de riesgo crediticio
+realizara una verificación de los datos y solicitara al usuario su consentimiento informado
+por medio de un llamado telefónico o SMS que emitirá dentro de las 24 horas en que la
+solicitud fuera aprobada. La aprobación definitiva dependerá de la entrevista realizada
+donde se informará al usuario los términos y condiciones de la contratación y se requerirá
+su aceptación expresa.</p>
+<p>7.- El usuario acepta y brinda su consentimiento para que se le debite automáticamente de
+la cuenta bancaria identificada por su CBU en los plazos y por los montos confirmados por
+el usuario en la propuesta. Asumido esto, Macrosolutions podrá efectuar los débitos
+automáticos por si o por medio de terceras entidades. Ante el supuesto de que se produjera
+un rechazo del débito ordenado por parte de la Entidad Bancaria se emitirá una
+comunicación por medios electrónicos o telefónicos a los fines de que el Usuario proceda
+al pago inmediato de la suma en mora por medios alternativos de pago dispuestos por
+Macrosolutions.</p>
+<p>8.- El usuario se compromete a mantener la cuenta activa y con saldo suficiente al momento
+de realizarse el débito y autoriza a Macrosolutions a debitar por el valor de hasta una cuota
+y media (1 y 1⁄2) si el Usuario se encontrara en mora de sus obligaciones por insuficiencia de
+saldo, aplicación de stop debit, cambios en su cuenta, y/o cualquier otro motivo ajeno a
+Macrosolutions. Es obligación del usuario informar a la brevedad sobre cualquier cambio o
+modificación en los datos bancarios y financieros, y autoriza a Macrosolutions a efectuar
+control sobre los datos y a obtener nuevos datos de parte del usuario o terceros.</p>
+<p>9.- La aceptación de las condiciones y oferta por parte del Usuario implicara la obligación
+directa de parte de Macrosolutions de liquidar las sumas aprobadas en un plazo no mayor
+a setenta y dos (72) horas hábiles desde que se efectuare la aprobación definitiva.
+Macrosolutions informara al usuario si la entidad bancaria rechazara las transferencias por
+ella efectuadas.</p>
+<p>10.- El usuario podrá revocar la aceptación de la oferta dentro de los diez (10) días corridos
+a partir de la aceptación de esta. Para efectuar este derecho el Usuario podrá notificar a
+Macrosolutions por escrito o por medios electrónicos y telefónicos y efectuará la devolución
+del importe recibido mediante transferencia bancaria cuentas de propiedad de
+Macrosolutions y que esta informare oportunamente.</p>
+<p>11.- Se establece que el usuario podrá precancelar los servicios contratados mediante el
+sitio en cualquier momento. La precancelacion se tomará al vencimiento de la próxima
+cuota desde el momento en que el Usuario se comunique con Macrosolutions y siempre
+que no existan cuotas vencidas en mora. Macrosolutions informara al usuario el monto de
+cancelación, el plazo y los medios de pagos disponibles para que el Usuario efectué el pago.</p>
+<p>12.- El Usuario presta su conformidad para que Macrosolutions pueda ceder libremente en
+fideicomiso o mediante otra forma los derechos resultantes de los servicios y asistencias
+comercializadas mediante el sitio y el simulador de créditos, sin que esto signifique
+modificar o extinguir las obligaciones del Usuario. En caso de cesión de derechos, se
+realizará conforme a lo dispuesto por las leyes 24.441 y 26.994. La notificación al deudor
+cedido se practicará conforme a la ley vigente y las prácticas comerciales, no siendo
+necesaria la notificación personal o notarial.</p>
+<h3>Protección de los datos personales del Usuario.</h3
+<p>La información recopilada por Macrosolutions son datos personales otorgados por el titular,
+por su propia voluntad y con la finalidad de instrumentar una operación de asistencia
+crediticia, dentro del marco de la Ley N° 25326 de Protección de Datos Personales. El
+otorgamiento de los datos de parte del Usuario implica la autorización expresa para que
+Macrosolutions pueda utilizar la información y/o suministrarla a terceras personas para
+diversos fines tales como el ofrecimiento de nuevos productos y servicios, a través de
+diversos canales de comunicación.</p>
+<p>El Usuario podrá conocer los datos registrados y ejercer los derechos de rectificación,
+actualización o supresión de estos gratuitamente comunicándose con Macrosolutions S.A.
+al teléfono +54 9 11 23765493 o mediante correo electrónico dirigido a
+clientes@macrosolutions.com.ar. Macrosolutions se ha adaptado a los estándares técnicos
+y de seguridad habituales para la protección de los datos tratados, promoviendo las
+medidas que están a su alcance para evitar accesos no autorizados, fugas, perdidas o
+transmisión de datos. Sus servidores centrales se encuentran en su sede social de calle 25
+de Mayo 431, piso 3° F, CABA, Código Postal C1002ABI.</p>
+<p>Macrosolutions asume dar estricta observancia a lo dispuesto por la Ley N° 25326 de
+Protección de Datos Personales y asume el carácter de Responsable Inscripto ante la
+Dirección Nacional de Protección de Datos Personales. La Dirección Nacional de Protección
+de Datos Personales es el Órgano de Control de la Ley N° 25326 y tiene por finalidad la de
+atender las denuncias y/o reclamos que se interpongan contra las bases de datos públicas
+o privadas ante el incumplimiento a las normas.</p>
+<h3>Central de deudores financieros.</h3>
+<p>Macrosolutions pone en conocimiento de los Usuarios que es un sujeto registrado ante el
+Banco Central de la República Argentina, y que cumple con su obligación de contribuye
+mediante el régimen informativo mensual con la “Central de Deudores” dispuesta por la
+autoridad de control. El Usuario tendrá acceso a su información actual e histórica mediante
+el acceso al sitio web http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp. El
+Usuario acepta que Macrosolutions no resulta responsable por los datos publicados o
+consultados por medio de terceras entidades que recopilen datos de la “Central de
+Deudores”.</p>
+<h3>Compromiso con el Usuario y el sobreendeudamiento:</h3>
+<p>Se informa a los Usuarios y potenciales consumidores que el Banco Central de la República
+Argentina dispone de una Gerencia de Protección del Consumidor Financiero que asegura
+el derecho a la información mediante la publicación de un Régimen de Transparencia que
+permite comparar precios y condiciones de los servicios financieros en el sitio web:
+http://www.bcra.gob.ar/BCRAyVos/Regimen_de_transparencia.asp. Para conocer tu
+situación crediticia, acceder a la central de cheques rechazados, solicitar información sobre
+productos y servicios financieros o enviar consultas y sugerencias el usuario tiene a su
+disposición el sitio web: http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp.
+Macrosolutions asume su compromiso para con los potenciales consumidores y o usuarios,
+y aconseja a estos evaluar previamente sus condiciones particulares y su capacidad de pago
+previo a la contratación de los servicios que ofrece a través del sitio.</p>
+<p>El Sobreendeudamiento del consumidor es un flagelo derivado de la contratación masiva
+de productos o servicios financieros por parte del consumidor o su familia, derivando en la
+imposibilidad del consumidor (persona física no comerciante) de hacer frente a todas sus
+deudas actuales y/o futuras en un tiempo razonable y acorde a su capacidad de pago actual.
+Ley aplicable y jurisdicción.</p>
+<p>El Usuario denuncia sus medios de contacto y domicilios donde serán válidas todas las
+notificaciones enviadas por Macrosolutions, y acepta la plena validez de las notificaciones
+que se cursaren por vía telefónica, email, SMS, Whats App y otros medios similares. Para
+todos los efectos de la presente contratación, las partes se someterán a la competencia de
+la Justicia Nacional en lo Comercial de la Capital Federal, comprometiéndose a no efectuar
+excepciones o solicitudes de competencia de otros tribunales. La presente competencia
+será obligatoria para las partes, salvo que por ley se establezca una diferente.
+Otras disposiciones.</p>
+<p>1.- La propiedad intelectual del sitio web, el simulador y el contenido de este pertenecen a
+Macrosolutions SA, incluyendo la marca comercial, los logos e isologos, diseños, dibujos,
+estudios, e implementaciones tecnológicas. En consecuencia, todo lo comprendido en
+cuestiones de visibilidad, accesibilidad y contenido como su software se encuentra
+protegido por las leyes de propiedad intelectual, de autor, marcas o patentes.</p>
+<p>2.- Macrosolutions se reserva el derecho a modificar o actualizar los términos y condiciones
+en cualquier momento ajustándose al nuevo giro comercial, políticas de riesgo,
+requerimientos legales, técnicos o tecnológicos como así ante toda circunstancia que a
+criterio de Macrosolutions requiera una actualización. Los cambios serán aplicados e
+informados en este documento. Si el Usuario continúa navegando el sitio, o utilizando los
+servicios provistos por el mismo implica e importa la aceptación y el consentimiento del
+usuario de todas las nuevas disposiciones.</p>
+<p>3.- Macrosolutions no asume responsabilidades adicionales con relación a: (i) Publicidad
+que terceros pudieran realizar y en la cual se contenga información del sitio, vínculos o
+hipervínculos con el mismo, (ii) Daños o perjuicios derivados de fallas del sistema, servidor
+o servicio de internet contratados o utilizados por el Usuario al momento de acceder al sitio,
+(iii) Por malas interpretaciones que pudiera realizar el Usuario, como por usos indebidos o
+actos de terceros por los cuales no esté obligada a responder.</p>
+<p>4.- Se prohíbe la copia, duplicación, comercialización, redistribución o cualquier otra
+actividad similar sobre los contenidos y servicios del sitio sin la correspondiente
+autorización y citando las fuentes. Salvo pacto en contrario por escrito.</p>
+<p>5.- Ante la eventualidad de que alguna parte o cláusula del presente documento sea declara
+nula por autoridad competente, ello no significara la extensión de las obligaciones del
+usuario ni afectara en modo alguno a las demás disposiciones de estos términos y
+condiciones que continuaran con su vigencia.</p>
+      `,
     }
   },
 
