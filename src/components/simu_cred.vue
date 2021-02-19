@@ -711,7 +711,15 @@ condiciones que continuaran con su vigencia.</p>
                    <td>"${this.form.sexo}"</td>
                    <tr>
                    <td><strong>Ingreso Neto:</strong></td>
-                   <td>"${this.form.ingNeto}"</td>
+                   <td>"$${this.form.ingNeto}"</td>
+                   </tr>
+                   <tr>
+                   <td><strong>Monto Solicitado:</strong></td>
+                   <td>"$${this.ex1.val}"</td>
+                   </tr>
+                   <tr>
+                   <td><strong>Cant.Cuotas:</strong></td>
+                   <td>"${this.ex2.val}"</td>
                    </tr>
                    </table>
                    </html>
