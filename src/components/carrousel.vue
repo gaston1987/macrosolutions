@@ -45,14 +45,20 @@ export default {
     return {
       items: [
         {
-          src: 'https://i.postimg.cc/6Q72y00T/slide-1.jpg',
+          src: 'https://i.postimg.cc/sxZ6XgPQ/slide-new01.jpg',
         },
         {
-          src: 'https://i.postimg.cc/Hnkyzgms/slide-0002.jpg',
+          src: 'https://i.postimg.cc/RVZ1XFJc/slide-new02.jpg',
         },
      
         {
-          src: 'https://i.postimg.cc/4dNznZjQ/slide004.jpg',
+          src: 'https://i.postimg.cc/J06k9NHj/SLIDE-1.jpg',
+        },
+         {
+          src: 'https://i.postimg.cc/6qwkDRx6/slide-new04.jpg',
+        },
+         {
+          src: 'https://i.postimg.cc/MG6jK301/slide-new05.jpg',
         },
       ],
     }
