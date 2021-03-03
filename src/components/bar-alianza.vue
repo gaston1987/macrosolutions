@@ -213,7 +213,19 @@
               @click="politica = true"
             >Politicas de Privacidad | </a>
 
-            <a class="pr-3 pt-5">Solicitud de Credito Modelo</a>
+            <a
+              class="pr-3 pt-5"
+              style="text-decoration: none;"
+              href="SOLICITUD DE PRESTAMO MODELO.pdf"
+              target='new'
+            >Solicitud de Credito Modelo |</a>
+
+            <a
+              class="pr-3 pt-5"
+              style="text-decoration: none;"
+              href="Usuario_Financiero.pdf"
+              target='new'
+            >Información a usuarios financieros</a>
 
           </v-row>
 
