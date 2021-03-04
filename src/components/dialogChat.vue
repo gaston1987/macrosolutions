@@ -126,7 +126,7 @@
                   elevation="3"
                   outlined
                   shaped
-                  width="auto"
+                  width="78%"
                   color="white"
                 >
                   <v-card-text>
@@ -137,14 +137,21 @@
                   </v-card-text>
                 </v-card>
               </v-container>
+              <v-row justify="center">
               <div
                 id="cns-cred"
                 style="margin-top:20px; margin-bottom:30px; "
               >
+              
+     
+            
+           
+         
                 <cns-credito></cns-credito>
-
+    
+             
               </div>
-
+ </v-row>
               <v-divider></v-divider>
 
               <v-card-actions>

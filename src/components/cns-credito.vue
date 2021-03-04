@@ -8,9 +8,10 @@
       elevation=20
       id="cnscard"
       class="mx-auto mb-20"
+     
       outlined
       rounded
-      width="84%"
+      width="78%"
       mt-20
       light
     >
@@ -19,27 +20,31 @@
         dark
         height="30px"
       >
-        <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
+       <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
         <v-spacer></v-spacer>
       </v-system-bar>
+       <v-row justify="center">
       <v-col
-        cols=12
-        sm=12
+            cols="12"
+           class="col-md-12 col-xs-12 col-sm-12 "
+          >
+      <v-card-title
+        class="text-center font-weight-black"
+        background-color="#2C1F77"
+        width="90%"
+        style="width:90%;"
+        
       >
-        <v-card-title
-          class=" font-weight-black"
-          background-color="#2C1F77"
-          width="90%"
-        >
+      
+      <p>
+        ¿Tenes Dudas?
+        Podes completar el formulario con tus datos aclarando la consulta y
+        nos contactaremos para enviarte la información solicitada.
+        También podes chatear con Ali quien te responderá en el acto. </p>
 
-          <p>
-            ¿Tenes Dudas?
-            Podes completar el formulario con tus datos aclarando la consulta y
-            nos contactaremos para enviarte la información solicitada.
-            También podes chatear con Ali quien te responderá en el acto. </p>
-
-        </v-card-title>
+      </v-card-title>
       </v-col>
+       </v-row>
       <v-divider></v-divider>
 
       <v-form
