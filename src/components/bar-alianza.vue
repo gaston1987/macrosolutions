@@ -150,7 +150,7 @@
 
             <v-col
               flat
-              class="col-md-6 col-xs-12 col-sm-12 "
+              cols=12
               pt-20
             >
 

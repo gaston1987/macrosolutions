@@ -10,7 +10,7 @@
       class="mx-auto mb-20"
       outlined
       rounded
-      width="81.5%"
+      width="84%"
       mt-20
       light
     >
@@ -19,26 +19,27 @@
         dark
         height="30px"
       >
-       <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
+        <v-icon style="color:#FFF; padding-left:2px; font-size:28px">mdi-file-find</v-icon>
         <v-spacer></v-spacer>
       </v-system-bar>
-     
-      <v-card-title
-        class="text-center font-weight-black"
-        background-color="#2C1F77"
-        width="90%"
-        style="width:90%;"
-        
+      <v-col
+        cols=12
+        sm=12
       >
-      
-      <p>
-        ¿Tenes Dudas?
-        Podes completar el formulario con tus datos aclarando la consulta y
-        nos contactaremos para enviarte la información solicitada.
-        También podes chatear con Ali quien te responderá en el acto. </p>
+        <v-card-title
+          class=" font-weight-black"
+          background-color="#2C1F77"
+          width="90%"
+        >
 
-      </v-card-title>
+          <p>
+            ¿Tenes Dudas?
+            Podes completar el formulario con tus datos aclarando la consulta y
+            nos contactaremos para enviarte la información solicitada.
+            También podes chatear con Ali quien te responderá en el acto. </p>
 
+        </v-card-title>
+      </v-col>
       <v-divider></v-divider>
 
       <v-form
