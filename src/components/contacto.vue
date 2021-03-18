@@ -292,7 +292,8 @@ export default {
             Username: "web@macrosolutions.com.ar",
             Password: "Dkno198000",
             //SecureToken: "82b06d19-25c4-451d-a485-df6822ea67f8",            
-            To: 'administracion@macrosolutions.com.ar',
+            //To: 'administracion@macrosolutions.com.ar',
+            To: 'clientes@macrosolutions.com.ar',
             From: "web@macrosolutions.com.ar",
             Subject: "Solicitud de Contacto:" + this.form.name,
             Body: `<html>
