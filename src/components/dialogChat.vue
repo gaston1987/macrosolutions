@@ -83,7 +83,7 @@
           </v-container>
           <v-divider></v-divider>
           <v-dialog
-            v-model="dialog3"
+            v-model="dialog"
             width="700"
           >
 
@@ -126,7 +126,7 @@
                   elevation="3"
                   outlined
                   shaped
-                  width="auto"
+                  width="78%"
                   color="white"
                 >
                   <v-card-text>
@@ -137,14 +137,16 @@
                   </v-card-text>
                 </v-card>
               </v-container>
-              <div
-                id="cns-cred"
-                style="margin-top:20px; margin-bottom:30px; "
-              >
-                <cns-credito></cns-credito>
+              <v-row justify="center">
+                <div
+                  id="cns-cred"
+                  style="margin-top:20px; margin-bottom:30px; "
+                >
 
-              </div>
+                  <cns-credito></cns-credito>
 
+                </div>
+              </v-row>
               <v-divider></v-divider>
 
               <v-card-actions>
@@ -311,7 +313,7 @@
             <v-icon>mdi-whatsapp</v-icon>
 
           </v-list-item-action>
-          <v-list-item-title>CHATEÁ CON NOSTROS!</v-list-item-title>
+          <v-list-item-title>CHATEÁ CON NOSOTROS!</v-list-item-title>
         </v-list-item>
         <v-divider></v-divider>
       </v-card>

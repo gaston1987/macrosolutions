@@ -150,7 +150,8 @@
 
             <v-col
               flat
-              class="col-md-6 col-xs-12 "
+              cols=12
+              class="col-md-6 col-xs-12 col-sm-12 "
               pt-20
             >
 
@@ -176,6 +177,13 @@
               <p style="text-align:center">
                 <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-phone-forward-outline</v-icon>
                 <b> Tel: +54 11 52527626 </b>
+              </p>
+              <p style="text-align:center">
+                <v-icon style="color:#1976d2; padding:10px; font-size:30px">mdi-whatsapp</v-icon>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5491123765493"
+                  target="blank"
+                > <b>Chatea con Nosotros: +54 9 11 2376-5493</b> </a>
               </p>
               <v-btn
                 v-for="(social, i) in socials"
@@ -218,7 +226,7 @@
               style="text-decoration: none;"
               href="SOLICITUD DE PRESTAMO MODELO.pdf"
               target='new'
-            >Solicitud de Credito Modelo |</a>
+            >Contrato de adhesión – Ley 24.240 – de Defensa del Consumidor |</a>
 
             <a
               class="pr-3 pt-5"
