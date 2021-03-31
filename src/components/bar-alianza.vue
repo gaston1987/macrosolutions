@@ -167,7 +167,7 @@
 
             <v-col
               flat
-              class="col-md-6 col-xs-12 col-sm-12 "
+              class="col-md-6 col-xs-12"
             >
 
               <p style="text-align:center; margin-top:30px">
