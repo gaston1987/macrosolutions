@@ -233,7 +233,17 @@
               style="text-decoration: none;"
               href="Usuario_Financiero.pdf"
               target='new'
-            >Información a usuarios financieros</a>
+            >Información a usuarios financieros |</a>
+            <p
+              class="pr-3 pt-5"
+              style="text-decoration: none;"
+            >
+              Defensa de las y los Consumidores. Para reclamos:
+              <a
+                href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
+                target='new'
+              >Ingrese aquí</a>
+            </p>
 
           </v-row>
 
