@@ -95,7 +95,7 @@
       </div>
       <div v-if="impcuo!=0">
         <p style="font-size: 10px">
-          *Cuota aproximada para préstamos personales para consumo, Plazo de validez de simulación 7 días. La mismas está sujeta a verificación comercial y crediticia del departamento de créditos (1). Tasa fija en pesos, Sistema de amortización francés, las tasas de interés mínimas son las siguientes TNA: 82,44%. TEA: CFT: y las tasas de interés máxima son las siguientes TNA: 82,44%. TEA: CFT:
+          *Cuota aproximada para préstamos personales para consumo, Plazo de validez de simulación 7 días. La mismas está sujeta a verificación comercial y crediticia del departamento de créditos (1). Tasa fija en pesos, Sistema de amortización francés, las tasas de interés mínimas son las siguientes:
         </p>
 
         <table>

@@ -1,7 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf288b1b323a8f5cda59",
-    "url": "/css/app.2df5bb95.css"
+    "revision": "3ec660c10364871dc3f90afe642d7b90",
+    "url": "/SOLICITUD DE PRESTAMO MODELO.pdf"
+  },
+  {
+    "revision": "289a270da5d18f2b51ae27d974b79f10",
+    "url": "/Usuario_Financiero.pdf"
+  },
+  {
+    "revision": "8b5ab89e1008855d561b",
+    "url": "/css/app.384fde3e.css"
   },
   {
     "revision": "8c965b95c5c6f121260f",
@@ -76,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/virtual.13d64c1c.jpg"
   },
   {
-    "revision": "8d8f8058bb510e398cca61fecb1dfb97",
+    "revision": "86ca16e5fb10145d8c109e3be1a782c4",
     "url": "/index.html"
   },
   {
-    "revision": "bf288b1b323a8f5cda59",
-    "url": "/js/app.990c4e14.js"
+    "revision": "8b5ab89e1008855d561b",
+    "url": "/js/app.b807602c.js"
   },
   {
     "revision": "8c965b95c5c6f121260f",
