@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.cf1fe00001461d6808733a53b07a68d4.js"
+  "/precache-manifest.e64f3ea03f9ba494612e328e03d03b92.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "MACROSOLUTIONS"});

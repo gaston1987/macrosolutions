@@ -108,14 +108,14 @@
           <tr>
             <td><strong>Tasa Mínima</strong></td>
             <td>108%</td>
-            <td>181.27%</td>
-            <td>219%</td>
+            <td>219.53%</td>
+            <td>219,53%</td>
           </tr>
           <tr>
             <td><strong>Tasa Máxima</strong></td>
-            <td>216%</td>
-            <td>628.76%</td>
-            <td>761%</td>
+            <td>198%</td>
+            <td>636.69%</td>
+            <td>636,69%</td>
           </tr>
         </table>
 
